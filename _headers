@@ -21,3 +21,7 @@
 
 /*.html
   Cache-Control: public, max-age=300, must-revalidate
+
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+  Service-Worker-Allowed: /

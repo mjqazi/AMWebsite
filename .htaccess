@@ -48,6 +48,13 @@
     Header set Cache-Control "public, max-age=300, must-revalidate"
   </FilesMatch>
 
+  # Service worker: never HTTP-cache the SW file itself, otherwise users
+  # get stuck on an old worker. The SW manages its own asset caches.
+  <FilesMatch "^sw\.js$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+    Header set Service-Worker-Allowed "/"
+  </FilesMatch>
+
   # Security headers
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"

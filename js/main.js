@@ -1,4 +1,19 @@
 // Advanced Mechanix — site JS
+
+// Service worker registration — deferred until after load + idle so it
+// never blocks the critical path on first visit. Repeat visits and
+// page-to-page navigations are then served from cache.
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    const register = () => navigator.serviceWorker.register('/sw.js').catch(() => {});
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(register, { timeout: 4000 });
+    } else {
+      setTimeout(register, 2000);
+    }
+  });
+}
+
 // Lightweight analytics shim. Replace with GA4 / GTM when wiring production.
 window.amTrack = function(event, props) {
   // Google Analytics 4 (gtag) — uncomment after adding GA4 snippet
