@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://advancedmechanix.com/</loc>
+    <image:image><image:loc>https://advancedmechanix.com/images/drawings/single-line-diagram.svg</image:loc><image:caption>Industrial single-line diagram sample &mdash; MCC package with motor loads</image:caption></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/drawings/riser-diagram.svg</image:loc><image:caption>Commercial high-rise electrical riser diagram sample</image:caption></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/drawings/mining-power-distribution.svg</image:loc><image:caption>Mine power distribution from 132 kV substation sample</image:caption></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/Synergy.png</image:loc><image:caption>Synergy client logo</image:caption></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/Rio-Tinto.png</image:loc><image:caption>Rio Tinto client logo</image:caption></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/Fortescue.png</image:loc><image:caption>Fortescue client logo</image:caption></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/Evolution-Mining.png</image:loc></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/Endeavour-Mining.png</image:loc></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/CBH-Group.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://advancedmechanix.com/solar-services.html</loc>
+    <image:image><image:loc>https://advancedmechanix.com/images/drawings/solar-pv-layout.svg</image:loc><image:caption>Commercial solar PV system layout and single-line diagram sample</image:caption></image:image>
+  </url>
+  <url>
+    <loc>https://advancedmechanix.com/3d-modeling.html</loc>
+    <image:image><image:loc>https://advancedmechanix.com/images/Revit.jpg</image:loc><image:caption>Revit MEP modeling platform</image:caption></image:image>
+  </url>
+  <url>
+    <loc>https://advancedmechanix.com/electrical-design.html</loc>
+    <image:image><image:loc>https://advancedmechanix.com/images/Microstation.webp</image:loc><image:caption>Microstation platform for electrical documentation</image:caption></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/AutoCAD.jpeg</image:loc><image:caption>AutoCAD Electrical platform</image:caption></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/ETAP.jpg</image:loc><image:caption>ETAP power system analysis platform</image:caption></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/SkyCAD.jpg</image:loc><image:caption>SkyCAD utility documentation platform</image:caption></image:image>
+  </url>
+</urlset>

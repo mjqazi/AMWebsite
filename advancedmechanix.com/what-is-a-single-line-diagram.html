@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is a Single-Line Diagram? Complete Engineer's Guide | Advanced Mechanix</title>
+<meta name="description" content="A clear, illustrated guide to the single-line diagram (SLD): what it shows, standard symbols, how it's used in industrial and commercial projects, and how to read one.">
+<link rel="canonical" href="https://advancedmechanix.com/what-is-a-single-line-diagram.html">
+<link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
+<link rel="stylesheet" href="css/styles.css">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Is a Single-Line Diagram? Complete Engineer's Guide">
+<meta property="og:description" content="What the single-line diagram shows, standard symbols, and how engineers actually read them.">
+<meta property="og:image" content="images/drawings/single-line-diagram.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
+    {"@type":"Article","@id":"https://advancedmechanix.com/what-is-a-single-line-diagram.html#article","headline":"What Is a Single-Line Diagram? Complete Engineer's Guide","author":{"@type":"Person","@id":"https://advancedmechanix.com/authors/junaid-qazi#person","name":"Junaid Qazi","url":"https://advancedmechanix.com/authors/junaid-qazi.html"},"publisher":{"@id":"https://advancedmechanix.com/#organization"},"datePublished":"2026-04-19","image":"https://advancedmechanix.com/images/drawings/single-line-diagram.svg","mainEntityOfPage":"https://advancedmechanix.com/what-is-a-single-line-diagram.html"},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
+      {"@type":"ListItem","position":2,"name":"Insights","item":"https://advancedmechanix.com/blog.html"},
+      {"@type":"ListItem","position":3,"name":"Single-Line Diagram","item":"https://advancedmechanix.com/what-is-a-single-line-diagram.html"}
+    ]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What does a single-line diagram show?","acceptedAnswer":{"@type":"Answer","text":"A single-line diagram (SLD) represents a three-phase electrical power system as a single line, showing the main components (sources, transformers, breakers, buses, feeders, loads) and how they connect, along with ratings and protective devices."}},
+      {"@type":"Question","name":"Why is it called single-line?","acceptedAnswer":{"@type":"Answer","text":"In a three-phase system there are three current-carrying conductors. Drawing all three at every point would make the diagram unreadable. The single-line convention collapses all three phases into one line, with notation indicating phasing where needed."}},
+      {"@type":"Question","name":"What standards govern single-line diagram symbols?","acceptedAnswer":{"@type":"Answer","text":"IEEE Std 315 / ANSI Y32.2 in the US, IEC 60617 internationally, and AS/NZS 1102 in Australia/NZ. Symbols between standards are similar but not identical; always confirm which standard your drawing set uses."}},
+      {"@type":"Question","name":"When do you need a single-line diagram?","acceptedAnswer":{"@type":"Answer","text":"Any time you design, document, or modify an electrical distribution system above the simplest residential scale. They are required for commissioning, NEC and AS/NZS compliance documentation, arc flash studies, protection coordination, and any meaningful maintenance or troubleshooting."}}
+    ]}
+  ]
+}
+</script>
+
+<style>
+.concept-wrap { max-width: 820px; margin: 0 auto; }
+.concept-wrap h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-top: 2.8em; margin-bottom: 0.6em; }
+.concept-wrap h3 { font-size: 1.25rem; margin-top: 1.8em; margin-bottom: 0.5em; }
+.concept-wrap p, .concept-wrap ul, .concept-wrap ol { font-size: 1.04rem; line-height: 1.75; color: var(--ink-2); margin-bottom: 1.1em; }
+.concept-wrap ul, .concept-wrap ol { padding-left: 24px; }
+.concept-wrap li { margin-bottom: 0.35em; }
+.concept-wrap figure { margin: 36px 0; }
+.concept-wrap figure img { width: 100%; border: 1px solid var(--rule); }
+.concept-wrap figcaption { font-family: var(--font-mono); font-size: 0.78rem; color: var(--margin); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 10px; }
+.concept-wrap table { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.95rem; }
+.concept-wrap th, .concept-wrap td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--rule); }
+.concept-wrap th { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--margin); }
+.concept-wrap .tldr { background: var(--paper-2); padding: 24px 28px; border-left: 3px solid var(--hazard); margin: 28px 0 40px; }
+.concept-wrap .tldr h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 10px; }
+.concept-wrap .tldr p { margin: 0; font-family: var(--font-display); font-style: italic; font-size: 1.12rem; color: var(--ink); }
+.related-reads { margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--rule); }
+.related-reads h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 18px; }
+.related-reads ul { list-style: none; padding: 0; }
+.related-reads li { margin-bottom: 10px; font-family: var(--font-display); font-size: 1.08rem; }
+.related-reads a { color: var(--ink); background: none; }
+.related-reads a:hover { color: var(--hazard); }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; company@advancedmechanix.com</span><span>&#9742; +1 408 412 0717</span></div><div><span>REV 2026.04 &middot; Q2 MANAGED-SERVICE SLOTS: 2 OF 3 REMAINING</span></div></div></div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="images/AM-Black-Logo.png" alt="Advanced Mechanix"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="electrical-design.html">Electrical</a></li>
+        <li><a href="3d-modeling.html">BIM</a></li>
+        <li><a href="solar-services.html">Solar</a></li>
+        <li><a href="data-analytics.html">Analytics</a></li>
+        <li><a href="case-studies.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-cta"><a href="contact.html">Free Drawing</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-hero center">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="blog.html">Insights</a> &rsaquo; Single-Line Diagram</div>
+    <h1>What is a <em>single-line diagram?</em></h1>
+    <p>An illustrated guide to the most-used drawing in electrical engineering &mdash; what it shows, how to read it, and when you need one.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="concept-wrap">
+
+      <div class="tldr">
+        <h4>TL;DR</h4>
+        <p>A single-line diagram is a simplified electrical schematic that represents a three-phase power system as a single line, showing sources, transformers, protective devices, and loads &mdash; plus their ratings and how they connect. It's the master document of any electrical system.</p>
+      </div>
+
+      <figure>
+        <img src="images/drawings/single-line-diagram.svg" alt="Example single-line diagram">
+        <figcaption>Fig. 01 &mdash; Example SLD: 11 kV utility source through 2500 kVA transformer to 415 V main switchboard with MCC feeders.</figcaption>
+      </figure>
+
+      <h2>The short answer</h2>
+      <p>A single-line diagram &mdash; often shortened to SLD, sometimes written "one-line" in North America &mdash; is a drawing that represents a three-phase electrical distribution system as if it had only one wire instead of three. It's the most frequently referenced document in any electrical project: designers use it to plan, commissioning engineers use it to test, and maintenance teams use it to troubleshoot twenty years later.</p>
+
+      <h2>Why "single-line"?</h2>
+      <p>Nearly all industrial and commercial power distribution is three-phase. A literal schematic would show three lines between every component, with neutral and earth on top. By the time you've drawn a medium-sized facility, the page is unreadable.</p>
+      <p>The single-line convention agrees to draw only one line per circuit path. Phase information, where it matters, is indicated in notes or secondary notation (3Ph+N, L1-L2-L3, etc.). The trade-off: simplicity wins, at the cost of explicit per-phase detail. For per-phase detail, engineers use <em>three-line</em> diagrams or schematic drawings.</p>
+
+      <h2>What a single-line diagram shows</h2>
+      <p>At minimum, a complete SLD shows:</p>
+      <ul>
+        <li><strong>Sources</strong> &mdash; utility feeds, generators, renewable inputs, with ratings (voltage, fault level, phase count)</li>
+        <li><strong>Transformation</strong> &mdash; transformers with their ratings and voltage ratios (e.g. 11 kV / 415 V, 2500 kVA)</li>
+        <li><strong>Protection</strong> &mdash; circuit breakers, fuses, protection relays with ratings and ANSI/IEC device numbers</li>
+        <li><strong>Distribution</strong> &mdash; buses, main switchboards, sub-boards, MCCs with their voltage and current ratings</li>
+        <li><strong>Feeders</strong> &mdash; cables and cable ratings between components</li>
+        <li><strong>Loads</strong> &mdash; motors, variable-frequency drives, lighting panels, large single loads, typically with kW rating</li>
+        <li><strong>Grounding</strong> &mdash; earth reference, neutral-to-ground, grounding transformer if present</li>
+        <li><strong>Metering &amp; instrumentation</strong> &mdash; current transformers, voltage transformers, meters</li>
+      </ul>
+
+      <h2>Standard symbols</h2>
+      <p>Single-line diagram symbols are standardized, but which standard depends on jurisdiction:</p>
+      <table>
+        <thead><tr><th>Region</th><th>Primary standard</th></tr></thead>
+        <tbody>
+          <tr><td>United States</td><td>IEEE Std 315 / ANSI Y32.2</td></tr>
+          <tr><td>International</td><td>IEC 60617</td></tr>
+          <tr><td>Australia / NZ</td><td>AS/NZS 1102</td></tr>
+          <tr><td>United Kingdom</td><td>BS EN 60617 (IEC aligned)</td></tr>
+        </tbody>
+      </table>
+      <p>Most symbols are immediately recognizable across standards (a transformer is always two circles), but device detail notation &mdash; breaker close/open, disconnect symbols, protection relay numbering &mdash; varies. Always verify which standard the drawing set references in the title block.</p>
+
+      <h2>How to read one</h2>
+      <p>Read top-to-bottom, following power flow:</p>
+      <ol>
+        <li>Find the source at the top &mdash; utility or generator, with its voltage and fault level.</li>
+        <li>Trace downward through main disconnect / breaker to transformer (if present).</li>
+        <li>Transformer secondary feeds the main bus &mdash; usually the widest horizontal line, labeled with voltage and current rating.</li>
+        <li>Vertical lines drop from the bus to downstream distribution equipment: sub-boards, MCCs, motor starters, large loads.</li>
+        <li>Each branch will have its own breaker or protective device at the bus tap.</li>
+        <li>Read notes and title block for protection philosophy, coordination references, and revisions.</li>
+      </ol>
+
+      <h2>When do you need one?</h2>
+      <p>Essentially always, for any system larger than a residential subpanel:</p>
+      <ul>
+        <li><strong>Design phase</strong> &mdash; to scope equipment, size conductors, specify protection.</li>
+        <li><strong>Construction</strong> &mdash; as the as-built reference for installation teams.</li>
+        <li><strong>Commissioning</strong> &mdash; to verify installed system matches designed system.</li>
+        <li><strong>Maintenance &amp; operations</strong> &mdash; for troubleshooting, isolation planning, shutdown scheduling.</li>
+        <li><strong>Arc flash studies</strong> &mdash; the SLD is a required input to IEEE 1584 / NFPA 70E analyses.</li>
+        <li><strong>Protection coordination</strong> &mdash; the SLD is the baseline for relay setting studies.</li>
+        <li><strong>Regulatory compliance</strong> &mdash; required by NEC, AS/NZS, IEC, and utility interconnection processes.</li>
+      </ul>
+
+      <h2>Common mistakes</h2>
+      <ol>
+        <li><strong>Missing ratings.</strong> Every component should have its voltage, current, and fault rating. SLDs that omit this are effectively useless for maintenance or protection coordination.</li>
+        <li><strong>Outdated revisions.</strong> Field modifications not reflected on the drawing are a safety hazard. The SLD should be kept current as an "as-operated" document, not just a project-delivery artifact.</li>
+        <li><strong>Inconsistent symbology.</strong> Using a mix of IEEE and IEC symbols within the same drawing set confuses readers and fails jurisdiction review.</li>
+        <li><strong>No fault-level information.</strong> Fault levels at every major bus should be noted. Without this, downstream equipment can't be properly specified or maintained.</li>
+      </ol>
+
+      <h2>How we produce single-line diagrams</h2>
+      <p>Advanced Mechanix produces SLDs daily for industrial, mining, commercial, and utility clients. Every drawing is delivered against the applicable jurisdiction's code (NEC 2023, IEC 60364, AS/NZS 3000, CSA, or BS 7671), inside the client's own template and cell library, with multi-stage QA before issue.</p>
+      <p>Turnaround for a standard SLD is 3&ndash;5 business days from kickoff. Complex multi-sheet packages (MCC schedules, protection coordination) run 2&ndash;3 weeks. First drawing is free for new clients.</p>
+
+      <div class="guarantee" style="margin-top: 60px;">
+        <div class="guarantee-seal">First<br>Drawing<br>Free</div>
+        <div>
+          <h3>Need an SLD delivered this week?</h3>
+          <p>Send us your source material &mdash; single-line on existing equipment, a new design brief, or a legacy drawing that needs updating. First drawing free, regardless of complexity.</p>
+        <p style="font-size:0.88rem; color:rgba(247,245,238,0.7); margin-top:12px; font-style:italic;">We can afford this because SLDs are routine production work. One drawing costs us almost nothing.</p>
+        </div>
+        <div><a href="contact.html" class="btn">Claim Free Drawing</a></div>
+      </div>
+
+      <div class="related-reads">
+        <h4>Related Reads</h4>
+        <ul>
+          <li><a href="guide-electrical-drafting-outsourcing.html">The complete guide to outsourcing electrical drafting</a></li>
+          <li><a href="cost-calculator.html">Drafting cost calculator: benchmark your current spend</a></li>
+          <li><a href="electrical-design.html">Electrical drafting services overview</a></li>
+          <li><a href="case-studies.html">Case studies &mdash; see real SLD deliverables</a></li>
+        </ul>
+      </div>
+
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="logo" style="margin-bottom: 24px;"><img src="images/AM-White-Logo.png" alt="Advanced Mechanix"></a><p>Specialized electrical drafting, BIM modeling, solar permit packages, and data analytics. Onshore project management. Offshore production scale. First drawing free.</p></div>
+      <div><h4>Services</h4><ul class="footer-list"><li><a href="electrical-design.html">Electrical Drafting</a></li><li><a href="3d-modeling.html">3D BIM Modeling</a></li><li><a href="solar-services.html">Solar Permits</a></li><li><a href="civil-design.html">Civil &amp; Structural</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div>
+      <div><h4>Company</h4><ul class="footer-list"><li><a href="about.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="guide-electrical-drafting-outsourcing.html">Outsourcing Guide</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Office</h4><ul class="footer-list"><li>+1 408 412 0717</li><li>company@advancedmechanix.com</li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="current-year"></span> Advanced Mechanix &middot; Engineering Documentation</span>
+      <span>NEC &middot; IEC &middot; AS/NZS &middot; CSA &middot; BS 7671</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

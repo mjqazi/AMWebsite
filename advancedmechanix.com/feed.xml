@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+  <title>Advanced Mechanix &mdash; Engineering Insights</title>
+  <link>https://advancedmechanix.com/blog.html</link>
+  <atom:link href="https://advancedmechanix.com/feed.xml" rel="self" type="application/rss+xml" />
+  <description>Insights on electrical drafting, BIM modeling, solar permitting, arc flash safety, and engineering outsourcing from the Advanced Mechanix team.</description>
+  <language>en-US</language>
+  <copyright>&#169; 2026 Advanced Mechanix</copyright>
+  <ttl>1440</ttl>
+
+  <item>
+    <title>The Complete Guide to Outsourcing Electrical Drafting (2026)</title>
+    <link>https://advancedmechanix.com/guide-electrical-drafting-outsourcing.html</link>
+    <guid>https://advancedmechanix.com/guide-electrical-drafting-outsourcing.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Fri, 19 Apr 2026 00:00:00 +0000</pubDate>
+    <description>A 2,500-word buyer's guide for engineering managers, BIM leads, and procurement officers evaluating offshore drafting vendors. Standards, security, SLAs, pricing benchmarks, seven red flags.</description>
+  </item>
+
+  <item>
+    <title>What Is a Single-Line Diagram?</title>
+    <link>https://advancedmechanix.com/what-is-a-single-line-diagram.html</link>
+    <guid>https://advancedmechanix.com/what-is-a-single-line-diagram.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Fri, 19 Apr 2026 00:00:00 +0000</pubDate>
+    <description>An illustrated engineer's guide to the most-referenced drawing in electrical engineering. Symbols, standards, reading conventions, and common mistakes.</description>
+  </item>
+
+  <item>
+    <title>What Is NFPA 70E? Arc Flash Safety Explained for Engineers</title>
+    <link>https://advancedmechanix.com/what-is-nfpa-70e.html</link>
+    <guid>https://advancedmechanix.com/what-is-nfpa-70e.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Fri, 19 Apr 2026 00:00:00 +0000</pubDate>
+    <description>Plain-English guide to the US electrical safety standard. How it differs from NEC, arc flash risk assessment, PPE categories, employer documentation obligations.</description>
+  </item>
+</channel>
+</rss>

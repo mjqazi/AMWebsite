@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is LOD 350? BIM Level of Development Explained | Advanced Mechanix</title>
+<meta name="description" content="Plain-English guide to LOD 350 and the full BIM Level of Development spectrum. What each level means, what it contains, and how to match LOD to project phase.">
+<link rel="canonical" href="https://advancedmechanix.com/what-is-lod-350.html">
+<link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-600-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-400-normal-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Is LOD 350? BIM Level of Development Explained">
+<meta property="og:description" content="Plain-English guide to LOD 350 and the full LOD spectrum.">
+<meta property="og:image" content="images/Revit.jpg">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
+    {"@type":"Article","@id":"https://advancedmechanix.com/what-is-lod-350#article","headline":"What Is LOD 350? BIM Level of Development Explained","author":{"@type":"Person","@id":"https://advancedmechanix.com/authors/junaid-qazi#person","name":"Junaid Qazi","url":"https://advancedmechanix.com/authors/junaid-qazi.html"},"publisher":{"@id":"https://advancedmechanix.com/#organization"},"datePublished":"2026-04-19","image":"https://advancedmechanix.com/images/Revit.jpg"},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
+      {"@type":"ListItem","position":2,"name":"Insights","item":"https://advancedmechanix.com/blog.html"},
+      {"@type":"ListItem","position":3,"name":"LOD 350","item":"https://advancedmechanix.com/what-is-lod-350.html"}
+    ]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is LOD 350 in BIM?","acceptedAnswer":{"@type":"Answer","text":"LOD 350 is a BIM Level of Development where model elements are accurately located, sized, oriented, and include interfaces with other systems. It is the typical level at which multi-discipline coordination and clash detection become reliable."}},
+      {"@type":"Question","name":"What is the difference between LOD 300 and LOD 350?","acceptedAnswer":{"@type":"Answer","text":"LOD 300 contains accurate geometry for the element itself. LOD 350 adds the interfaces and connections between elements across disciplines, which is what makes coordination work. LOD 300 is about the element; LOD 350 is about how it meets the rest of the model."}},
+      {"@type":"Question","name":"At what project phase do you need LOD 350?","acceptedAnswer":{"@type":"Answer","text":"LOD 350 is typically required during design development through construction documentation, when clash detection and coordination are the primary activities. It is the minimum LOD for meaningful multi-discipline clash resolution."}},
+      {"@type":"Question","name":"Who defines LOD for a project?","acceptedAnswer":{"@type":"Answer","text":"The project BIM Execution Plan (BEP) defines LOD requirements by discipline and by project phase. LOD expectations should be written into the BEP before modeling begins, not negotiated retroactively."}}
+    ]}
+  ]
+}
+</script>
+
+<style>
+.concept-wrap { max-width: 820px; margin: 0 auto; }
+.concept-wrap h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-top: 2.8em; margin-bottom: 0.6em; }
+.concept-wrap h3 { font-size: 1.25rem; margin-top: 1.8em; margin-bottom: 0.5em; }
+.concept-wrap p, .concept-wrap ul, .concept-wrap ol { font-size: 1.04rem; line-height: 1.75; color: var(--ink-2); margin-bottom: 1.1em; }
+.concept-wrap ul, .concept-wrap ol { padding-left: 24px; }
+.concept-wrap li { margin-bottom: 0.35em; }
+.concept-wrap table { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.95rem; }
+.concept-wrap th, .concept-wrap td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.concept-wrap th { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--margin); background: var(--paper-2); }
+.concept-wrap .tldr { background: var(--paper-2); padding: 24px 28px; border-left: 3px solid var(--hazard); margin: 28px 0 40px; }
+.concept-wrap .tldr h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 10px; }
+.concept-wrap .tldr p { margin: 0; font-family: var(--font-display); font-style: italic; font-size: 1.12rem; color: var(--ink); }
+.related-reads { margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--rule); }
+.related-reads h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 18px; }
+.related-reads ul { list-style: none; padding: 0; }
+.related-reads li { margin-bottom: 10px; font-family: var(--font-display); font-size: 1.08rem; }
+.related-reads a { color: var(--ink); background: none; }
+.related-reads a:hover { color: var(--hazard); }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; company@advancedmechanix.com</span><span>&#9742; +1 408 412 0717</span></div><div><span>REV 2026.04 &middot; Q2 MANAGED-SERVICE SLOTS: 2 OF 3 REMAINING</span></div></div></div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="images/AM-Black-Logo.png" alt="Advanced Mechanix"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="electrical-design.html">Electrical</a></li>
+        <li><a href="3d-modeling.html">BIM</a></li>
+        <li><a href="solar-services.html">Solar</a></li>
+        <li><a href="data-analytics.html">Analytics</a></li>
+        <li><a href="industries/">Industries</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-cta"><a href="contact.html">Free Drawing</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-hero center">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="blog.html">Insights</a> &rsaquo; LOD 350</div>
+    <h1>What is <em>LOD 350?</em></h1>
+    <p>A plain-English guide to BIM Level of Development &mdash; what LOD 350 means, how it differs from LOD 300 and 400, and when to use it.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="concept-wrap">
+
+      <div class="tldr">
+        <h4>TL;DR</h4>
+        <p>LOD 350 is the Level of Development at which model elements are accurately located, sized, oriented, and include their interfaces with other systems &mdash; which is what makes multi-discipline coordination actually work.</p>
+      </div>
+
+      <h2>The short answer</h2>
+      <p>LOD (Level of Development) is a BIM concept that defines how developed a model element is at a given project phase. The spectrum runs from LOD 100 (conceptual placeholder) through LOD 400 (fabrication-ready) and sometimes LOD 500 (as-built).</p>
+      <p>LOD 350 sits at the sweet spot where model elements are accurate enough to coordinate with other disciplines reliably. The geometry is correct. The location is correct. Critically, the <em>interfaces</em> between elements are modeled &mdash; the connections, the clearances, the handoffs between systems.</p>
+      <p>Until LOD 350, you have accurate objects floating in space. At LOD 350, you have a coordinated building.</p>
+
+      <h2>The full LOD spectrum</h2>
+      <table>
+        <thead><tr><th>LOD</th><th>Geometry</th><th>Typical use</th></tr></thead>
+        <tbody>
+          <tr><td><strong>LOD 100</strong></td><td>Conceptual / symbolic</td><td>Conceptual design, early massing, approximate cost estimating</td></tr>
+          <tr><td><strong>LOD 200</strong></td><td>Approximate &mdash; generic element</td><td>Schematic design; approximate quantities</td></tr>
+          <tr><td><strong>LOD 300</strong></td><td>Accurate geometry &mdash; specific element</td><td>Design development; detailed cost estimating</td></tr>
+          <tr><td><strong>LOD 350</strong></td><td>Accurate geometry + interfaces with other systems</td><td>Construction documentation; multi-discipline clash detection</td></tr>
+          <tr><td><strong>LOD 400</strong></td><td>Fabrication-ready geometry + assembly detail</td><td>Shop drawings, fabrication, installation</td></tr>
+          <tr><td><strong>LOD 500</strong></td><td>As-built / field-verified</td><td>Facility operations, asset management, digital twin</td></tr>
+        </tbody>
+      </table>
+
+      <h2>LOD 300 vs LOD 350 &mdash; the critical difference</h2>
+      <p>This is where most BIM projects get confused. The jump from LOD 300 to LOD 350 sounds small on paper but is operationally enormous.</p>
+      <p><strong>LOD 300:</strong> Your electrical panel is modeled accurately. The enclosure is the right size, located where it should be, oriented correctly.</p>
+      <p><strong>LOD 350:</strong> Your electrical panel is modeled accurately, <em>and</em> its conduit entries align with the conduit layout from the mechanical model, <em>and</em> the clearance zones required for panel operation are reserved in the architectural model, <em>and</em> the structural support is dimensioned for the panel weight.</p>
+      <p>LOD 300 lets you count panels. LOD 350 lets you build them without clashes.</p>
+
+      <h2>When to require LOD 350</h2>
+      <ul>
+        <li><strong>Design development:</strong> You're about to start multi-discipline coordination. Without LOD 350, clash detection misses the interface issues.</li>
+        <li><strong>Construction documentation:</strong> The drawings you're about to issue for construction must reflect a coordinated design.</li>
+        <li><strong>Prefab / modular construction:</strong> Off-site fabrication requires clash-free, interface-verified models.</li>
+        <li><strong>Complex MEP coordination:</strong> Hospitals, data centers, labs &mdash; any building where MEP density is high enough to create tight clearances.</li>
+      </ul>
+
+      <h2>When LOD 350 is overkill</h2>
+      <ul>
+        <li>Early conceptual design (LOD 100&ndash;200 is correct)</li>
+        <li>Simple buildings with low MEP density and no complex coordination requirements</li>
+        <li>Schematic-phase deliverables where speed is more valuable than interface accuracy</li>
+        <li>Projects where the final deliverable is a set of 2D construction documents, not a coordinated BIM model</li>
+      </ul>
+
+      <h2>Defining LOD in your BEP</h2>
+      <p>LOD expectations belong in the <a href="glossary.html">BIM Execution Plan (BEP)</a>. A good BEP defines LOD requirements:</p>
+      <ul>
+        <li>By discipline (electrical might be LOD 350 while site/civil is LOD 300)</li>
+        <li>By project phase (LOD 200 at schematic, 300 at DD, 350 at CD, 400 at shop drawing)</li>
+        <li>By element category (major equipment at higher LOD than minor ductwork)</li>
+        <li>With explicit handoff dates between LOD milestones</li>
+      </ul>
+      <p>If LOD isn't written into the BEP before modeling starts, it will get negotiated retroactively under deadline pressure &mdash; which is when scope creep and rework happen.</p>
+
+      <h2>How we deliver LOD 350</h2>
+      <p>When clients engage us for <a href="bim-modeling-outsourcing.html">BIM modeling outsourcing</a>, LOD 350 is the most commonly required level. Our production workflow is structured around it:</p>
+      <ol>
+        <li>Kickoff: confirm LOD requirement per discipline and phase against your BEP</li>
+        <li>Pilot model: deliver one discipline at target LOD so you validate our interpretation before scaling</li>
+        <li>Production: build to LOD 300 first, then elevate to LOD 350 as coordination information becomes available</li>
+        <li>Coordination: Navisworks clash detection with interface-focused severity classification</li>
+        <li>QA: verify LOD 350 criteria (geometry + interface + location + orientation) on every element before milestone issue</li>
+      </ol>
+
+      <div class="guarantee" style="margin-top: 60px;">
+        <div class="guarantee-seal">Pilot<br>Model<br>Free</div>
+        <div>
+          <h3>Want to see what LOD 350 delivery looks like?</h3>
+          <p>We'll build a free pilot model at your target LOD on one discipline. You validate our interpretation against your BEP before committing to full production.</p>
+        </div>
+        <div><a href="contact.html" class="btn">Request Pilot</a></div>
+      </div>
+
+      <div class="related-reads">
+        <h4>Related Reads</h4>
+        <ul>
+          <li><a href="bim-modeling-outsourcing.html">BIM modeling outsourcing services</a></li>
+          <li><a href="3d-modeling.html">3D BIM &amp; Revit services overview</a></li>
+          <li><a href="what-is-a-single-line-diagram.html">What is a single-line diagram?</a></li>
+          <li><a href="glossary.html">Engineering glossary &mdash; BIM &amp; BEP terms</a></li>
+        </ul>
+      </div>
+
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="logo" style="margin-bottom: 24px;"><img src="images/AM-White-Logo.png" alt="Advanced Mechanix"></a><p>Specialized electrical drafting, BIM modeling outsourcing, solar permit packages, and data analytics. First drawing free.</p></div>
+      <div><h4>Services</h4><ul class="footer-list"><li><a href="electrical-design.html">Electrical</a></li><li><a href="bim-modeling-outsourcing.html">BIM Outsourcing</a></li><li><a href="solar-services.html">Solar</a></li><li><a href="civil-design.html">Civil</a></li><li><a href="data-analytics.html">Analytics</a></li></ul></div>
+      <div><h4>Resources</h4><ul class="footer-list"><li><a href="faq.html">FAQ</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="offshore-drafting-vendor-checklist.html">Vendor Checklist</a></li></ul></div>
+      <div><h4>Office</h4><ul class="footer-list"><li>+1 408 412 0717</li><li>company@advancedmechanix.com</li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; <span class="current-year"></span> Advanced Mechanix &middot; Engineering Documentation</span><span>NEC &middot; IEC &middot; AS/NZS &middot; CSA &middot; BS 7671</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

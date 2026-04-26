@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industrial Data Analytics + AI Scheduling | Advanced Mechanix &amp; OptiScheduleAI</title>
+<meta name="description" content="Turn SCADA and historian data into decisions, then execute them with AI-powered scheduling. Predictive maintenance, operational dashboards, and OptiScheduleAI integration for mining and industrial operations.">
+<link rel="canonical" href="https://advancedmechanix.com/data-analytics.html">
+<link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-600-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-400-normal-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Industrial Data Analytics + AI Scheduling | Advanced Mechanix">
+<meta property="og:description" content="Predictive analytics to find the optimization; AI-powered scheduling to execute it. Mining &amp; industrial operations.">
+<meta property="og:image" content="images/ABX.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
+    {"@type":"Organization","@id":"https://optischeduleai.com/#organization","name":"OptiScheduleAI","url":"https://optischeduleai.com/","description":"AI-powered scheduling and workforce optimization platform for industrial operations. Sister initiative to Advanced Mechanix."},
+    {"@type":"Service","@id":"https://advancedmechanix.com/data-analytics#service","name":"Industrial Data Analytics &amp; AI Scheduling Services","provider":{"@id":"https://advancedmechanix.com/#organization"},"serviceType":["Industrial Analytics","Predictive Maintenance","AI Scheduling","Shutdown Planning","Workforce Optimization"],"description":"Predictive maintenance, operational dashboards, efficiency analytics, and AI-powered scheduling via OptiScheduleAI integration for mining and industrial operations.","areaServed":"Worldwide"},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
+      {"@type":"ListItem","position":2,"name":"Data Analytics","item":"https://advancedmechanix.com/data-analytics.html"}
+    ]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What data sources can you integrate with?","acceptedAnswer":{"@type":"Answer","text":"Historians (PI, Wonderware, GE Proficy), SCADA systems, CMMS (Maximo, SAP PM), ERP, MES, and custom OT data sources. Read-only integration by default with client-controlled data egress."}},
+      {"@type":"Question","name":"How does the AI scheduling integration work?","acceptedAnswer":{"@type":"Answer","text":"Our analytics layer identifies what to optimize (failure risks, throughput bottlenecks, labor waste). Our sister platform OptiScheduleAI executes the optimization by generating optimized work schedules, shutdown plans, and workforce allocations in minutes instead of weeks. The two layers share an integration path through SAP and CMMS systems."}},
+      {"@type":"Question","name":"How do you handle sensitive operational data?","acceptedAnswer":{"@type":"Answer","text":"NDAs, encrypted workspaces, role-segregated engineer access. We can run entirely inside your environment with no data leaving your network."}},
+      {"@type":"Question","name":"How long does a typical pilot take?","acceptedAnswer":{"@type":"Answer","text":"Analytics pilot: 4-6 weeks covering data ingestion, one predictive model, and one dashboard. Scheduling pilot via OptiScheduleAI: typically under 60 days to first ROI."}},
+      {"@type":"Question","name":"Do you build dashboards we can maintain internally?","acceptedAnswer":{"@type":"Answer","text":"Yes. We build on Power BI, Tableau, or Grafana with full knowledge transfer. Dashboards are yours to maintain, or we can operate them on retainer."}},
+      {"@type":"Question","name":"What outcomes are typical from analytics + scheduling together?","acceptedAnswer":{"@type":"Answer","text":"Analytics alone: 20-35% reduction in unplanned downtime within 6 months, 15-25% reduction in maintenance spend. Adding OptiScheduleAI execution: 20-50% workforce efficiency gain, shutdown-planning cycle reduced from weeks to minutes, and documented shutdown savings averaging ~$1.8M per event across verified deployments."}}
+    ]}
+  ]
+}
+</script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; company@advancedmechanix.com</span><span>&#9742; +1 408 412 0717</span></div><div><span>REV 2026.04 &middot; Q2 MANAGED-SERVICE SLOTS: 2 OF 3 REMAINING</span></div></div></div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="images/AM-Black-Logo.png" alt="Advanced Mechanix"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="electrical-design.html">Electrical</a></li>
+        <li><a href="3d-modeling.html">BIM</a></li>
+        <li><a href="solar-services.html">Solar</a></li>
+        <li><a href="data-analytics.html" class="active">Analytics</a></li>
+        <li><a href="industries/">Industries</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-cta"><a href="contact.html">Free Drawing</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Data Analytics &amp; AI Scheduling</div>
+    <h1>From SCADA noise to operator decisions <em>&mdash; and executed automatically.</em></h1>
+    <p>Predictive maintenance, operational dashboards, and efficiency analytics from Advanced Mechanix. AI-powered scheduling and workforce optimization from our sister platform <a href="https://optischeduleai.com/" style="color:var(--hazard); text-decoration:underline; background:none;">OptiScheduleAI</a>. Together: insight plus execution, end-to-end.</p>
+    <div class="chips" style="justify-content:flex-start; margin-top:26px;">
+      <span class="chip">PI / Wonderware</span>
+      <span class="chip">Maximo / SAP PM</span>
+      <span class="chip">Power BI / Tableau</span>
+      <span class="chip">AI Scheduling</span>
+      <span class="chip">Shutdown Planning</span>
+      <span class="chip">Workforce Optimization</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div class="two-col-media"><img src="images/ABX.png" alt="Operational analytics dashboard" loading="lazy"></div>
+      <div>
+        <div class="section-number">&sect;01 &mdash; Overview</div>
+        <h2>Analytics finds the optimization. <em>Scheduling executes it.</em></h2>
+        <p>Every mining and industrial operation sits on terabytes of tag data that no one has time to mine &mdash; and even when the analysis surfaces the right move, manually rescheduling a shutdown or reallocating a workforce takes weeks. Two bottlenecks, one problem.</p>
+        <p>Advanced Mechanix handles the analysis layer: predictive models, operational dashboards, reporting pipelines on top of your existing historian. Our sister platform <strong>OptiScheduleAI</strong> handles the execution layer: AI-generated work schedules, shutdown plans, and workforce allocations in minutes instead of weeks.</p>
+        <ul class="feature-list">
+          <li>Read-only integration with your historian &amp; SCADA</li>
+          <li>Predictive models validated by your domain experts</li>
+          <li>AI scheduling with bidirectional SAP sync</li>
+          <li>Analytics pilot in 4&ndash;6 weeks; scheduling ROI in &lt; 60 days</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-number">&sect;02 &mdash; Capabilities</div>
+      <h2>Two layers, <em>one optimization stack.</em></h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="service-card"><div class="service-icon"><img src="images/5-1.png" alt="" loading="lazy"></div><h3>Predictive Maintenance</h3><p>Failure-mode targeted models trained on your historian data. 20&ndash;35% downtime reduction typical within 6 months.</p></div>
+      <div class="service-card"><div class="service-icon"><img src="images/2-1.png" alt="" loading="lazy"></div><h3>Operational Dashboards</h3><p>Operator-grade dashboards in Power BI, Tableau, or Grafana. Role-specific views for control room, supervisors, execs.</p></div>
+      <div class="service-card"><div class="service-icon"><img src="images/1.png" alt="" loading="lazy"></div><h3>Efficiency Analytics</h3><p>Throughput, energy, and OEE analytics that identify bottlenecks and quantify recovery opportunities.</p></div>
+      <div class="service-card"><div class="service-icon"><img src="images/3-2.png" alt="" loading="lazy"></div><h3>AI Scheduling <span style="font-size:0.72rem; color:var(--hazard); letter-spacing:0.1em; font-family:var(--font-mono); text-transform:uppercase; margin-left:6px;">via OptiScheduleAI</span></h3><p>Four weeks of manual planning collapsed into a five-minute AI output. Generates optimized work schedules, reschedules in 20 seconds when disruptions hit.</p></div>
+      <div class="service-card"><div class="service-icon"><img src="images/4-1.png" alt="" loading="lazy"></div><h3>Shutdown &amp; Outage Planning <span style="font-size:0.72rem; color:var(--hazard); letter-spacing:0.1em; font-family:var(--font-mono); text-transform:uppercase; margin-left:6px;">via OptiScheduleAI</span></h3><p>Mining turnarounds, refinery shutdowns, grid outages &mdash; planned to the hour with constraint enforcement and auto-compliance.</p></div>
+      <div class="service-card"><div class="service-icon"><img src="images/5-1.png" alt="" loading="lazy"></div><h3>Workforce Optimization <span style="font-size:0.72rem; color:var(--hazard); letter-spacing:0.1em; font-family:var(--font-mono); text-transform:uppercase; margin-left:6px;">via OptiScheduleAI</span></h3><p>Labor-requirement optimization with real-time Gantt feedback. Typical deployments reduce labor overhead 20&ndash;50% per operation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OptiScheduleAI integration section -->
+<section class="section section-dark" style="background: var(--ink); color: rgba(247,245,238,0.75);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-number" style="color: rgba(247,245,238,0.5);">&sect;03 &mdash; The Execution Layer</div>
+      <h2 style="color: var(--paper);">Meet <em style="color: var(--hazard);">OptiScheduleAI</em> &mdash; our sister platform for AI-powered industrial scheduling.</h2>
+      <p style="color: rgba(247,245,238,0.75);">Predictive analytics tells you what to do. OptiScheduleAI does it. A multi-agent AI architecture that replaces manual scheduling with optimized output in minutes.</p>
+    </div>
+
+    <div class="grid grid-2" style="gap: 48px; align-items: stretch;">
+      <div style="padding: 36px 36px 30px; background: rgba(247,245,238,0.04); border-left: 3px solid var(--hazard);">
+        <div style="font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.2em; color: var(--hazard); text-transform: uppercase; margin-bottom: 10px;">How the integration works</div>
+        <h3 style="color: var(--paper); font-family: var(--font-display); font-weight: 500; font-size: 1.4rem; letter-spacing: -0.01em; margin-bottom: 14px;">From insight to executed schedule &mdash; one workflow.</h3>
+        <ol style="color: rgba(247,245,238,0.85); padding-left: 22px; line-height: 1.7;">
+          <li style="margin-bottom: 10px;"><strong style="color: var(--paper);">Analytics surfaces the trigger.</strong> Predictive model flags a bearing failure risk, or efficiency analytics identifies a throughput bottleneck.</li>
+          <li style="margin-bottom: 10px;"><strong style="color: var(--paper);">OptiScheduleAI ingests the signal.</strong> Bidirectional SAP / CMMS sync pulls the maintenance order, work breakdown, and constraints.</li>
+          <li style="margin-bottom: 10px;"><strong style="color: var(--paper);">The AI schedules it.</strong> Billions of combinations evaluated, constraints auto-enforced. First-issue output passes 99%+ of the time.</li>
+          <li style="margin-bottom: 0;"><strong style="color: var(--paper);">Disruption? Replan in 20 seconds.</strong> Drag-and-drop Gantt with real-time labor and cost impact feedback.</li>
+        </ol>
+      </div>
+
+      <div style="padding: 36px 36px 30px; background: rgba(247,245,238,0.04); border-left: 3px solid var(--hazard);">
+        <div style="font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.2em; color: var(--hazard); text-transform: uppercase; margin-bottom: 10px;">Where OSA fits your operation</div>
+        <h3 style="color: var(--paper); font-family: var(--font-display); font-weight: 500; font-size: 1.4rem; letter-spacing: -0.01em; margin-bottom: 14px;">Use-case targets across mining &amp; industrial.</h3>
+        <ul style="color: rgba(247,245,238,0.85); padding-left: 22px; line-height: 1.7; list-style: none;">
+          <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: var(--hazard);">&rarr;</span> <strong style="color: var(--paper);">Mining shutdowns &amp; turnarounds</strong> &mdash; hour-level planning, constraint enforcement, equipment-availability coordination.</li>
+          <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: var(--hazard);">&rarr;</span> <strong style="color: var(--paper);">Refinery &amp; petrochemical turnarounds</strong> &mdash; thousands of concurrent tasks, tight critical paths, change-driven replanning.</li>
+          <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: var(--hazard);">&rarr;</span> <strong style="color: var(--paper);">Preventive maintenance scheduling</strong> &mdash; auto-generated from predictive-model outputs, balanced against labor availability.</li>
+          <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: var(--hazard);">&rarr;</span> <strong style="color: var(--paper);">Grid &amp; utility outage planning</strong> &mdash; scheduled maintenance coordinated with load forecasting and crew availability.</li>
+          <li style="margin-bottom: 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: var(--hazard);">&rarr;</span> <strong style="color: var(--paper);">Offshore &amp; remote-site scheduling</strong> &mdash; helicopter rotations, crew changes, weather-driven rescheduling.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+      <a href="https://optischeduleai.com/" class="btn" style="background: var(--hazard); border-color: var(--hazard);">Visit OptiScheduleAI &rarr;</a>
+      <a href="https://optischeduleai.com/roi-calculator.html" class="btn btn-outline">OSA ROI Calculator</a>
+      <a href="https://optischeduleai.com/case-study.html" style="color: rgba(247,245,238,0.75); font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; background: none; text-decoration: underline;">See a deployed case study</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-number">&sect;04 &mdash; Outcomes</div>
+      <h2>What the <em>combined stack</em> delivers.</h2>
+      <p>Analytics alone moves downtime and maintenance spend. Scheduling alone moves labor and shutdown cost. Together, they compound.</p>
+    </div>
+    <div class="stats-grid">
+      <div><div class="stat-num">30%+</div><div class="stat-label">Unplanned downtime reduction (analytics)</div></div>
+      <div><div class="stat-num">20&ndash;50%</div><div class="stat-label">Workforce efficiency gain (OSA)</div></div>
+      <div><div class="stat-num">~$1.8M</div><div class="stat-label">Avg. savings per shutdown (OSA verified)</div></div>
+      <div><div class="stat-num">&lt; 60 day</div><div class="stat-label">ROI timeline (OSA deployments)</div></div>
+    </div>
+    <p style="text-align:center; margin-top: 28px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--margin); letter-spacing: 0.12em; text-transform: uppercase;">Analytics stats: AM managed-service engagements (6-month average). Scheduling stats: OptiScheduleAI verified deployments.</p>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="guarantee">
+      <div class="guarantee-seal">Pilot<br>Fee<br>Refunded</div>
+      <div>
+        <h3>Scope a 4-week pilot. Refund if it doesn't prove value.</h3>
+        <p>We scope an analytics pilot covering one use case and one dashboard. If the findings don't justify continuing to production &mdash; or don't justify extending to OptiScheduleAI scheduling &mdash; we refund the pilot fee in full.</p>
+        <p style="font-size:0.88rem; color:rgba(247,245,238,0.7); margin-top:12px; font-style:italic;">We can afford this because the historian almost always holds at least one six-figure optimization. One pilot exposes it.</p>
+      </div>
+      <div><a href="contact.html" class="btn">Scope a Pilot</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-number">&sect;05 &mdash; FAQ</div>
+      <h2>Questions operations leaders ask us</h2>
+    </div>
+    <div class="faq-wrap">
+      <details class="faq-item"><summary>What data sources can you integrate with?</summary><div class="faq-body">Historians (PI, Wonderware, GE Proficy), SCADA systems, CMMS (Maximo, SAP PM), ERP, MES, and custom OT data sources. Read-only integration by default with client-controlled data egress. OptiScheduleAI adds bidirectional SAP sync for the scheduling layer.</div></details>
+      <details class="faq-item"><summary>How does the AI scheduling integration work?</summary><div class="faq-body">Our analytics layer identifies what to optimize &mdash; a failure risk surfaced by a predictive model, a throughput bottleneck identified by efficiency analytics, a maintenance backlog pulled from the CMMS. OptiScheduleAI takes that signal and generates an executed schedule: optimized work orders, shutdown plans, or workforce allocations. The two layers share a common SAP / CMMS integration path. You can run them independently or as a combined stack.</div></details>
+      <details class="faq-item"><summary>How do you handle sensitive operational data?</summary><div class="faq-body">NDAs, encrypted workspaces, role-segregated engineer access. We can run entirely inside your environment (VDI, cloud tenant) with no data leaving your network. All engineers bound by individual confidentiality agreements.</div></details>
+      <details class="faq-item"><summary>How long does a typical pilot take?</summary><div class="faq-body">Analytics pilot: 4&ndash;6 weeks for data ingestion, one predictive model, and one operational dashboard. OptiScheduleAI scheduling pilot: typically under 60 days to first documented ROI, including integration with your SAP / CMMS and a shadow-mode validation period against your current scheduling process.</div></details>
+      <details class="faq-item"><summary>Do you build dashboards we can maintain internally?</summary><div class="faq-body">Yes. We build on Power BI, Tableau, or Grafana with full knowledge transfer. Dashboards are yours to maintain, or we can operate them on retainer. OptiScheduleAI provides its own operator-grade Gantt interface plus dashboard export to your BI platform.</div></details>
+      <details class="faq-item"><summary>What outcomes are typical from analytics + scheduling together?</summary><div class="faq-body">Analytics alone: 20&ndash;35% reduction in unplanned downtime within 6 months, 15&ndash;25% reduction in maintenance spend. Adding OptiScheduleAI execution: 20&ndash;50% workforce efficiency gain, shutdown-planning cycle reduced from weeks to minutes, and documented shutdown savings averaging around $1.8M per event across verified deployments. Combined stack compounds both.</div></details>
+      <details class="faq-item"><summary>Can we start with just analytics, then add scheduling later?</summary><div class="faq-body">Yes &mdash; that's the most common path. Analytics pilot first validates the data foundation; once predictive models and dashboards are producing clear optimization targets, OptiScheduleAI scheduling is layered in to execute them. Each layer stands alone; combining them compounds the return.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-block">
+      <h2>Your historian has the answers. <em>OptiScheduleAI executes them.</em></h2>
+      <p>Scope a 4-week analytics pilot. Add scheduling when the findings are clear. Refund if it doesn't prove value.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:18px;">
+        <a href="contact.html" class="btn btn-outline">Book Analytics Call</a>
+        <a href="https://optischeduleai.com/" class="btn btn-outline" style="background:var(--hazard); border-color:var(--hazard);">Visit OptiScheduleAI</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="logo" style="margin-bottom:18px;"><img src="images/AM-White-Logo.png" alt="Advanced Mechanix"></a><p>Specialized electrical drafting, BIM modeling outsourcing, solar permit packages, and data analytics. Sister platform: <a href="https://optischeduleai.com/" style="color:var(--hazard); text-decoration:underline;">OptiScheduleAI</a> &mdash; AI scheduling for industrial operations.</p></div>
+      <div><h4>Services</h4><ul class="footer-list"><li><a href="electrical-design.html">Electrical Drafting</a></li><li><a href="bim-modeling-outsourcing.html">BIM Outsourcing</a></li><li><a href="solar-services.html">Solar Permits</a></li><li><a href="civil-design.html">Civil &amp; Structural</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div>
+      <div><h4>Sister Platform</h4><ul class="footer-list"><li><a href="https://optischeduleai.com/">OptiScheduleAI &mdash; home</a></li><li><a href="https://optischeduleai.com/mining-scheduling-software.html">Mining Scheduling</a></li><li><a href="https://optischeduleai.com/shutdown-scheduling-software.html">Shutdown Scheduling</a></li><li><a href="https://optischeduleai.com/maintenance-outage-planning.html">Maintenance &amp; Outage</a></li><li><a href="https://optischeduleai.com/sap-integrated-scheduling.html">SAP-Integrated</a></li><li><a href="https://optischeduleai.com/roi-calculator.html">ROI Calculator</a></li></ul></div>
+      <div><h4>Get in Touch</h4><ul class="footer-list"><li>+1 408 412 0717</li><li>company@advancedmechanix.com</li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; <span class="current-year"></span> Advanced Mechanix &middot; Engineering Documentation</span><span>NEC &middot; IEC &middot; AS/NZS</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

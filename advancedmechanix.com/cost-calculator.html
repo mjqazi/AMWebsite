@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrical Drafting Cost Calculator &mdash; Onshore vs. Outsourced | Advanced Mechanix</title>
+<meta name="description" content="Interactive calculator: compare in-house electrical drafting cost to outsourced delivery. Benchmark your current spend against industry rates for SLDs, panel schedules, MCC packages, and BIM modeling.">
+<link rel="canonical" href="https://advancedmechanix.com/cost-calculator.html">
+<link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
+<link rel="stylesheet" href="css/styles.css">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Electrical Drafting Cost Calculator | Advanced Mechanix">
+<meta property="og:description" content="Interactive benchmark: in-house vs. outsourced drafting cost.">
+<meta property="og:image" content="images/drawings/single-line-diagram.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
+    {"@type":"WebApplication","name":"Drafting Cost Calculator","applicationCategory":"BusinessApplication","url":"https://advancedmechanix.com/cost-calculator.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
+      {"@type":"ListItem","position":2,"name":"Cost Calculator","item":"https://advancedmechanix.com/cost-calculator.html"}
+    ]}
+  ]
+}
+</script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; company@advancedmechanix.com</span><span>&#9742; +1 408 412 0717</span></div><div><span>Mon &ndash; Fri: 9:00 &ndash; 17:00 PT &middot; 24/7 Global Production</span></div></div></div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="images/AM-Black-Logo.png" alt="Advanced Mechanix"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="electrical-design.html">Electrical</a></li>
+        <li><a href="3d-modeling.html">BIM / 3D</a></li>
+        <li><a href="solar-services.html">Solar</a></li>
+        <li><a href="data-analytics.html">Analytics</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Insights</a></li>
+        <li class="nav-cta"><a href="contact.html">Free Drawing</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Cost Calculator</div>
+    <h1>How much is your drafting actually costing you?</h1>
+    <p>Benchmark your in-house electrical drafting spend against onshore vendor rates and outsourced delivery. Adjust the inputs to match your operation.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap:60px; align-items:start;">
+      <div class="calc-panel">
+        <h3 style="margin-bottom:20px;">Your Operation</h3>
+
+        <div class="calc-row">
+          <label for="c-sld">Single-line diagrams per year</label>
+          <input type="number" id="c-sld" value="24" min="0">
+        </div>
+        <div class="calc-row">
+          <label for="c-panel">Panel schedules / MCC docs per year</label>
+          <input type="number" id="c-panel" value="36" min="0">
+        </div>
+        <div class="calc-row">
+          <label for="c-cable">Cable schedules per year</label>
+          <input type="number" id="c-cable" value="18" min="0">
+        </div>
+        <div class="calc-row">
+          <label for="c-bim">BIM / 3D model packages per year</label>
+          <input type="number" id="c-bim" value="6" min="0">
+        </div>
+        <div class="calc-row">
+          <label for="c-region">Your region (sets onshore rate)</label>
+          <select id="c-region">
+            <option value="us">United States</option>
+            <option value="au">Australia</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="eu">Europe</option>
+          </select>
+        </div>
+
+        <div class="calc-result">
+          <div class="calc-label">Estimated annual savings</div>
+          <div class="calc-value" id="c-savings">$0</div>
+          <div class="calc-vs">vs. equivalent onshore-hired delivery</div>
+        </div>
+
+        <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="contact.html" class="btn" data-track-event="calc_cta_click">Get My Detailed Quote</a>
+          <a href="case-studies.html" class="btn btn-ghost">See Case Studies</a>
+        </div>
+      </div>
+
+      <div>
+        <span class="eyebrow">Methodology</span>
+        <h2>How this calculator works</h2>
+        <p>We benchmark your drawing counts against published rate data from major onshore engineering consultancies across the US, Australia, Canada, UK, and Europe. Our per-drawing rates are the averages we quote to new clients.</p>
+        <p><strong>What it includes:</strong></p>
+        <ul class="feature-list">
+          <li>Average fully-loaded onshore drafter cost per drawing type</li>
+          <li>Advanced Mechanix standard per-drawing rate</li>
+          <li>Typical time-per-drawing benchmarks</li>
+        </ul>
+        <p><strong>What it excludes:</strong></p>
+        <ul style="padding-left:20px; color:var(--muted); font-size:0.92rem;">
+          <li>Revision cycles beyond the included standard (2 per drawing)</li>
+          <li>Specialist studies (arc flash, load flow, protection coordination)</li>
+          <li>Stamp fees where applicable</li>
+          <li>Onboarding and standards-library setup (one-off)</li>
+        </ul>
+        <p style="font-size:0.85rem; color:var(--muted); margin-top:20px;">Calculator output is an estimate based on industry benchmarks, not a quote. Actual pricing depends on scope, complexity, and engagement model. Request a detailed scoping call for a firm proposal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Benchmark Rates</span>
+      <h2>Industry rate context</h2>
+      <p>Published and observed rates for electrical drafting across major regions, 2025 data.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="feature-item"><h4>Single-Line Diagram</h4><p style="color:var(--muted); font-size:0.88rem;">US onshore: $1,200&ndash;$2,400 each<br>AM rate: $480&ndash;$960 each</p></div>
+      <div class="feature-item"><h4>Panel Schedule / MCC</h4><p style="color:var(--muted); font-size:0.88rem;">US onshore: $800&ndash;$1,800 each<br>AM rate: $320&ndash;$720 each</p></div>
+      <div class="feature-item"><h4>Cable Schedule</h4><p style="color:var(--muted); font-size:0.88rem;">US onshore: $1,500&ndash;$3,200 each<br>AM rate: $600&ndash;$1,280 each</p></div>
+      <div class="feature-item"><h4>BIM / 3D Package</h4><p style="color:var(--muted); font-size:0.88rem;">US onshore: $12,000&ndash;$28,000<br>AM rate: $4,800&ndash;$11,200</p></div>
+    </div>
+    <p style="text-align:center; font-size:0.85rem; color:var(--muted); margin-top:30px;">Rates vary by complexity, platform, jurisdiction, and engagement model. All quoted in USD.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-block">
+      <h2>Numbers look worth a conversation?</h2>
+      <p>Book a 30-minute scoping call. We'll build a detailed quote tailored to your project pipeline.</p>
+      <a href="contact.html" class="btn btn-outline">Book Scoping Call</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="logo" style="margin-bottom:18px;"><img src="images/AM-White-Logo.png" alt="Advanced Mechanix"></a><p>Specialized electrical drafting, BIM modeling, solar permit packages, and data analytics. Onshore project management, offshore production scale, first drawing free.</p></div>
+      <div><h4>Services</h4><ul class="footer-list"><li><a href="electrical-design.html">Electrical Drafting</a></li><li><a href="3d-modeling.html">3D BIM Modeling</a></li><li><a href="solar-services.html">Solar Permits</a></li><li><a href="civil-design.html">Civil &amp; Structural</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div>
+      <div><h4>Company</h4><ul class="footer-list"><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="blog.html">Insights</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Get in Touch</h4><ul class="footer-list"><li>+1 408 412 0717</li><li>company@advancedmechanix.com</li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
+    </div>
+    <div class="footer-bottom">&copy; <span class="current-year"></span> Advanced Mechanix &middot; NEC &#8226; IEC &#8226; AS/NZS</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// Cost calculator — standalone
+(function(){
+  // Per-drawing rate assumptions (USD midpoints)
+  const ONSHORE = {
+    us:  { sld: 1800, panel: 1300, cable: 2350, bim: 20000 },
+    au:  { sld: 1950, panel: 1450, cable: 2500, bim: 22000 },
+    ca:  { sld: 1650, panel: 1200, cable: 2200, bim: 18000 },
+    uk:  { sld: 1700, panel: 1250, cable: 2250, bim: 19000 },
+    eu:  { sld: 1600, panel: 1200, cable: 2150, bim: 17000 }
+  };
+  const AM = { sld: 720, panel: 520, cable: 940, bim: 8000 };
+
+  function fmt(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function calc() {
+    const sld  = Math.max(0, parseInt(document.getElementById('c-sld').value  || '0', 10));
+    const pn   = Math.max(0, parseInt(document.getElementById('c-panel').value|| '0', 10));
+    const cab  = Math.max(0, parseInt(document.getElementById('c-cable').value|| '0', 10));
+    const bim  = Math.max(0, parseInt(document.getElementById('c-bim').value  || '0', 10));
+    const reg  = document.getElementById('c-region').value;
+    const rates = ONSHORE[reg] || ONSHORE.us;
+    const onshore = sld*rates.sld + pn*rates.panel + cab*rates.cable + bim*rates.bim;
+    const amTotal = sld*AM.sld   + pn*AM.panel    + cab*AM.cable    + bim*AM.bim;
+    const savings = Math.max(0, onshore - amTotal);
+    document.getElementById('c-savings').textContent = fmt(savings);
+  }
+
+  ['c-sld','c-panel','c-cable','c-bim','c-region'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', calc);
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering Glossary &mdash; SLD, BIM, NEC, NFPA 70E &amp; More | Advanced Mechanix</title>
+<meta name="description" content="Plain-English definitions for electrical engineering, BIM, and solar permit terminology. SLD, MCC, arc flash, LOD, NEC, NFPA 70E, IEEE 1584, and more.">
+<link rel="canonical" href="https://advancedmechanix.com/glossary.html">
+<link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
+<link rel="stylesheet" href="css/styles.css">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Engineering Glossary | Advanced Mechanix">
+<meta property="og:description" content="Plain-English definitions for electrical engineering, BIM, and solar permit terminology.">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
+    {"@type":"CollectionPage","@id":"https://advancedmechanix.com/glossary.html#collection","name":"Engineering Glossary","url":"https://advancedmechanix.com/glossary.html"},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
+      {"@type":"ListItem","position":2,"name":"Glossary","item":"https://advancedmechanix.com/glossary.html"}
+    ]},
+    {"@type":"DefinedTermSet","@id":"https://advancedmechanix.com/glossary.html#termset","name":"Advanced Mechanix Engineering Glossary","hasDefinedTerm":[
+      {"@type":"DefinedTerm","name":"Single-Line Diagram (SLD)","description":"A simplified electrical schematic representing a three-phase system as a single line, showing sources, transformers, protective devices, buses, and loads with their ratings.","url":"https://advancedmechanix.com/what-is-a-single-line-diagram.html"},
+      {"@type":"DefinedTerm","name":"NFPA 70E","description":"US consensus standard for electrical safety in the workplace. Covers shock, arc flash, and arc blast hazard protection through risk assessment, safe work practices, PPE, and training.","url":"https://advancedmechanix.com/what-is-nfpa-70e.html"},
+      {"@type":"DefinedTerm","name":"NEC","description":"National Electrical Code (NFPA 70). US foundational code governing the installation of electrical systems. Revised every three years."},
+      {"@type":"DefinedTerm","name":"Arc Flash","description":"Intense heat, light, and pressure wave generated when a fault creates an arcing short-circuit. Quantified via IEEE 1584 incident energy calculations."},
+      {"@type":"DefinedTerm","name":"IEEE 1584","description":"Industry-standard method for calculating arc flash incident energy. Input to NFPA 70E-compliant PPE selection and equipment labeling."},
+      {"@type":"DefinedTerm","name":"LOD (Level of Development)","description":"BIM concept defining how developed a model element is at a given project phase. Common levels: LOD 100 (conceptual), 200 (approximate), 300 (accurate), 350 (coordinated), 400 (fabrication)."},
+      {"@type":"DefinedTerm","name":"MCC (Motor Control Center)","description":"Grouped assembly of motor starters, protective devices, and associated wiring in a single enclosure for controlling multiple motors from a common bus."},
+      {"@type":"DefinedTerm","name":"Hazardous Area Classification","description":"Division of areas per NEC Art. 500/505 or IEC 60079 based on the likelihood of explosive gas/dust presence. Drives equipment and installation requirements."},
+      {"@type":"DefinedTerm","name":"AHJ (Authority Having Jurisdiction)","description":"The local regulator responsible for approving electrical installations. In the US typically a city or county building department; in solar permitting context, defines local requirements and plan-check process."},
+      {"@type":"DefinedTerm","name":"BEP (BIM Execution Plan)","description":"Document defining how a project's BIM will be executed: LOD requirements, coordinate system, file naming, model federation, clash detection process, deliverable schedule."}
+    ]}
+  ]
+}
+</script>
+
+<style>
+.glossary-grid { display: grid; grid-template-columns: 200px 1fr; gap: 60px; align-items: start; }
+.glossary-toc { position: sticky; top: 100px; }
+.glossary-toc ul { list-style: none; padding: 0; }
+.glossary-toc li { font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; }
+.glossary-toc a { background: none; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+.glossary-toc a::before { content: ''; width: 14px; height: 1px; background: var(--rule); transition: background 0.2s, width 0.2s; }
+.glossary-toc a:hover::before { background: var(--hazard); width: 22px; }
+.glossary-entry { padding: 32px 0; border-bottom: 1px solid var(--rule); }
+.glossary-entry:first-child { border-top: 1px solid var(--rule); }
+.glossary-letter { font-family: var(--font-mono); font-size: 0.82rem; color: var(--hazard); letter-spacing: 0.2em; margin-bottom: 6px; }
+.glossary-entry h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 12px; letter-spacing: -0.01em; }
+.glossary-entry p { font-size: 1rem; line-height: 1.7; color: var(--ink-2); max-width: 68ch; }
+.glossary-entry .read-more { font-family: var(--font-mono); font-size: 0.78rem; color: var(--hazard); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 12px; display: inline-block; background: none; }
+@media (max-width: 900px) {
+  .glossary-grid { grid-template-columns: 1fr; }
+  .glossary-toc { position: static; }
+  .glossary-toc ul { display: flex; flex-wrap: wrap; gap: 14px; }
+  .glossary-toc li { margin: 0; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; company@advancedmechanix.com</span><span>&#9742; +1 408 412 0717</span></div><div><span>REV 2026.04 &middot; Q2 MANAGED-SERVICE SLOTS: 2 OF 3 REMAINING</span></div></div></div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="images/AM-Black-Logo.png" alt="Advanced Mechanix"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="electrical-design.html">Electrical</a></li>
+        <li><a href="3d-modeling.html">BIM</a></li>
+        <li><a href="solar-services.html">Solar</a></li>
+        <li><a href="data-analytics.html">Analytics</a></li>
+        <li><a href="industries/index.html">Industries</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-cta"><a href="contact.html">Free Drawing</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-hero center">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Glossary</div>
+    <h1>Engineering glossary, <em>plain English.</em></h1>
+    <p>Reference definitions for the terminology we use every day. Linked to deeper explainers where available.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="glossary-grid">
+      <aside class="glossary-toc">
+        <ul>
+          <li><a href="#a">A</a></li>
+          <li><a href="#b">B</a></li>
+          <li><a href="#i">I</a></li>
+          <li><a href="#l">L</a></li>
+          <li><a href="#m">M</a></li>
+          <li><a href="#n">N</a></li>
+          <li><a href="#s">S</a></li>
+        </ul>
+      </aside>
+
+      <div>
+        <div class="glossary-entry" id="a">
+          <div class="glossary-letter">A</div>
+          <h3>AHJ &mdash; Authority Having Jurisdiction</h3>
+          <p>The local regulator responsible for approving electrical installations. In the US, typically a city or county building department. In solar permitting, the AHJ defines local plan-check requirements, submission format, and inspection process. Each AHJ has quirks; a good permit vendor maintains checklists per jurisdiction.</p>
+        </div>
+        <div class="glossary-entry">
+          <div class="glossary-letter">A</div>
+          <h3>Arc Flash</h3>
+          <p>The intense heat, light, and pressure wave generated when an electrical fault creates an arcing short-circuit. Arc flash hazards are quantified via IEEE 1584 incident-energy calculations and mitigated through NFPA 70E-compliant PPE selection, approach boundaries, and work practices. See <a href="what-is-nfpa-70e.html">our NFPA 70E guide</a>.</p>
+        </div>
+
+        <div class="glossary-entry" id="b">
+          <div class="glossary-letter">B</div>
+          <h3>BEP &mdash; BIM Execution Plan</h3>
+          <p>A document defining how a project's BIM will be executed: LOD requirements, coordinate system, file naming, model federation, clash detection process, deliverable schedule. Required input for any outsourced BIM engagement.</p>
+        </div>
+        <div class="glossary-entry">
+          <div class="glossary-letter">B</div>
+          <h3>BIM &mdash; Building Information Modeling</h3>
+          <p>An intelligent 3D modeling workflow where model elements carry metadata beyond geometry (equipment tags, specs, manufacturer data). Enables coordination, clash detection, and digital twins. Typical tools: Revit, Navisworks.</p>
+        </div>
+
+        <div class="glossary-entry" id="i">
+          <div class="glossary-letter">I</div>
+          <h3>IEEE 1584</h3>
+          <p>The industry-standard method for calculating arc flash incident energy. IEEE 1584 output drives NFPA 70E-compliant PPE selection and equipment label values. Performed in ETAP, SKM Power Tools, or similar; requires accurate upstream fault data and protection settings.</p>
+        </div>
+        <div class="glossary-entry">
+          <div class="glossary-letter">I</div>
+          <h3>Incident Energy</h3>
+          <p>The thermal energy density (typically in cal/cm&sup2;) delivered to a worker at the working distance during an arc flash event. Calculated via IEEE 1584, used to determine PPE category and arc flash boundary per NFPA 70E.</p>
+        </div>
+
+        <div class="glossary-entry" id="l">
+          <div class="glossary-letter">L</div>
+          <h3>LOD &mdash; Level of Development</h3>
+          <p>BIM concept defining how developed a model element is at a given project phase. Common levels: LOD 100 (conceptual), 200 (approximate geometry), 300 (accurate geometry), 350 (coordinated with other disciplines), 400 (fabrication-ready). Defined in the project's BEP.</p>
+        </div>
+
+        <div class="glossary-entry" id="m">
+          <div class="glossary-letter">M</div>
+          <h3>MCC &mdash; Motor Control Center</h3>
+          <p>A grouped assembly of motor starters, protective devices, and associated wiring in a single enclosure for controlling multiple motors from a common bus. MCC documentation is a core electrical drafting deliverable for industrial and mining facilities.</p>
+        </div>
+        <div class="glossary-entry">
+          <div class="glossary-letter">M</div>
+          <h3>MEP</h3>
+          <p>Mechanical, Electrical, Plumbing. The three technical disciplines that share coordination responsibility on most commercial and industrial building projects. In BIM terms, the three disciplines that drive the most clashes.</p>
+        </div>
+
+        <div class="glossary-entry" id="n">
+          <div class="glossary-letter">N</div>
+          <h3>NEC &mdash; National Electrical Code</h3>
+          <p>NFPA 70. US foundational code governing the installation of electrical systems. Revised every three years (current: NEC 2023). Adopted into law by states and local AHJs.</p>
+        </div>
+        <div class="glossary-entry">
+          <div class="glossary-letter">N</div>
+          <h3>NFPA 70E</h3>
+          <p>US consensus standard for electrical safety in the workplace. Addresses worker protection from shock, arc flash, and arc blast through risk assessment, safe work practices, PPE, and training. Referenced by OSHA as industry best practice. <a href="what-is-nfpa-70e.html">Full guide</a>.</p>
+        </div>
+
+        <div class="glossary-entry" id="s">
+          <div class="glossary-letter">S</div>
+          <h3>SLD &mdash; Single-Line Diagram</h3>
+          <p>A simplified electrical schematic representing a three-phase power system as a single line, showing sources, transformers, protective devices, buses, and loads with their ratings. The master reference document for any electrical system. <a href="what-is-a-single-line-diagram.html">Full guide</a>.</p>
+        </div>
+        <div class="glossary-entry">
+          <div class="glossary-letter">S</div>
+          <h3>Substation</h3>
+          <p>An assembly of electrical equipment for voltage transformation, switching, or protection. Transmission substations typically operate at 66 kV and above; distribution substations step down to 11 kV or lower for local distribution.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container">
+    <div class="cta-block">
+      <h2>Want a term added?</h2>
+      <p>Tell us what's missing. We'll write a plain-English definition and add it.</p>
+      <a href="contact.html" class="btn btn-outline">Suggest a Term</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="logo" style="margin-bottom: 24px;"><img src="images/AM-White-Logo.png" alt="Advanced Mechanix"></a><p>Specialized electrical drafting, BIM modeling, solar permit packages, and data analytics. Onshore project management. Offshore production scale. First drawing free.</p></div>
+      <div><h4>Services</h4><ul class="footer-list"><li><a href="electrical-design.html">Electrical Drafting</a></li><li><a href="3d-modeling.html">3D BIM Modeling</a></li><li><a href="solar-services.html">Solar Permits</a></li><li><a href="civil-design.html">Civil &amp; Structural</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div>
+      <div><h4>Resources</h4><ul class="footer-list"><li><a href="faq.html">FAQ</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="guide-electrical-drafting-outsourcing.html">Outsourcing Guide</a></li></ul></div>
+      <div><h4>Office</h4><ul class="footer-list"><li>+1 408 412 0717</li><li>company@advancedmechanix.com</li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; <span class="current-year"></span> Advanced Mechanix &middot; Engineering Documentation</span><span>NEC &middot; IEC &middot; AS/NZS &middot; CSA &middot; BS 7671</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
