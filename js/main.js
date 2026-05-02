@@ -68,27 +68,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Contact form (client-side acknowledgment; wire to backend before launch)
+  // Contact form — POSTs to /contact-handler.php (PHP mailer, same-origin)
   const form = document.getElementById('consultation-form');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    const success = document.getElementById('form-success');
+    const errorBox = document.getElementById('form-error');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn ? submitBtn.textContent : '';
+
+    const showError = (msg) => {
+      if (!errorBox) { alert(msg); return; }
+      errorBox.textContent = msg;
+      errorBox.style.display = 'block';
+      errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+    const hideError = () => { if (errorBox) errorBox.style.display = 'none'; };
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const success = document.getElementById('form-success');
+      hideError();
       const required = form.querySelectorAll('[required]');
       let valid = true;
       required.forEach(f => {
-        if (!f.value.trim()) {
-          f.style.borderColor = '#E11D48';
-          valid = false;
-        } else {
-          f.style.borderColor = '';
-        }
+        if (!f.value.trim()) { f.style.borderColor = '#E11D48'; valid = false; }
+        else { f.style.borderColor = ''; }
       });
-      if (!valid) return;
-      if (success) { success.classList.add('show'); success.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-      window.amTrack('form_submit', { form: form.id || 'consultation', page: location.pathname });
-      form.reset();
-      setTimeout(() => success && success.classList.remove('show'), 8000);
+      if (!valid) { showError('Please complete the required fields.'); return; }
+
+      const action = form.getAttribute('action') || '/contact-handler.php';
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+
+      try {
+        const res = await fetch(action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' },
+          credentials: 'same-origin'
+        });
+        let data = {};
+        try { data = await res.json(); } catch (_) {}
+        if (!res.ok || !data.ok) {
+          showError(data.error || 'Could not send your message. Please email company@advancedmechanix.com.');
+          return;
+        }
+        if (success) { success.classList.add('show'); success.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+        window.amTrack('form_submit', { form: form.id || 'consultation', page: location.pathname });
+        form.reset();
+        setTimeout(() => success && success.classList.remove('show'), 12000);
+      } catch (err) {
+        showError('Network error. Please try again or email company@advancedmechanix.com.');
+      } finally {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel; }
+      }
     });
   }
 

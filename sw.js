@@ -3,7 +3,7 @@
 // navigations near-instant on mobile. Bump CACHE_VERSION on any deploy
 // where you need clients to refresh precached assets.
 
-const CACHE_VERSION = 'am-v1-2026-04-26';
+const CACHE_VERSION = 'am-v2-2026-05-02';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;

@@ -81,6 +81,11 @@ ErrorDocument 404 /404.html
   Require all denied
 </FilesMatch>
 
+# --- Deny internal docs (LAUNCH-TODO, READMEs, etc.) ---
+<FilesMatch "\.(md|markdown)$">
+  Require all denied
+</FilesMatch>
+
 # =====================================================================
 # NGINX equivalent (reference — use in /etc/nginx/sites-available/...)
 # =====================================================================

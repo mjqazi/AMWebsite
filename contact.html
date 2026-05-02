@@ -157,7 +157,12 @@
       <div class="form-card">
         <h3>Request Free Consultation</h3>
         <div class="form-success" id="form-success">Your consultation request has been received. One of our engineering specialists will contact you within 1 business day.</div>
-        <form id="consultation-form" novalidate>
+        <div class="form-error" id="form-error" style="display:none; padding:14px 18px; margin-bottom:18px; background:#fdecea; border-left:3px solid var(--hazard); color:var(--ink); font-size:0.92rem; line-height:1.55;"></div>
+        <form id="consultation-form" action="/contact-handler.php" method="POST" novalidate>
+          <div aria-hidden="true" style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">
+            <label for="website">Leave this field empty</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
           <div class="form-row">
             <div class="form-group">
               <label for="name">Full Name</label>
