@@ -10,24 +10,25 @@
 <link rel="stylesheet" href="css/styles.css">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://advancedmechanix.com/careers.html">
 <meta property="og:site_name" content="Advanced Mechanix">
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- Structured Data: Organization + WebSite -->
 <script type="application/ld+json">
 {
-  "": "https://schema.org",
-  "": [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "": "Organization",
-      "": "https://advancedmechanix.com/#organization",
+      "@type": "Organization",
+      "@id": "https://advancedmechanix.com/#organization",
       "name": "Advanced Mechanix",
       "url": "https://advancedmechanix.com/",
       "logo": "https://advancedmechanix.com/images/AM-Black-Logo.png",
       "description": "Specialized engineering services firm providing electrical drafting, civil design, 3D BIM modeling, solar permit packages, and data analytics through integrated onshore-offshore teams.",
       "foundingDate": "2020",
       "address": {
-        "": "PostalAddress",
+        "@type": "PostalAddress",
         "streetAddress": "12478 San Bruno Cove",
         "addressLocality": "San Diego",
         "addressRegion": "CA",
@@ -35,26 +36,54 @@
         "addressCountry": "US"
       },
       "contactPoint": {
-        "": "ContactPoint",
+        "@type": "ContactPoint",
         "telephone": "+1-408-412-0717",
-        "email": "company.com",
+        "email": "company@advancedmechanix.com",
         "contactType": "sales"
       },
       "areaServed": ["United States","Australia","Canada","United Kingdom","Worldwide"],
       "knowsAbout": ["Electrical Design","AutoCAD Electrical","Microstation","Revit MEP","ETAP","SkyCAD","EPLAN","BIM Coordination","Solar Permit Packages","Arc Flash Studies","Industrial Power Distribution","Mining Electrical Engineering"]
     },
     {
-      "": "WebSite",
-      "": "https://advancedmechanix.com/#website",
+      "@type": "WebSite",
+      "@id": "https://advancedmechanix.com/#website",
       "url": "https://advancedmechanix.com/",
       "name": "Advanced Mechanix",
-      "publisher": {"": "https://advancedmechanix.com/#organization"},
+      "publisher": {"@id": "https://advancedmechanix.com/#organization"},
       "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://advancedmechanix.com/careers.html#webpage",
+      "url": "https://advancedmechanix.com/careers.html",
+      "name": "Careers at Advanced Mechanix",
+      "isPartOf": {"@id": "https://advancedmechanix.com/#website"},
+      "about": {"@id": "https://advancedmechanix.com/#organization"}
     }
   ]
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://advancedmechanix.com/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Careers",
+      "item": "https://advancedmechanix.com/careers.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
