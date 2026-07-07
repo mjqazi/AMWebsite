@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
-  <title>Advanced Mechanix &mdash; Engineering Insights</title>
+  <title>Advanced Mechanix &#8212; Engineering Insights</title>
   <link>https://advancedmechanix.com/blog.html</link>
   <atom:link href="https://advancedmechanix.com/feed.xml" rel="self" type="application/rss+xml" />
   <description>Insights on electrical drafting, BIM modeling, solar permitting, arc flash safety, and engineering outsourcing from the Advanced Mechanix team.</description>
@@ -10,11 +10,56 @@
   <ttl>1440</ttl>
 
   <item>
+    <title>The True Cost of Chasing Timesheets in Engineering Teams</title>
+    <link>https://advancedmechanix.com/the-true-cost-of-chasing-timesheets.html</link>
+    <guid>https://advancedmechanix.com/the-true-cost-of-chasing-timesheets.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>Admin drag, payroll errors, and billing leakage: a worked costing of the informal timesheet department inside every engineering firm, and the three ways to shut it down.</description>
+  </item>
+
+  <item>
+    <title>How to Brief an Offshore Drafting Team</title>
+    <link>https://advancedmechanix.com/how-to-brief-an-offshore-drafting-team.html</link>
+    <guid>https://advancedmechanix.com/how-to-brief-an-offshore-drafting-team.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>The eight-part briefing pack, a 45-minute kickoff agenda, and the RFI protocol that gets the first offshore drawing issue back right instead of on revision three.</description>
+  </item>
+
+  <item>
+    <title>The IEEE 1584 Arc Flash Calculation, Explained Step by Step</title>
+    <link>https://advancedmechanix.com/ieee-1584-arc-flash-calculation-explained.html</link>
+    <guid>https://advancedmechanix.com/ieee-1584-arc-flash-calculation-explained.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>The full pipeline from single-line to arc flash label: arcing current, clearing time, electrode configurations, the reduced-current check, and what changed from 2002 to 2018.</description>
+  </item>
+
+  <item>
+    <title>Case Study: A 38-Site Arc Flash Program for a Grain Network</title>
+    <link>https://advancedmechanix.com/case-study-grain-network-arc-flash.html</link>
+    <guid>https://advancedmechanix.com/case-study-grain-network-arc-flash.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>IEEE 1584-2018 studies refreshed across an anonymized Australian grain network of 38 receival and port sites in nine months, staged around the harvest window.</description>
+  </item>
+
+  <item>
+    <title>Case Study: The Timesheet Desk We Run In-House</title>
+    <link>https://advancedmechanix.com/case-study-inside-our-timesheet-desk.html</link>
+    <guid>https://advancedmechanix.com/case-study-inside-our-timesheet-desk.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>Before timesheet management was a service, it was our own back office: how Advanced Mechanix tracks, validates, and bills time for a distributed engineering team.</description>
+  </item>
+
+  <item>
     <title>The Complete Guide to Outsourcing Electrical Drafting (2026)</title>
     <link>https://advancedmechanix.com/guide-electrical-drafting-outsourcing.html</link>
     <guid>https://advancedmechanix.com/guide-electrical-drafting-outsourcing.html</guid>
     <dc:creator>Junaid Qazi</dc:creator>
-    <pubDate>Fri, 19 Apr 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
     <description>A 2,500-word buyer's guide for engineering managers, BIM leads, and procurement officers evaluating offshore drafting vendors. Standards, security, SLAs, pricing benchmarks, seven red flags.</description>
   </item>
 
@@ -23,7 +68,7 @@
     <link>https://advancedmechanix.com/what-is-a-single-line-diagram.html</link>
     <guid>https://advancedmechanix.com/what-is-a-single-line-diagram.html</guid>
     <dc:creator>Junaid Qazi</dc:creator>
-    <pubDate>Fri, 19 Apr 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
     <description>An illustrated engineer's guide to the most-referenced drawing in electrical engineering. Symbols, standards, reading conventions, and common mistakes.</description>
   </item>
 
@@ -32,7 +77,7 @@
     <link>https://advancedmechanix.com/what-is-nfpa-70e.html</link>
     <guid>https://advancedmechanix.com/what-is-nfpa-70e.html</guid>
     <dc:creator>Junaid Qazi</dc:creator>
-    <pubDate>Fri, 19 Apr 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
     <description>Plain-English guide to the US electrical safety standard. How it differs from NEC, arc flash risk assessment, PPE categories, employer documentation obligations.</description>
   </item>
 </channel>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: Arc Flash Program Across 38 Grain Sites</title>
+<meta name="description" content="How an Australian grain-handling network refreshed IEEE 1584 arc flash studies across 38 sites in nine months — without stopping grain intake.">
+<link rel="canonical" href="https://advancedmechanix.com/case-study-grain-network-arc-flash.html">
+<link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-600-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-400-normal-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://advancedmechanix.com/case-study-grain-network-arc-flash.html">
+<meta property="og:title" content="Case Study: Arc Flash Program Across 38 Grain Sites">
+<meta property="og:description" content="IEEE 1584 arc flash studies refreshed across a 38-site grain network in nine months — staged around harvest, zero disruption to intake operations.">
+<meta property="og:image" content="https://advancedmechanix.com/images/drawings/mining-power-distribution.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
+    {"@type":"Article","@id":"https://advancedmechanix.com/case-study-grain-network-arc-flash.html#article","headline":"Case Study: A 38-Site Arc Flash Study Program for an Australian Grain-Handling Network","author":{"@type":"Person","@id":"https://advancedmechanix.com/authors/junaid-qazi#person","name":"Junaid Qazi","url":"https://advancedmechanix.com/authors/junaid-qazi.html"},"publisher":{"@id":"https://advancedmechanix.com/#organization"},"datePublished":"2026-07-07","dateModified":"2026-07-07","image":"https://advancedmechanix.com/images/drawings/mining-power-distribution.svg","mainEntityOfPage":"https://advancedmechanix.com/case-study-grain-network-arc-flash.html","about":{"@type":"Thing","name":"Arc Flash Study"}},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
+      {"@type":"ListItem","position":2,"name":"Case Studies","item":"https://advancedmechanix.com/case-studies.html"},
+      {"@type":"ListItem","position":3,"name":"Grain Network Arc Flash Program","item":"https://advancedmechanix.com/case-study-grain-network-arc-flash.html"}
+    ]}
+  ]
+}
+</script>
+
+<style>
+.concept-wrap { max-width: 820px; margin: 0 auto; }
+.concept-wrap h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-top: 2.8em; margin-bottom: 0.6em; }
+.concept-wrap h3 { font-size: 1.25rem; margin-top: 1.8em; margin-bottom: 0.5em; }
+.concept-wrap p, .concept-wrap ul, .concept-wrap ol { font-size: 1.04rem; line-height: 1.75; color: var(--ink-2); margin-bottom: 1.1em; }
+.concept-wrap ul, .concept-wrap ol { padding-left: 24px; }
+.concept-wrap li { margin-bottom: 0.35em; }
+.concept-wrap table { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.95rem; }
+.concept-wrap th, .concept-wrap td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--rule); }
+.concept-wrap th { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--margin); }
+.concept-wrap .tldr { background: var(--paper-2); padding: 24px 28px; border-left: 3px solid var(--hazard); margin: 28px 0 40px; }
+.concept-wrap .tldr h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 10px; }
+.concept-wrap .tldr p { margin: 0; font-family: var(--font-display); font-style: italic; font-size: 1.12rem; color: var(--ink); }
+.related-reads { margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--rule); }
+.related-reads h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 18px; }
+.related-reads ul { list-style: none; padding: 0; }
+.related-reads li { margin-bottom: 10px; font-family: var(--font-display); font-size: 1.08rem; }
+.related-reads a { color: var(--ink); background: none; }
+.related-reads a:hover { color: var(--hazard); }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; company@advancedmechanix.com</span><span>&#9742; +1 408 412 0717</span></div><div><span>REV 2026.04 &middot; Q2 MANAGED-SERVICE SLOTS: 2 OF 3 REMAINING</span></div></div></div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="images/AM-Black-Logo.png" alt="Advanced Mechanix"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="electrical-design.html">Electrical</a></li>
+        <li><a href="3d-modeling.html">BIM</a></li>
+        <li><a href="solar-services.html">Solar</a></li>
+        <li><a href="data-analytics.html">Analytics</a></li>
+        <li><a href="timesheet.html">Timesheets</a></li>
+        <li><a href="case-studies.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-cta"><a href="contact.html">Free Drawing</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-hero center">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="case-studies.html">Case Studies</a> &rsaquo; Grain Network Arc Flash</div>
+    <h1>38 sites, one harvest window, <em>zero interruptions.</em></h1>
+    <p>How an Australian grain-handling network refreshed its arc flash studies across 38 sites in nine months &mdash; without stopping a single receival site.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="concept-wrap">
+
+      <div class="tldr">
+        <h4>Project Snapshot</h4>
+        <p>Client: Australian grain-handling network (anonymized composite &mdash; identifying details altered; representative of the engagement). Scope: IEEE 1584-2018 arc flash studies across 38 receival and port sites, ~520 buses. Platform: ETAP. Duration: 9 months, staged around harvest. Field data collected by the client's electricians using our structured collection packs.</p>
+      </div>
+
+      <h2>The situation</h2>
+      <p>The client operates a network of grain receival sites and port terminals spread across a very large area &mdash; each with its own transformers, MCCs, and distribution boards driving conveyors, elevators, aeration fans, and ship loaders. Their last network-wide arc flash assessment predated both the IEEE 1584-2018 method and several rounds of site upgrades. An insurer review flagged the gap; internally, the electrical team already knew the labels on the gear no longer matched the systems behind them.</p>
+      <p>Three constraints shaped the engagement:</p>
+      <ul>
+        <li><strong>The harvest window is untouchable.</strong> During intake season the sites run hard, and nobody is walking a consultant through a switchroom.</li>
+        <li><strong>Documentation quality varied wildly by site.</strong> Some sites had current single-lines; others had drawings two upgrade cycles old, or none that could be located.</li>
+        <li><strong>Onshore study quotes didn't scale.</strong> Priced site-by-site by local consultancies, the program's cost was roughly double the approved budget &mdash; a familiar shape of problem (see our <a href="guide-electrical-drafting-outsourcing.html">outsourcing pricing benchmarks</a>).</li>
+      </ul>
+
+      <h2>What we did</h2>
+      <p>The engagement ran as a staged program rather than 38 separate studies:</p>
+      <ol>
+        <li><strong>Site triage.</strong> All 38 sites ranked by documentation quality, electrical complexity, and operational criticality. Port terminals and the largest receival sites first.</li>
+        <li><strong>Structured data collection packs.</strong> Rather than flying engineers between remote sites, we built per-site collection packs &mdash; photo checklists, nameplate forms, settings capture sheets &mdash; that the client's own electricians completed during routine site visits. Our team validated each pack overnight and returned queries within 24 hours.</li>
+        <li><strong>SLD verification and redraw.</strong> Every site got a verified single-line as a study prerequisite; 14 sites needed substantial redraws from field data. These became client-standard drawings, not just study inputs.</li>
+        <li><strong>ETAP modeling and studies.</strong> Short-circuit, protection coordination review, and IEEE 1584-2018 incident-energy calculations at every relevant bus, including reduced-arcing-current cases and per-bus electrode configurations.</li>
+        <li><strong>Labels and remediation register.</strong> Print-ready labels per site, plus a network-wide remediation register: recommended protection-setting changes ranked by risk reduction per dollar &mdash; most requiring only settings work by site electricians, no hardware.</li>
+      </ol>
+
+      <h2>Deliverables</h2>
+      <ul>
+        <li>38 verified site single-line diagrams (14 fully redrawn)</li>
+        <li>Per-site ETAP models, handed over in native format</li>
+        <li>Short-circuit &amp; coordination study reports per site</li>
+        <li>IEEE 1584-2018 incident-energy results for ~520 buses</li>
+        <li>Print-ready arc flash labels for every labeled equipment item</li>
+        <li>Network remediation register: recommended setting changes, ranked</li>
+        <li>Program summary for the insurer and the board HSE committee</li>
+      </ul>
+
+      <h2>Results</h2>
+      <div class="case-metrics" style="margin: 28px 0 8px;">
+        <div class="case-metric"><strong>38</strong><span>Sites completed</span></div>
+        <div class="case-metric"><strong>9 mo</strong><span>Program duration</span></div>
+        <div class="case-metric"><strong>0</strong><span>Operational interruptions</span></div>
+      </div>
+      <p style="margin-top: 24px;">The program finished inside the originally approved budget that onshore quotes had doubled. After the client's electricians implemented the first tranche of recommended setting changes, the number of buses with calculated incident energy above 8 cal/cm&sup2; at the working distance fell by roughly three-quarters &mdash; the few that remain are queued behind switchgear upgrades already on the capital plan. Most durably, every site now has a verified single-line and a native ETAP model, so the five-year review cycle becomes an update, not another archaeology project.</p>
+
+      <div class="testimonial-card" style="margin-top: 40px;">
+        <div class="testimonial-head">
+          <div class="testimonial-avatar">RM</div>
+          <div class="testimonial-who">
+            <div class="testimonial-author">R.M., Electrical Superintendent</div>
+            <div class="testimonial-role">Grain-handling network, Australia &middot; 38-site arc flash program</div>
+          </div>
+        </div>
+        <p class="testimonial-quote">The collection-pack approach was the difference. My own electricians gathered the data on their normal runs, and the queries came back overnight. We got through the whole network without hiring anyone or stopping anything.</p>
+        <div class="testimonial-result">&#10004; 38 sites in 9 months / high-incident-energy buses cut by roughly three-quarters</div>
+      </div>
+
+      <div class="guarantee" style="margin-top: 60px;">
+        <div class="guarantee-seal">First<br>Bus<br>Free</div>
+        <div>
+          <h3>Running a multi-site network on stale labels?</h3>
+          <p>Send us one site's SLD and protection settings. We'll perform an initial IEEE 1584 calculation at one bus for free, and show you what a staged program would look like for your network.</p>
+        </div>
+        <div><a href="contact.html" class="btn">Claim Free Calculation</a></div>
+      </div>
+
+      <div class="related-reads">
+        <h4>Related Reads</h4>
+        <ul>
+          <li><a href="arc-flash-study-services.html">Arc flash study services &mdash; IEEE 1584 &amp; NFPA 70E</a></li>
+          <li><a href="ieee-1584-arc-flash-calculation-explained.html">The IEEE 1584 calculation, explained step by step</a></li>
+          <li><a href="what-is-nfpa-70e.html">What is NFPA 70E? Arc flash safety explained</a></li>
+          <li><a href="case-studies.html">All case studies</a></li>
+        </ul>
+      </div>
+
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="logo" style="margin-bottom: 24px;"><img src="images/AM-White-Logo.png" alt="Advanced Mechanix"></a><p>Specialized electrical drafting, BIM modeling, solar permit packages, and data analytics. Onshore project management. Offshore production scale. First drawing free.</p></div>
+      <div><h4>Services</h4><ul class="footer-list"><li><a href="electrical-design.html">Electrical Drafting</a></li><li><a href="3d-modeling.html">3D BIM Modeling</a></li><li><a href="solar-services.html">Solar Permits</a></li><li><a href="civil-design.html">Civil &amp; Structural</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div>
+      <div><h4>Company</h4><ul class="footer-list"><li><a href="about.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="blog.html">Insights</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Office</h4><ul class="footer-list"><li>+1 408 412 0717</li><li>company@advancedmechanix.com</li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="current-year"></span> Advanced Mechanix &middot; Engineering Documentation</span>
+      <span>NEC &middot; IEC &middot; AS/NZS &middot; CSA &middot; BS 7671</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

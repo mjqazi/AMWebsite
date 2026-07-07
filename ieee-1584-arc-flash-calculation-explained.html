@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IEEE 1584 Arc Flash Calculation Explained</title>
+<meta name="description" content="Step-by-step guide to the IEEE 1584-2018 incident-energy method: required data, arcing current, clearing time, electrode configuration, and label outputs.">
+<link rel="canonical" href="https://advancedmechanix.com/ieee-1584-arc-flash-calculation-explained.html">
+<link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-600-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-400-normal-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://advancedmechanix.com/ieee-1584-arc-flash-calculation-explained.html">
+<meta property="og:title" content="IEEE 1584 Arc Flash Calculation Explained">
+<meta property="og:description" content="Step-by-step guide to the IEEE 1584-2018 incident-energy method: required data, arcing current, clearing time, electrode configuration, and label outputs.">
+<meta property="og:image" content="https://advancedmechanix.com/images/drawings/single-line-diagram.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
+    {"@type":"Article","@id":"https://advancedmechanix.com/ieee-1584-arc-flash-calculation-explained.html#article","headline":"The IEEE 1584 Arc Flash Calculation, Explained Step by Step","author":{"@type":"Person","@id":"https://advancedmechanix.com/authors/junaid-qazi#person","name":"Junaid Qazi","url":"https://advancedmechanix.com/authors/junaid-qazi.html"},"publisher":{"@id":"https://advancedmechanix.com/#organization"},"datePublished":"2026-07-07","dateModified":"2026-07-07","image":"https://advancedmechanix.com/images/drawings/single-line-diagram.svg","mainEntityOfPage":"https://advancedmechanix.com/ieee-1584-arc-flash-calculation-explained.html","about":{"@type":"Thing","name":"IEEE 1584 Arc Flash Calculation"}},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
+      {"@type":"ListItem","position":2,"name":"Insights","item":"https://advancedmechanix.com/blog.html"},
+      {"@type":"ListItem","position":3,"name":"IEEE 1584 Explained","item":"https://advancedmechanix.com/ieee-1584-arc-flash-calculation-explained.html"}
+    ]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is IEEE 1584?","acceptedAnswer":{"@type":"Answer","text":"IEEE Std 1584 is the industry-standard method for calculating arc flash incident energy and the arc flash boundary in three-phase AC power systems. The current edition, IEEE 1584-2018, is based on an extensive laboratory test program and covers systems from 208 V to 15 kV. NFPA 70E-compliant arc flash labels are almost always produced using this method."}},
+      {"@type":"Question","name":"What data is needed for an IEEE 1584 calculation?","acceptedAnswer":{"@type":"Answer","text":"An accurate single-line diagram, utility source fault data, transformer impedances, cable sizes and lengths, motor contributions, protective device types and settings, plus per-bus details: nominal voltage, electrode configuration, conductor gap, enclosure dimensions, and working distance."}},
+      {"@type":"Question","name":"Why does IEEE 1584-2018 require a reduced arcing current check?","acceptedAnswer":{"@type":"Answer","text":"Arcing current varies in practice. A lower arcing current can move a protective device from its instantaneous region into a slower part of its curve, so the fault clears in seconds instead of cycles and releases more total energy. The 2018 edition therefore requires incident energy to be evaluated at both the calculated arcing current and a reduced value, with the worst case governing the label."}},
+      {"@type":"Question","name":"Can a bus with a low fault current still be dangerous?","acceptedAnswer":{"@type":"Answer","text":"Yes — this is the most counter-intuitive result in arc flash work. Incident energy is driven by current multiplied by time. A small transformer secondary with modest fault current can produce a severe incident-energy level because the upstream device takes seconds to respond at that current level."}},
+      {"@type":"Question","name":"What must an arc flash label show?","acceptedAnswer":{"@type":"Answer","text":"Under NFPA 70E, equipment labels must show the nominal system voltage, the arc flash boundary, and at least one means of specifying PPE — typically the calculated incident energy at the working distance, or the applicable PPE category."}}
+    ]}
+  ]
+}
+</script>
+
+<style>
+.concept-wrap { max-width: 820px; margin: 0 auto; }
+.concept-wrap h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-top: 2.8em; margin-bottom: 0.6em; }
+.concept-wrap h3 { font-size: 1.25rem; margin-top: 1.8em; margin-bottom: 0.5em; }
+.concept-wrap p, .concept-wrap ul, .concept-wrap ol { font-size: 1.04rem; line-height: 1.75; color: var(--ink-2); margin-bottom: 1.1em; }
+.concept-wrap ul, .concept-wrap ol { padding-left: 24px; }
+.concept-wrap li { margin-bottom: 0.35em; }
+.concept-wrap table { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.95rem; }
+.concept-wrap th, .concept-wrap td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--rule); }
+.concept-wrap th { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--margin); }
+.concept-wrap .tldr { background: var(--paper-2); padding: 24px 28px; border-left: 3px solid var(--hazard); margin: 28px 0 40px; }
+.concept-wrap .tldr h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 10px; }
+.concept-wrap .tldr p { margin: 0; font-family: var(--font-display); font-style: italic; font-size: 1.12rem; color: var(--ink); }
+.callout {
+  border: 1px solid var(--hazard);
+  padding: 20px 24px;
+  margin: 28px 0;
+  background: var(--paper);
+  position: relative;
+}
+.callout::before {
+  content: 'WARNING';
+  position: absolute;
+  top: -11px;
+  left: 20px;
+  background: var(--paper);
+  padding: 0 10px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--hazard);
+  font-weight: 500;
+}
+.callout p { margin: 0; font-family: var(--font-display); font-style: italic; color: var(--ink); font-size: 1.05rem; }
+.related-reads { margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--rule); }
+.related-reads h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 18px; }
+.related-reads ul { list-style: none; padding: 0; }
+.related-reads li { margin-bottom: 10px; font-family: var(--font-display); font-size: 1.08rem; }
+.related-reads a { color: var(--ink); background: none; }
+.related-reads a:hover { color: var(--hazard); }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; company@advancedmechanix.com</span><span>&#9742; +1 408 412 0717</span></div><div><span>REV 2026.04 &middot; Q2 MANAGED-SERVICE SLOTS: 2 OF 3 REMAINING</span></div></div></div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="images/AM-Black-Logo.png" alt="Advanced Mechanix"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="electrical-design.html">Electrical</a></li>
+        <li><a href="3d-modeling.html">BIM</a></li>
+        <li><a href="solar-services.html">Solar</a></li>
+        <li><a href="data-analytics.html">Analytics</a></li>
+        <li><a href="timesheet.html">Timesheets</a></li>
+        <li><a href="case-studies.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-cta"><a href="contact.html">Free Drawing</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-hero center">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="blog.html">Insights</a> &rsaquo; IEEE 1584</div>
+    <h1>The IEEE 1584 calculation, <em>explained.</em></h1>
+    <p>What actually happens between "send us your single-line" and the incident-energy label on your switchgear &mdash; step by step, in plain engineering English.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="concept-wrap">
+
+      <div class="tldr">
+        <h4>TL;DR</h4>
+        <p>IEEE 1584-2018 is the empirically derived method behind nearly every arc flash label. The pipeline: verify the single-line, run a short-circuit study, estimate the arcing current, read the clearing time off the protective device's curve, then compute incident energy at the working distance &mdash; twice, once at reduced arcing current, because slower clearing at lower current is often the worst case. Time, not current, usually decides the number on the label.</p>
+      </div>
+
+      <h2>What IEEE 1584 is</h2>
+      <p>IEEE Std 1584, <em>Guide for Performing Arc-Flash Hazard Calculations</em>, is the calculation method used to quantify how much thermal energy an electrical arc would deliver to a worker standing at a defined distance. Its output &mdash; incident energy in calories per square centimetre &mdash; is the number that drives PPE selection under <a href="what-is-nfpa-70e.html">NFPA 70E</a> and equivalent workplace-safety frameworks worldwide.</p>
+      <p>The 2018 edition replaced the original 2002 model and is built on a far larger laboratory test program &mdash; over 1,800 arc tests &mdash; which is why its equations respond to details the old model ignored, most importantly the physical orientation of the conductors where the arc occurs.</p>
+
+      <h2>Where the model applies</h2>
+      <table>
+        <thead><tr><th>Parameter</th><th>IEEE 1584-2018 range</th></tr></thead>
+        <tbody>
+          <tr><td>System voltage</td><td>208 V &ndash; 15 kV, three-phase AC, 50/60 Hz</td></tr>
+          <tr><td>Bolted fault current</td><td>500 A &ndash; 106 kA (&le;600 V); 200 A &ndash; 65 kA (601 V &ndash; 15 kV)</td></tr>
+          <tr><td>Conductor gap</td><td>6.35 &ndash; 76.2 mm (&le;600 V); 19 &ndash; 254 mm (601 V &ndash; 15 kV)</td></tr>
+          <tr><td>Working distance</td><td>&ge; 305 mm (12 in)</td></tr>
+        </tbody>
+      </table>
+      <p>Outside these ranges &mdash; DC systems, transmission-class voltages, single-phase &mdash; other methods apply, and a competent study report will say so explicitly rather than quietly extrapolating.</p>
+
+      <h2>The calculation pipeline</h2>
+
+      <h3>Step 1 &mdash; Verify the single-line diagram</h3>
+      <p>Everything downstream inherits the quality of the <a href="what-is-a-single-line-diagram.html">single-line diagram</a>. Field verification confirms transformer nameplates, cable sizes and routed lengths, breaker and relay models, and &mdash; critically &mdash; the protection settings as they are <em>today</em>, not as designed. The most common cause of a wrong label is not the math; it's a breaker whose settings were changed in the field and never made it back into any document.</p>
+
+      <h3>Step 2 &mdash; Short-circuit study</h3>
+      <p>The system is modeled (ETAP, SKM, or similar) and the three-phase bolted fault current is calculated at every bus: utility source impedance, transformer impedances, cable impedances, motor contribution. This is the same study that validates equipment ratings, which is why arc flash work is usually packaged with a short-circuit and coordination study rather than bolted on afterwards.</p>
+
+      <h3>Step 3 &mdash; Estimate the arcing current</h3>
+      <p>A real arc is not a bolted connection &mdash; the arc itself has impedance, so the arcing current is lower than the bolted value, dramatically so at low voltage. IEEE 1584 provides empirical equations for arcing current as a function of bolted fault current, voltage, conductor gap, and electrode configuration. At 480 V the arcing current can be roughly half the bolted value; at medium voltage the reduction is much smaller.</p>
+
+      <h3>Step 4 &mdash; Determine the clearing time</h3>
+      <p>The arcing current is traced onto the upstream protective device's time&ndash;current curve to find how long the fault persists. Fuse, breaker trip unit, or relay plus breaker operating time &mdash; this is where protection engineering meets safety engineering, and it is the single most influential input to the final number.</p>
+
+      <h3>Step 5 &mdash; Calculate incident energy</h3>
+      <p>With arcing current, clearing time, gap, enclosure dimensions, electrode configuration, and working distance, the model computes incident energy at the worker's position, in cal/cm&sup2;. The enclosure matters because a box focuses energy toward the opening &mdash; the same arc in open air delivers substantially less energy to a worker than in a motor control center bucket.</p>
+
+      <h3>Step 6 &mdash; Repeat at reduced arcing current</h3>
+      <p>Arcing current varies in practice, so the 2018 standard requires the calculation be repeated at a reduced arcing current (using its arc-current variation factor; the 2002 edition used a flat 85% for low voltage). The reason is subtle and important: a <em>lower</em> current can push the protective device out of its instantaneous region into a slower part of its curve. The case that produces the higher incident energy governs the label.</p>
+
+      <h3>Step 7 &mdash; Arc flash boundary and labels</h3>
+      <p>The arc flash boundary is the distance from the equipment at which incident energy falls to 1.2 cal/cm&sup2; &mdash; the onset threshold for a second-degree burn. Each equipment item then gets a label showing, per NFPA 70E: nominal voltage, arc flash boundary, and the incident energy at working distance (or a PPE category). The full study report documents every assumption behind every label.</p>
+
+      <h2>Electrode configuration: the 2018 game-changer</h2>
+      <p>The 2018 model requires you to classify how the conductors are arranged at each possible arc location, because orientation changes how the arc plasma is driven &mdash; sometimes directly toward the worker:</p>
+      <table>
+        <thead><tr><th>Code</th><th>Configuration</th><th>Typical equipment</th></tr></thead>
+        <tbody>
+          <tr><td>VCB</td><td>Vertical conductors in a box</td><td>Switchgear, MCC buckets</td></tr>
+          <tr><td>VCBB</td><td>Vertical conductors terminating in an insulating barrier, in a box</td><td>Bus terminations onto barriers</td></tr>
+          <tr><td>HCB</td><td>Horizontal conductors in a box</td><td>Horizontal bus stabs, some switchboards</td></tr>
+          <tr><td>VOA</td><td>Vertical conductors in open air</td><td>Open outdoor structures</td></tr>
+          <tr><td>HOA</td><td>Horizontal conductors in open air</td><td>Outdoor bus, line work</td></tr>
+        </tbody>
+      </table>
+      <p>HCB and VCBB configurations can produce markedly higher incident energy than VCB at the same bus &mdash; horizontal electrodes eject plasma outward, toward the working position. A study that assumed VCB everywhere (a common shortcut) can understate the hazard on exactly the equipment where workers rack breakers.</p>
+
+      <h2>Why clearing time dominates</h2>
+      <p>Incident energy scales approximately linearly with time. Current enters the equations with less than proportional effect &mdash; but time is pure multiplication. A fault cleared in 5 cycles (0.083 s) at a given current produces a fraction of the energy of the same fault cleared in 2 seconds.</p>
+
+      <div class="callout">
+        <p>The low-fault-current paradox: the "small, harmless" 150 kVA transformer secondary is often the worst label in the building &mdash; not because the current is high, but because at that current the upstream device takes seconds to operate. If your study shows 30 cal/cm&sup2; on a small panel, believe it, then fix the protection.</p>
+      </div>
+
+      <p>This is also why arc flash mitigation is mostly protection engineering, not PPE procurement:</p>
+      <ul>
+        <li><strong>Settings optimization</strong> &mdash; tightening instantaneous pickups where coordination allows, often cutting calculated incident energy at the worst buses by half or more at zero hardware cost.</li>
+        <li><strong>Maintenance-mode switches</strong> &mdash; a temporary fast setting group engaged while workers are at the gear.</li>
+        <li><strong>Zone-selective interlocking and differential schemes</strong> &mdash; fast clearing without sacrificing coordination.</li>
+        <li><strong>Remote operation and racking</strong> &mdash; moving the worker outside the arc flash boundary entirely.</li>
+      </ul>
+
+      <h2>What changed from 1584-2002 to 1584-2018</h2>
+      <table>
+        <thead><tr><th>Aspect</th><th>2002 edition</th><th>2018 edition</th></tr></thead>
+        <tbody>
+          <tr><td>Test basis</td><td>~300 tests</td><td>1,800+ tests</td></tr>
+          <tr><td>Electrode orientation</td><td>Not modeled</td><td>Five configurations (VCB, VCBB, HCB, VOA, HOA)</td></tr>
+          <tr><td>Enclosure size</td><td>Fixed typical values</td><td>Enclosure-size correction factor</td></tr>
+          <tr><td>Reduced-current check</td><td>Flat 85% of arcing current, LV only</td><td>Calculated arc-current variation factor, all voltages</td></tr>
+          <tr><td>125 kVA "exception"</td><td>Small LV transformers could be excluded</td><td>Removed; replaced with guidance that sustainable arcs are less likely at 240 V nominal or less with available short-circuit current below 2,000 A</td></tr>
+        </tbody>
+      </table>
+      <p>Practical consequence: any study performed to the 2002 model is methodologically superseded. If your labels predate 2018 &mdash; or your facility has changed &mdash; the five-year review clock in NFPA 70E is not the only reason to refresh.</p>
+
+      <h2>The data checklist</h2>
+      <p>What we need from a client (or collect in the field) before the math can be trusted:</p>
+      <ol>
+        <li>Current single-line diagram &mdash; verified, or flagged for verification</li>
+        <li>Utility available fault current and X/R at the point of supply</li>
+        <li>Transformer nameplates: kVA, impedance, connection</li>
+        <li>Cable sizes, types, and routed lengths for significant runs</li>
+        <li>Protective device schedule: make, model, and as-found settings</li>
+        <li>Motor schedules above ~37 kW / 50 hp for contribution modeling</li>
+        <li>Per-bus physicals: enclosure type and size, electrode configuration, working distance</li>
+        <li>Operating scenarios: normal, standby generation, tie-closed configurations &mdash; each can produce a different worst case</li>
+      </ol>
+      <p>Items 1 and 5 cause almost all study delays and almost all wrong labels. Our <a href="arc-flash-study-services.html">arc flash study service</a> starts with an SLD verification pass for exactly that reason.</p>
+
+      <h2>Frequently asked questions</h2>
+      <div style="margin-top: 28px;">
+        <details class="faq-item"><summary>What is IEEE 1584?</summary><div class="faq-body">IEEE Std 1584 is the industry-standard method for calculating arc flash incident energy and the arc flash boundary in three-phase AC power systems. The current edition, IEEE 1584-2018, is based on an extensive laboratory test program and covers systems from 208 V to 15 kV. NFPA 70E-compliant arc flash labels are almost always produced using this method.</div></details>
+        <details class="faq-item"><summary>What data is needed for an IEEE 1584 calculation?</summary><div class="faq-body">An accurate single-line diagram, utility source fault data, transformer impedances, cable sizes and lengths, motor contributions, protective device types and settings, plus per-bus details: nominal voltage, electrode configuration, conductor gap, enclosure dimensions, and working distance.</div></details>
+        <details class="faq-item"><summary>Why does IEEE 1584-2018 require a reduced arcing current check?</summary><div class="faq-body">Arcing current varies in practice. A lower arcing current can move a protective device from its instantaneous region into a slower part of its curve, so the fault clears in seconds instead of cycles and releases more total energy. The 2018 edition therefore requires incident energy to be evaluated at both the calculated arcing current and a reduced value, with the worst case governing the label.</div></details>
+        <details class="faq-item"><summary>Can a bus with a low fault current still be dangerous?</summary><div class="faq-body">Yes — this is the most counter-intuitive result in arc flash work. Incident energy is driven by current multiplied by time. A small transformer secondary with modest fault current can produce a severe incident-energy level because the upstream device takes seconds to respond at that current level.</div></details>
+        <details class="faq-item"><summary>What must an arc flash label show?</summary><div class="faq-body">Under NFPA 70E, equipment labels must show the nominal system voltage, the arc flash boundary, and at least one means of specifying PPE — typically the calculated incident energy at the working distance, or the applicable PPE category.</div></details>
+      </div>
+
+      <div class="guarantee" style="margin-top: 60px;">
+        <div class="guarantee-seal">First<br>Bus<br>Free</div>
+        <div>
+          <h3>Want to see the method on your own system?</h3>
+          <p>Send us your existing SLD and protection settings. We'll perform an initial IEEE 1584 calculation at one bus for free &mdash; full working shown &mdash; so you can judge the quality before committing to a facility-wide study.</p>
+        </div>
+        <div><a href="contact.html" class="btn">Claim Free Calculation</a></div>
+      </div>
+
+      <div class="related-reads">
+        <h4>Related Reads</h4>
+        <ul>
+          <li><a href="what-is-nfpa-70e.html">What is NFPA 70E? Arc flash safety explained</a></li>
+          <li><a href="arc-flash-study-services.html">Arc flash study services &mdash; IEEE 1584 &amp; NFPA 70E</a></li>
+          <li><a href="what-is-a-single-line-diagram.html">What is a single-line diagram?</a></li>
+          <li><a href="case-study-grain-network-arc-flash.html">Case study: 38-site arc flash program for a grain network</a></li>
+        </ul>
+      </div>
+
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="logo" style="margin-bottom: 24px;"><img src="images/AM-White-Logo.png" alt="Advanced Mechanix"></a><p>Specialized electrical drafting, BIM modeling, solar permit packages, and data analytics. Onshore project management. Offshore production scale. First drawing free.</p></div>
+      <div><h4>Services</h4><ul class="footer-list"><li><a href="electrical-design.html">Electrical Drafting</a></li><li><a href="3d-modeling.html">3D BIM Modeling</a></li><li><a href="solar-services.html">Solar Permits</a></li><li><a href="civil-design.html">Civil &amp; Structural</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div>
+      <div><h4>Company</h4><ul class="footer-list"><li><a href="about.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="blog.html">Insights</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Office</h4><ul class="footer-list"><li>+1 408 412 0717</li><li>company@advancedmechanix.com</li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="current-year"></span> Advanced Mechanix &middot; Engineering Documentation</span>
+      <span>NEC &middot; IEC &middot; AS/NZS &middot; CSA &middot; BS 7671</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

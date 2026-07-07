@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: The Timesheet Desk We Run In-House</title>
+<meta name="description" content="How Advanced Mechanix runs timesheets for its own distributed engineering team — the in-house process behind the timesheet service we now offer clients.">
+<link rel="canonical" href="https://advancedmechanix.com/case-study-inside-our-timesheet-desk.html">
+<link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-600-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-400-normal-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://advancedmechanix.com/case-study-inside-our-timesheet-desk.html">
+<meta property="og:title" content="Case Study: The Timesheet Desk We Run In-House">
+<meta property="og:description" content="The in-house time-tracking and billing process behind the Advanced Mechanix timesheet service — the desk we built for ourselves first.">
+<meta property="og:image" content="https://advancedmechanix.com/images/AM-Main.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
+    {"@type":"Article","@id":"https://advancedmechanix.com/case-study-inside-our-timesheet-desk.html#article","headline":"Case Study: Inside the Timesheet Desk Advanced Mechanix Runs In-House","author":{"@type":"Person","@id":"https://advancedmechanix.com/authors/junaid-qazi#person","name":"Junaid Qazi","url":"https://advancedmechanix.com/authors/junaid-qazi.html"},"publisher":{"@id":"https://advancedmechanix.com/#organization"},"datePublished":"2026-07-07","dateModified":"2026-07-07","image":"https://advancedmechanix.com/images/AM-Main.png","mainEntityOfPage":"https://advancedmechanix.com/case-study-inside-our-timesheet-desk.html","about":{"@type":"Thing","name":"Timesheet Management"}},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
+      {"@type":"ListItem","position":2,"name":"Case Studies","item":"https://advancedmechanix.com/case-studies.html"},
+      {"@type":"ListItem","position":3,"name":"Inside Our Timesheet Desk","item":"https://advancedmechanix.com/case-study-inside-our-timesheet-desk.html"}
+    ]}
+  ]
+}
+</script>
+
+<style>
+.concept-wrap { max-width: 820px; margin: 0 auto; }
+.concept-wrap h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-top: 2.8em; margin-bottom: 0.6em; }
+.concept-wrap h3 { font-size: 1.25rem; margin-top: 1.8em; margin-bottom: 0.5em; }
+.concept-wrap p, .concept-wrap ul, .concept-wrap ol { font-size: 1.04rem; line-height: 1.75; color: var(--ink-2); margin-bottom: 1.1em; }
+.concept-wrap ul, .concept-wrap ol { padding-left: 24px; }
+.concept-wrap li { margin-bottom: 0.35em; }
+.concept-wrap table { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.95rem; }
+.concept-wrap th, .concept-wrap td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--rule); }
+.concept-wrap th { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--margin); }
+.concept-wrap .tldr { background: var(--paper-2); padding: 24px 28px; border-left: 3px solid var(--hazard); margin: 28px 0 40px; }
+.concept-wrap .tldr h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 10px; }
+.concept-wrap .tldr p { margin: 0; font-family: var(--font-display); font-style: italic; font-size: 1.12rem; color: var(--ink); }
+.related-reads { margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--rule); }
+.related-reads h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 18px; }
+.related-reads ul { list-style: none; padding: 0; }
+.related-reads li { margin-bottom: 10px; font-family: var(--font-display); font-size: 1.08rem; }
+.related-reads a { color: var(--ink); background: none; }
+.related-reads a:hover { color: var(--hazard); }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; company@advancedmechanix.com</span><span>&#9742; +1 408 412 0717</span></div><div><span>REV 2026.04 &middot; Q2 MANAGED-SERVICE SLOTS: 2 OF 3 REMAINING</span></div></div></div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="images/AM-Black-Logo.png" alt="Advanced Mechanix"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="electrical-design.html">Electrical</a></li>
+        <li><a href="3d-modeling.html">BIM</a></li>
+        <li><a href="solar-services.html">Solar</a></li>
+        <li><a href="data-analytics.html">Analytics</a></li>
+        <li><a href="timesheet.html">Timesheets</a></li>
+        <li><a href="case-studies.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-cta"><a href="contact.html">Free Drawing</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-hero center">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="case-studies.html">Case Studies</a> &rsaquo; Inside Our Timesheet Desk</div>
+    <h1>The timesheet service <em>we built for ourselves.</em></h1>
+    <p>Before we offered timesheet management to anyone, we had to run it &mdash; every day, across two continents, for our own production team. This is that story.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="concept-wrap">
+
+      <div class="tldr">
+        <h4>Operations Snapshot</h4>
+        <p>Team: Advanced Mechanix's own production group &mdash; engineers and drafters in Pakistan, front office in San Diego. Challenge: track, validate, and bill every production hour across dozens of concurrent client engagements, three pricing models, and multiple time zones. This page describes our internal operation &mdash; the process now offered to clients as the <a href="timesheet.html">timesheet service</a>.</p>
+      </div>
+
+      <h2>Why we had to get this right first</h2>
+      <p>An outsourced engineering firm has exactly one product underneath all the drawings: trust. Our clients receive invoices from a production team they have never sat next to, in a time zone they sleep through. If those invoices were ever vague &mdash; hours that didn't reconcile, line items that couldn't be traced &mdash; the entire model would collapse, no matter how good the drafting was.</p>
+      <p>Our billing structure makes the problem harder, not easier. We sell three engagement models side by side &mdash; fixed-scope projects, per-drawing capacity extension, and monthly managed-service retainers. Each demands a different kind of time truth:</p>
+      <ul>
+        <li><strong>Fixed-scope projects</strong> need accurate effort data so the next quote is priced from evidence, not optimism. Our published <a href="cost-calculator.html">cost benchmarks</a> are only honest because the underlying hours are.</li>
+        <li><strong>Per-drawing work</strong> needs hours mapped to individual deliverables, so we know which drawing types are profitable and which rate-card lines need revisiting.</li>
+        <li><strong>Retainers</strong> need utilization reporting &mdash; clients paying for guaranteed capacity deserve to see how that capacity was spent.</li>
+      </ul>
+      <p>So the discipline was never optional. Timesheets are the load-bearing wall of the business.</p>
+
+      <h2>The desk we run</h2>
+      <p>The internal process, as it operates today:</p>
+      <ol>
+        <li><strong>Daily logging against project codes.</strong> Every production engineer logs time daily &mdash; not weekly &mdash; against client, project, and deliverable codes. A drawing number is a cost code. Nobody reconstructs a week from memory on Friday.</li>
+        <li><strong>Overnight validation.</strong> An operations coordinator reviews the previous day's entries every morning: unrecognized codes queried, improbable hours flagged, gaps chased while the memory is a day old, not a week old. It is the same overnight rhythm our drafting clients see, pointed inward.</li>
+        <li><strong>Cross-checks against production records.</strong> Because we run formal revision logs and transmittals on every engagement, logged hours are reconciled against what actually moved: drawings issued, revisions closed, QA gates passed. Time claims and document control confirm each other.</li>
+        <li><strong>Weekly utilization and burn reports.</strong> Every Monday, engagement leads see the week's hours per project against budget and retainer capacity &mdash; early enough to steer, not autopsy.</li>
+        <li><strong>Traceable invoicing.</strong> Every invoice line traces to validated, coded entries. When a client queries a line item, the answer is a lookup, not an investigation.</li>
+      </ol>
+
+      <h2>What the discipline buys</h2>
+      <div class="case-metrics" style="margin: 28px 0 8px;">
+        <div class="case-metric"><strong>Daily</strong><span>Time coded &amp; validated</span></div>
+        <div class="case-metric"><strong>Weekly</strong><span>Utilization &amp; burn reports</span></div>
+        <div class="case-metric"><strong>3</strong><span>Pricing models, one desk</span></div>
+      </div>
+      <p style="margin-top: 24px;">The practical payoffs, stated plainly rather than dressed up as statistics: payroll and billing preparation is a review task, not a reconstruction project. Invoice disputes are rare because every line is traceable to a validated entry &mdash; and when a query does come, it's answered from the record, same day. Quotes improve every quarter because they're built on real effort data. And when a project starts consuming more hours than it should, the Monday report says so while there's still time to act.</p>
+
+      <h2>From back office to service</h2>
+      <p>The push to productize came from clients, not from a strategy session. Engineering managers who saw our transmittal-grade invoices asked what tooling we used; contractors juggling paper timesheets from field crews asked whether our back office could absorb theirs. The honest answer was that the "tooling" is mostly discipline &mdash; daily capture, overnight validation, coded everything, reports that arrive while they're still useful &mdash; and that discipline transfers.</p>
+      <p>That is what the <a href="timesheet.html">timesheet management service</a> is: the desk we already run, offered outward. Same overnight processing window, same validation habits, same traceability standard &mdash; applied to your crews' hours instead of ours. What it costs firms to <em>not</em> run this way is quantified in <a href="the-true-cost-of-chasing-timesheets.html">the true cost of chasing timesheets</a>.</p>
+
+      <div class="testimonial-card" style="margin-top: 40px;">
+        <div class="testimonial-head">
+          <div class="testimonial-avatar">JQ</div>
+          <div class="testimonial-who">
+            <div class="testimonial-author">Junaid Qazi, Founder</div>
+            <div class="testimonial-role">Advanced Mechanix &middot; San Diego front office, Pakistan production team</div>
+          </div>
+        </div>
+        <p class="testimonial-quote">We didn't build a timesheet product &mdash; we productized our own back office. Running a distributed engineering team leaves you no choice but to get time-tracking right, and after years of doing it for ourselves, offering it to clients was the shortest product decision we've ever made.</p>
+        <div class="testimonial-result">&#10004; The process described here is the one the timesheet service delivers</div>
+      </div>
+
+      <div class="related-reads">
+        <h4>Related Reads</h4>
+        <ul>
+          <li><a href="timesheet.html">Timesheet management for engineering &amp; field teams</a></li>
+          <li><a href="the-true-cost-of-chasing-timesheets.html">The true cost of chasing timesheets in engineering teams</a></li>
+          <li><a href="about.html">About Advanced Mechanix &mdash; how the team works</a></li>
+          <li><a href="case-studies.html">All case studies</a></li>
+        </ul>
+      </div>
+
+    </article>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container">
+    <div class="cta-block">
+      <h2>Want this desk pointed at your crews?</h2>
+      <p>Tell us how your teams record time today &mdash; paper, app, or chaos &mdash; and we'll map what the same process would look like for your operation.</p>
+      <a href="timesheet.html" class="btn">See the Timesheet Service</a>
+      <a href="contact.html" class="btn btn-outline">Talk to Us</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="logo" style="margin-bottom: 24px;"><img src="images/AM-White-Logo.png" alt="Advanced Mechanix"></a><p>Specialized electrical drafting, BIM modeling, solar permit packages, and data analytics. Onshore project management. Offshore production scale. First drawing free.</p></div>
+      <div><h4>Services</h4><ul class="footer-list"><li><a href="electrical-design.html">Electrical Drafting</a></li><li><a href="3d-modeling.html">3D BIM Modeling</a></li><li><a href="solar-services.html">Solar Permits</a></li><li><a href="timesheet.html">Timesheet Management</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div>
+      <div><h4>Company</h4><ul class="footer-list"><li><a href="about.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="blog.html">Insights</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Office</h4><ul class="footer-list"><li>+1 408 412 0717</li><li>company@advancedmechanix.com</li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="current-year"></span> Advanced Mechanix &middot; Engineering Documentation</span>
+      <span>NEC &middot; IEC &middot; AS/NZS &middot; CSA &middot; BS 7671</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://advancedmechanix.com/</loc>
-    <image:image><image:loc>https://advancedmechanix.com/images/drawings/single-line-diagram.svg</image:loc><image:caption>Industrial single-line diagram sample &mdash; MCC package with motor loads</image:caption></image:image>
+    <image:image><image:loc>https://advancedmechanix.com/images/drawings/single-line-diagram.svg</image:loc><image:caption>Industrial single-line diagram sample &#8212; MCC package with motor loads</image:caption></image:image>
     <image:image><image:loc>https://advancedmechanix.com/images/drawings/riser-diagram.svg</image:loc><image:caption>Commercial high-rise electrical riser diagram sample</image:caption></image:image>
     <image:image><image:loc>https://advancedmechanix.com/images/drawings/mining-power-distribution.svg</image:loc><image:caption>Mine power distribution from 132 kV substation sample</image:caption></image:image>
     <image:image><image:loc>https://advancedmechanix.com/images/Synergy.png</image:loc><image:caption>Synergy client logo</image:caption></image:image>

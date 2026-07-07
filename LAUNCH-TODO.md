@@ -2,11 +2,19 @@
 
 *Everything flagged across our chat sessions that you (or your ops/marketing/legal team) need to finish. The website build is done; these are the external / operational items that can't be shipped from code.*
 
-Last updated: 2026-04-20
+Last updated: 2026-07-07
 
 ---
 
 ## 🔴 TIER 0 — Must ship BEFORE flipping the site live
+
+**New from the 2026-07-07 reimagine pass (timesheet service launch):**
+
+- [ ] **Confirm the "First timesheet cycle free" offer** on `/timesheet.html` — it's a NEW commercial commitment (mirrors "first drawing free"). Edit or remove the copy if you don't want to honor it.
+- [ ] **Review the two new success stories before launch** (`case-study-grain-network-arc-flash.html` is an anonymized composite; `case-study-inside-our-timesheet-desk.html` describes our internal ops under Junaid's name). Confirm you're comfortable with every number and framing.
+- [ ] **Create a 1200×630 PNG/JPG social card** (`images/og-card.png`, title-block aesthetic) — half the site's og:image values are SVGs, which LinkedIn/Facebook/X scrapers don't render; swap it in sitewide once it exists.
+- [ ] **Contact form now has a "Timesheet Management" service option** — make sure whoever triages `contact-handler.php` email knows the new service line exists.
+
 
 These are launch-blockers. The site will leak leads or credibility without them.
 
@@ -15,7 +23,7 @@ These are launch-blockers. The site will leak leads or credibility without them.
 - [ ] **Build the actual Vendor Checklist PDF.** Landing page is live; the document doesn't exist yet. Target: 14 pages per the landing promise.
 - [ ] **Build the actual BIM Execution Plan Template** (editable Word + PDF reference).
 - [ ] **Install real Google Analytics 4** — replace the `amTrack` stub in `js/main.js` with your GA4 measurement ID.
-- [ ] **Verify Google Search Console + Bing Webmaster Tools.** Submit the sitemap.xml.
+- [ ] **Verify Google Search Console + Bing Webmaster Tools.** Submit `sitemap-index.xml` (the legacy monolithic sitemap.xml was retired 2026-07-07 and now 301s to it).
 - [ ] **Deploy to production with HTTPS.** Pick www vs non-www and enforce 301 redirects (`.htaccess` already configured; just uncomment).
 - [ ] **Install Microsoft Clarity or Hotjar** for session-replay and heatmaps. Free; takes 10 minutes.
 

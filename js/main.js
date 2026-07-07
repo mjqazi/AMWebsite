@@ -40,6 +40,33 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.setAttribute('aria-expanded', 'false');
       });
     });
+    // Close menu on Escape and return focus to the toggle
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && links.classList.contains('open')) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+  }
+
+  // Sticky header lifts with a shadow once the sheet scrolls (CSS: .is-scrolled)
+  const header = document.querySelector('.site-header');
+  if (header) {
+    let scrolled = false;
+    let ticking = false;
+    const update = () => {
+      const s = window.scrollY > 4;
+      if (s !== scrolled) {
+        scrolled = s;
+        header.classList.toggle('is-scrolled', s);
+      }
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
   }
 
   // Platform tabs with ARIA + keyboard

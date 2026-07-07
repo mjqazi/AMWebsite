@@ -7,10 +7,15 @@
 <link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
 <title>Contact Us — Advanced Mechanix</title>
 <meta name="description" content="Contact Advanced Mechanix for a free consultation on electrical drafting, civil design, BIM, solar permits, and analytics. Response within 1 business day.">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-600-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-400-normal-latin.woff2" crossorigin>
 <link rel="stylesheet" href="css/styles.css">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://advancedmechanix.com/contact.html">
+<meta property="og:title" content="Contact Us — Advanced Mechanix">
+<meta property="og:description" content="Contact Advanced Mechanix for a free consultation on electrical drafting, civil design, BIM, solar permits, and analytics. Response within 1 business day.">
+<meta property="og:image" content="https://advancedmechanix.com/images/section_06.jpg">
 <meta property="og:site_name" content="Advanced Mechanix">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -97,11 +102,12 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="electrical-design.html">Electrical</a></li>
-        <li><a href="3d-modeling.html">BIM / 3D</a></li>
+        <li><a href="3d-modeling.html">BIM</a></li>
         <li><a href="solar-services.html">Solar</a></li>
         <li><a href="data-analytics.html">Analytics</a></li>
+        <li><a href="timesheet.html">Timesheets</a></li>
+        <li><a href="case-studies.html">Work</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Insights</a></li>
         <li class="nav-cta"><a href="contact.html">Free Drawing</a></li>
       </ul>
     </nav>
@@ -192,6 +198,7 @@
               <option>2D &rarr; 3D Modeling</option>
               <option>Solar Backend Services</option>
               <option>Advanced Data Analytics</option>
+              <option value="Timesheet Management">Timesheet Management</option>
               <option>Other / Multiple</option>
             </select>
           </div>
@@ -260,5 +267,19 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+(function () {
+  var svc = new URLSearchParams(location.search).get('service');
+  if (!svc) return;
+  var sel = document.getElementById('service');
+  if (!sel) return;
+  var map = { timesheets: 'Timesheet Management' };
+  var want = (map[svc.toLowerCase()] || svc).toLowerCase();
+  for (var i = 0; i < sel.options.length; i++) {
+    var o = sel.options[i];
+    if ((o.value || o.text).toLowerCase() === want) { sel.selectedIndex = i; break; }
+  }
+})();
+</script>
 </body>
 </html>
