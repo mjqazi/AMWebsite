@@ -48,7 +48,7 @@ Each item is a backlink and/or Knowledge Graph signal. Quick wins, no ongoing co
 
 - [ ] **Claim Google Business Profile** at business.google.com. Category: "Engineering Consultant." Add photos + opening hours + services.
 - [ ] **Create Wikidata entry** (wikidata.org — free). Add company, founder, founding date, sameAs links.
-- [ ] **Create Crunchbase profile.**
+- [ ] **Create Crunchbase profile** — then re-add its URL to the `sameAs` array in index.html's Organization JSON-LD (removed 2026-07-07 because the profile doesn't exist yet and a dead sameAs hurts entity SEO).
 - [ ] **Submit to high-DA directories:** Clutch, G2, DesignRush, GoodFirms, AEC Directory.
 - [ ] **Bing Places + Apple Maps** business listings.
 - [ ] **Chamber of Commerce San Diego** membership + listing.
