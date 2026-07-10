@@ -4,4 +4,4 @@ Allow: /
 Disallow: /tmp/
 Disallow: /*.json$
 
-Sitemap: https://advancedmechanix.com/sitemap-index.xml
+Sitemap: https://advancedmechanix.com/sitemap.xml

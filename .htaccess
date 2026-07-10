@@ -134,5 +134,4 @@ ErrorDocument 404 /404.html
 #   return 301 https://advancedmechanix.com$request_uri;
 # }
 
-# Legacy monolithic sitemap removed 2026-07-07; canonical entry point is the sitemap index
-Redirect 301 /sitemap.xml https://advancedmechanix.com/sitemap-index.xml
+# sitemap.xml is the canonical sitemap-index entry point.

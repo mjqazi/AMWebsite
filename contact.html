@@ -7,7 +7,7 @@
 <link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
 <title>Contact Us — Advanced Mechanix</title>
 <meta name="description" content="Contact Advanced Mechanix for a free consultation on electrical drafting, civil design, BIM, solar permits, and analytics. Response within 1 business day.">
-<link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-600-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-700-normal-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-400-normal-latin.woff2" crossorigin>
 <link rel="stylesheet" href="css/styles.css">
 <!-- Open Graph -->
@@ -190,15 +190,15 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="service">Service Needed</label>
+            <label for="service">Service or Product Needed</label>
             <select id="service" name="service">
-              <option value="">Select a service</option>
+              <option value="">Select a service or product</option>
               <option>Electrical Design &amp; Engineering</option>
               <option>Civil &amp; Structural Design</option>
               <option>2D &rarr; 3D Modeling</option>
               <option>Solar Backend Services</option>
               <option>Advanced Data Analytics</option>
-              <option value="Timesheet Management">Timesheet Management</option>
+              <option value="Timesheet Software">Timesheet Software</option>
               <option>Other / Multiple</option>
             </select>
           </div>
@@ -273,7 +273,7 @@
   if (!svc) return;
   var sel = document.getElementById('service');
   if (!sel) return;
-  var map = { timesheets: 'Timesheet Management' };
+  var map = { timesheets: 'Timesheet Software' };
   var want = (map[svc.toLowerCase()] || svc).toLowerCase();
   for (var i = 0; i < sel.options.length; i++) {
     var o = sel.options[i];

@@ -8,12 +8,12 @@ Last updated: 2026-07-07
 
 ## 🔴 TIER 0 — Must ship BEFORE flipping the site live
 
-**New from the 2026-07-07 reimagine pass (timesheet service launch):**
+**New from the 2026-07-07 reimagine pass (timesheet product launch):**
 
-- [ ] **Confirm the "First timesheet cycle free" offer** on `/timesheet.html` — it's a NEW commercial commitment (mirrors "first drawing free"). Edit or remove the copy if you don't want to honor it.
-- [ ] **Review the two new success stories before launch** (`case-study-grain-network-arc-flash.html` is an anonymized composite; `case-study-inside-our-timesheet-desk.html` describes our internal ops under Junaid's name). Confirm you're comfortable with every number and framing.
+- [ ] **Confirm the timesheet trial CTA** on `/timesheet.html` points to the correct production product URL before launch; it currently uses `https://staging.advancedmechanix.com/` from the handoff source.
+- [ ] **Review the two new success stories before launch** (`case-study-grain-network-arc-flash.html` is an anonymized composite; `case-study-inside-our-timesheet-desk.html` describes the internal operating workflow behind Advanced Mechanix Timesheets under Junaid's name). Confirm you're comfortable with every number and framing.
 - [ ] **Create a 1200×630 PNG/JPG social card** (`images/og-card.png`, title-block aesthetic) — half the site's og:image values are SVGs, which LinkedIn/Facebook/X scrapers don't render; swap it in sitewide once it exists.
-- [ ] **Contact form now has a "Timesheet Management" service option** — make sure whoever triages `contact-handler.php` email knows the new service line exists.
+- [ ] **Contact form now has a "Timesheet Software" option** — make sure whoever triages `contact-handler.php` email knows the new product line exists.
 
 
 These are launch-blockers. The site will leak leads or credibility without them.
@@ -118,7 +118,7 @@ Minor but worth keeping visible.
 *So you know where we left off.*
 
 - ✅ 42 pages built across services, industries, cities, concept explainers, comparisons, lead magnets
-- ✅ Full Engineering Atelier design system (Fraunces + IBM Plex, ink/paper palette)
+- ✅ Full Engineering Atelier design system (retired by the 2026-07-07 product/drafting-room reimagine)
 - ✅ JSON-LD schema on every page (Organization, Service, FAQPage, Breadcrumb, Article, Person, LocalBusiness, HowTo)
 - ✅ Sitemap.xml + segmented sitemaps + RSS feed + robots.txt
 - ✅ Self-hosted fonts (no Google Fonts dependency)

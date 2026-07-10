@@ -10,12 +10,30 @@
   <ttl>1440</ttl>
 
   <item>
-    <title>The True Cost of Chasing Timesheets in Engineering Teams</title>
+    <title>2026 Offshore Engineering Rates Report</title>
+    <link>https://advancedmechanix.com/offshore-engineering-rates-report-2026.html</link>
+    <guid>https://advancedmechanix.com/offshore-engineering-rates-report-2026.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>Planning-rate benchmarks for electrical drafting, BIM modeling, solar permits, arc flash studies, and managed offshore engineering documentation in 2026.</description>
+  </item>
+
+  <item>
+    <title>California Solar Permit Pass-Rate Benchmark 2026</title>
+    <link>https://advancedmechanix.com/california-solar-permit-pass-rate-benchmark-2026.html</link>
+    <guid>https://advancedmechanix.com/california-solar-permit-pass-rate-benchmark-2026.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>A practical benchmark for measuring commercial solar permit quality: first-submission pass rate, correction-cycle causes, AHJ notes, and production controls.</description>
+  </item>
+
+  <item>
+    <title>The True Cost of Timesheets Detached From Drawings</title>
     <link>https://advancedmechanix.com/the-true-cost-of-chasing-timesheets.html</link>
     <guid>https://advancedmechanix.com/the-true-cost-of-chasing-timesheets.html</guid>
     <dc:creator>Junaid Qazi</dc:creator>
     <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
-    <description>Admin drag, payroll errors, and billing leakage: a worked costing of the informal timesheet department inside every engineering firm, and the three ways to shut it down.</description>
+    <description>Why engineering teams lose control when hours, drawing progress, approvals, leave, and planner records live in separate systems.</description>
   </item>
 
   <item>
@@ -46,12 +64,66 @@
   </item>
 
   <item>
-    <title>Case Study: The Timesheet Desk We Run In-House</title>
+    <title>Case Study: The Origin of Advanced Mechanix Timesheets</title>
     <link>https://advancedmechanix.com/case-study-inside-our-timesheet-desk.html</link>
     <guid>https://advancedmechanix.com/case-study-inside-our-timesheet-desk.html</guid>
     <dc:creator>Junaid Qazi</dc:creator>
     <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
-    <description>Before timesheet management was a service, it was our own back office: how Advanced Mechanix tracks, validates, and bills time for a distributed engineering team.</description>
+    <description>How Advanced Mechanix's internal drawing-led operating process became Advanced Mechanix Timesheets, a product for engineering and AEC teams.</description>
+  </item>
+
+  <item>
+    <title>Case Study: 25 MVA Mine Power Distribution Package</title>
+    <link>https://advancedmechanix.com/case-study-pilbara-mine-power-distribution.html</link>
+    <guid>https://advancedmechanix.com/case-study-pilbara-mine-power-distribution.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>A remote mine power distribution and switchgear documentation package covering a 132/11 kV, 25 MVA substation and process plant loads.</description>
+  </item>
+
+  <item>
+    <title>Case Study: Commercial Riser &amp; Panel Schedule Package</title>
+    <link>https://advancedmechanix.com/case-study-commercial-riser-panel-schedules.html</link>
+    <guid>https://advancedmechanix.com/case-study-commercial-riser-panel-schedules.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>A 12-floor commercial tower electrical riser and panel schedule package delivered through BIM coordination, emergency power integration, and NFPA 70E documentation.</description>
+  </item>
+
+  <item>
+    <title>Case Study: Industrial MCC &amp; Single-Line Diagram Package</title>
+    <link>https://advancedmechanix.com/case-study-industrial-mcc-sld-package.html</link>
+    <guid>https://advancedmechanix.com/case-study-industrial-mcc-sld-package.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>How Advanced Mechanix delivered an industrial MCC and single-line diagram package two weeks early, catching five construction-phase conflicts before field mobilization.</description>
+  </item>
+
+  <item>
+    <title>Case Study: 120+ Commercial Solar Permit Packages</title>
+    <link>https://advancedmechanix.com/case-study-commercial-solar-permit-program.html</link>
+    <guid>https://advancedmechanix.com/case-study-commercial-solar-permit-program.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>Commercial rooftop solar permit packages across California AHJs with a five-day average turnaround and controlled correction-cycle tracking.</description>
+  </item>
+
+  <item>
+    <title>Case Study: BIM Transition Partnership</title>
+    <link>https://advancedmechanix.com/case-study-bim-transition-partnership.html</link>
+    <guid>https://advancedmechanix.com/case-study-bim-transition-partnership.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>BIM production support, ISO 19650-aligned standards, and staff enablement without project delivery stalling.</description>
+  </item>
+
+  <item>
+    <title>Case Study: Mining Predictive Maintenance Pilot</title>
+    <link>https://advancedmechanix.com/case-study-mining-predictive-maintenance.html</link>
+    <guid>https://advancedmechanix.com/case-study-mining-predictive-maintenance.html</guid>
+    <dc:creator>Junaid Qazi</dc:creator>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    <description>Historian analytics for conveyor motor failure modes, moved from four-week pilot to production maintenance workflow.</description>
   </item>
 
   <item>

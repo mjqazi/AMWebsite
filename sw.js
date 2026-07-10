@@ -3,7 +3,7 @@
 // navigations near-instant on mobile. Bump CACHE_VERSION on any deploy
 // where you need clients to refresh precached assets.
 
-const CACHE_VERSION = 'am-v3-2026-07-07';
+const CACHE_VERSION = 'am-v8-2026-07-09';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;
@@ -11,12 +11,18 @@ const HTML_CACHE = `${CACHE_VERSION}-html`;
 const PRECACHE_URLS = [
   '/',
   '/index.html',
+  '/timesheet.html',
+  '/case-studies.html',
+  '/blog.html',
   '/css/styles.css',
   '/js/main.js',
-  '/fonts/fraunces-600-normal-latin.woff2',
+  '/fonts/archivo-700-normal-latin.woff2',
   '/fonts/ibm-plex-sans-400-normal-latin.woff2',
   '/images/AM-Black-Logo.png',
   '/images/drawings/single-line-diagram.svg',
+  '/images/drawings/riser-diagram.svg',
+  '/images/drawings/mining-power-distribution.svg',
+  '/images/drawings/solar-pv-layout.svg',
   '/404.html'
 ];
 
