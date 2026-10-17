@@ -2002,10 +2002,12 @@ h3 em::after,
 }
 .footer a { background: none; color: rgba(247,245,238,0.72); }
 .footer a:hover { color: var(--paper); }
-.footer h4 {
+.footer h4,
+.footer .footer-heading {
   color: var(--paper);
   font-family: var(--font-mono);
   font-size: 0.76rem;
+  line-height: 1.05;
   margin-bottom: 22px;
   text-transform: uppercase;
   letter-spacing: 0.22em;
@@ -2029,7 +2031,7 @@ h3 em::after,
   justify-content: space-between;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: rgba(247,245,238,0.4);
+  color: rgba(247,245,238,0.5);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   flex-wrap: wrap;
@@ -2255,7 +2257,7 @@ h3 em::after,
   --paper-3:    #e4ded1;
   --rule:       #c9c1b2;
   --rule-soft:  #ded8cc;
-  --margin:     #71747c;
+  --margin:     #6a6d75; /* darkened from #71747c for 4.5:1 on --paper */
 
   --hazard:     #b4661a;
   --hazard-ink: #8d4b10;
@@ -3629,6 +3631,20 @@ h3 em,
   a { background: none; color: #000; }
   .site-header { position: static; box-shadow: none; }
   .footer { background: #fff; color: #000; border-top: 2px solid #000; padding: 24px 0; }
-  .footer a, .footer h4, .footer-grid p, .footer-list li { color: #000; }
+  .footer a, .footer h4, .footer .footer-heading, .footer-grid p, .footer-list li { color: #000; }
   .footer .logo img { filter: none; }
 }
+
+/* Accessibility: breadcrumbs/bylines on the dark navy page heroes were
+   1.7:1 (links) and 3.9:1 (text). Lift them to >= 4.5:1. */
+.page-hero .breadcrumb,
+.product-hero .breadcrumb { color: rgba(250,248,242,0.62); }
+.page-hero .breadcrumb a,
+.product-hero .breadcrumb a { color: rgba(250,248,242,0.88); }
+.page-hero .breadcrumb a:hover,
+.product-hero .breadcrumb a:hover { color: #93b9ff; }
+/* Dark-on-dark text: trust panel heading accent (1.6:1) and guarantee
+   copy inside article layouts (1.7:1). */
+.trust-panel h2 em { color: #93b9ff; }
+.concept-wrap .guarantee p,
+article .guarantee p { color: rgba(247,245,238,0.78); }
