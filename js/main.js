@@ -26,13 +26,45 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Lightweight analytics shim. Replace with GA4 / GTM when wiring production.
-window.amTrack = function(event, props) {
-  // Google Analytics 4 (gtag) — uncomment after adding GA4 snippet
-  // if (typeof gtag === 'function') gtag('event', event, props || {});
-  // Plausible (alt)
-  // if (typeof plausible === 'function') plausible(event, { props });
-  if (window.console && console.debug) console.debug('[amTrack]', event, props || {});
+// Analytics. Paste the IDs to switch tracking on; while both are empty
+// nothing is loaded and no request leaves the page.
+//   ga4:     Google Analytics 4 measurement ID, e.g. 'G-XXXXXXXXXX'
+//   clarity: Microsoft Clarity project ID, e.g. 'abcd1234ef'
+// Events sent to GA4: generate_lead (successful form submit),
+// contact_click (tel:/mailto: links), cta_click and file downloads.
+const ANALYTICS = {
+  ga4: '',
+  clarity: ''
+};
+
+(function loadAnalytics() {
+  const ga4 = (ANALYTICS.ga4 || '').trim();
+  const clarity = (ANALYTICS.clarity || '').trim();
+  if (/^G-[A-Z0-9]+$/i.test(ga4)) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', ga4);
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(ga4);
+    document.head.appendChild(s);
+  }
+  if (/^[a-z0-9]+$/i.test(clarity)) {
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', clarity);
+  }
+})();
+
+// One call for every event: forwards to GA4 (and tags Clarity) when loaded.
+window.amTrack = function (event, props) {
+  props = props || {};
+  if (typeof window.gtag === 'function') window.gtag('event', event, props);
+  if (typeof window.clarity === 'function') window.clarity('event', event);
+  if (window.console && console.debug) console.debug('[amTrack]', event, props);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -264,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
           showError('Sorry — your message could not be sent.');
           return;
         }
-        window.amTrack('form_submit', { form: payload.form, page: location.pathname });
+        window.amTrack('generate_lead', { form: payload.form, service: serviceSelect ? serviceSelect.value : '', page: location.pathname });
         form.reset();
         showSuccess();
       } catch (err) {
@@ -274,6 +306,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Phone and email clicks (topbar, footer, contact blocks, sticky bar)
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    window.amTrack('contact_click', {
+      method: href.startsWith('tel:') ? 'phone' : 'email',
+      link_url: href,
+      page: location.pathname
+    });
+  });
 
   // CTA click tracking
   document.querySelectorAll('a.btn, [data-track-event]').forEach(el => {
