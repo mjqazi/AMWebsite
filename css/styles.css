@@ -3906,3 +3906,12 @@ article .guarantee p { color: rgba(247,245,238,0.78); }
   line-height: 1.65;
 }
 @media (max-width: 640px) { .answer-block { font-size: 0.98rem; padding: 16px 18px; } }
+
+/* Regional hub pages (Part B, task 10) */
+.hub-card { display: block; text-decoration: none; color: inherit; background: var(--paper-2); }
+.hub-card:hover h3 { color: var(--hazard); }
+.hub-tag { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--hazard-ink); }
+.hub-card h3 { margin: 12px 0 8px; font-size: 1.2rem; }
+.hub-card p { font-size: 0.94rem; margin: 0; }
+.hub-more { display: inline-block; margin-top: 14px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+.page-hero .hero-actions { margin-top: 28px; }

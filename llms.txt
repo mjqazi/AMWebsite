@@ -19,6 +19,8 @@ Standards the team works to: NEC 2023 (US), IEC 60364 and IEC 61439, AS/NZS 3000
 
 ## Markets
 
+- [Australia hub](https://advancedmechanix.com/australia/): Australian city, industry and service pages, AS/NZS standards, AWST/AEST working-hour overlap, case studies and free resources.
+- [United States hub](https://advancedmechanix.com/usa/): US city, industry and service pages, NEC-based work, overnight production, case studies and free resources.
 - [Electrical drafting for Perth & Pilbara mining](https://advancedmechanix.com/electrical-drafting-perth.html): WA mining and EPC drafting to AS/NZS 3000, AS/NZS 3008.1.1, AS/NZS 61439 and AS/NZS 60079, with AWST working-hour overlap.
 - [Electrical drafting for Brisbane & Queensland](https://advancedmechanix.com/electrical-drafting-brisbane.html): Queensland coal, CSG and consultancy drafting to AS/NZS standards, with AEST working-hour overlap.
 - [Electrical drafting for Houston oil & gas](https://advancedmechanix.com/electrical-drafting-houston.html): Oil, gas and petrochemical electrical documentation with overnight turnaround from the CST time difference.
