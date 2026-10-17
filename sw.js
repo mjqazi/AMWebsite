@@ -1,9 +1,11 @@
 // Advanced Mechanix — service worker
-// Caches static assets and HTML to make repeat visits and inter-page
-// navigations near-instant on mobile. Bump CACHE_VERSION on any deploy
-// where you need clients to refresh precached assets.
+// HTML, CSS and JS are network-first (cache only as an offline fallback), so
+// a deploy is picked up on the next page view even though GitHub Pages
+// serves un-hashed /css/styles.css and /js/main.js. Fonts and images are
+// cache-first with background refresh. Bump CACHE_VERSION on each deploy
+// that changes precached files.
 
-const CACHE_VERSION = 'am-v8-2026-07-09';
+const CACHE_VERSION = 'am-v9-2026-10-17';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;
@@ -16,9 +18,9 @@ const PRECACHE_URLS = [
   '/blog.html',
   '/css/styles.css',
   '/js/main.js',
-  '/fonts/archivo-700-normal-latin.woff2',
-  '/fonts/ibm-plex-sans-400-normal-latin.woff2',
-  '/images/AM-Black-Logo.png',
+  '/fonts/archivo-var-latin.woff2',
+  '/fonts/ibm-plex-sans-var-latin.woff2',
+  '/images/am-logo-black-h88.png',
   '/images/drawings/single-line-diagram.svg',
   '/images/drawings/riser-diagram.svg',
   '/images/drawings/mining-power-distribution.svg',
@@ -58,6 +60,23 @@ function isStaticAsset(url) {
   return /\.(?:css|js|woff2?|ttf|otf|svg|png|jpe?g|webp|avif|ico|gif)$/i.test(url.pathname);
 }
 
+function isCodeAsset(url) {
+  return /\.(?:css|js)$/i.test(url.pathname);
+}
+
+// Network-first for CSS/JS — always fresh when online, cached copy offline.
+async function handleCode(request) {
+  const cache = await caches.open(RUNTIME_CACHE);
+  try {
+    const network = await fetch(request);
+    if (network && network.ok) cache.put(request, network.clone());
+    return network;
+  } catch (err) {
+    const cached = await caches.match(request);
+    return cached || Response.error();
+  }
+}
+
 // Network-first with cache fallback for HTML — fresh content when online,
 // instant fallback when offline or on flaky mobile connections.
 async function handleHtml(request) {
@@ -74,8 +93,7 @@ async function handleHtml(request) {
   }
 }
 
-// Cache-first for hashed/immutable static assets — these are served with
-// long Cache-Control already, but SW makes them survive HTTP cache eviction.
+// Cache-first (with background refresh) for fonts and images.
 async function handleStatic(request) {
   const cache = await caches.open(RUNTIME_CACHE);
   const cached = await cache.match(request);
@@ -105,7 +123,13 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  if (isStaticAsset(new URL(request.url))) {
+  const url = new URL(request.url);
+  if (isCodeAsset(url)) {
+    event.respondWith(handleCode(request));
+    return;
+  }
+
+  if (isStaticAsset(url)) {
     event.respondWith(handleStatic(request));
   }
 });
