@@ -1,0 +1,242 @@
+{
+  "index.html": {
+    "title": "Industrial Electrical Design & Documentation",
+    "description": "Power distribution, control panels and plant BIM for mining, process and industrial projects. Work in your templates with an agreed scope and review process."
+  },
+  "about.html": {
+    "title": "About Advanced Mechanix | Industrial Design Team",
+    "description": "Meet Advanced Mechanix and learn how we scope industrial electrical design documentation, control panel drawings and coordinated plant models with your team."
+  },
+  "contact.html": {
+    "title": "Scope Your Industrial Design Project | Advanced Mechanix",
+    "description": "Discuss an industrial electrical drawing package, control panel documentation or plant model. Share the scope, engineering standard and target issue date."
+  },
+  "electrical-design.html": {
+    "title": "Industrial Electrical Design: SLDs, MCC & Cable Schedules",
+    "description": "Electrical design and drafting for industrial plants: single-lines, MCC schedules, cable registers and distribution layouts in your project templates."
+  },
+  "control-panel-design-outsourcing.html": {
+    "title": "Control Panel Design & Documentation | Advanced Mechanix",
+    "description": "Control schematics, panel arrangements, terminal schedules and PLC I/O documentation. Scope a connected package in EPLAN or AutoCAD Electrical."
+  },
+  "3d-modeling.html": {
+    "title": "Plant BIM & Coordinated Models | Advanced Mechanix",
+    "description": "Plant equipment layouts, electrical containment and coordinated Revit models from your drawings and inputs. Work to your BIM Execution Plan and review sequence."
+  },
+  "bim-modeling-outsourcing.html": {
+    "title": "Revit Production & BIM Coordination | Advanced Mechanix",
+    "description": "Revit modelling and drawing production against your BIM Execution Plan. Define the model register, discipline interfaces, review responsibilities and handover."
+  },
+  "faq.html": {
+    "title": "Industrial Design Project Questions | Advanced Mechanix",
+    "description": "Questions about scoping industrial electrical design, control documentation and plant BIM: inputs, review responsibilities, file access, pricing and handover."
+  },
+  "case-studies.html": {
+    "title": "Industrial Design Project Notes | Advanced Mechanix",
+    "description": "Explore electrical drawing, MCC, power distribution and BIM project notes. Read the scope and constraints, with illustrative scenarios identified separately."
+  },
+  "advanced-mechanix-reviews.html": {
+    "title": "Client Perspectives | Advanced Mechanix",
+    "description": "Read client comments about electrical documentation, BIM coordination and working with Advanced Mechanix. Discuss the relevant scope and references with our team."
+  },
+  "advanced-mechanix-vs-india-drafting.html": {
+    "title": "Choosing an Industrial Design Team | Advanced Mechanix",
+    "description": "Compare drawing teams by their scope, review process, software, file handover and responsibilities. A practical alternative to choosing a supplier by location alone."
+  },
+  "advanced-mechanix-vs-onshore-drafting.html": {
+    "title": "In-House or External Design Support? | Advanced Mechanix",
+    "description": "Decide which industrial drawing tasks belong with your team and which can be scoped externally. Compare inputs, review ownership and the complete package cost."
+  },
+  "offshore-engineering-rates-report-2026.html": {
+    "title": "Industrial Design Budgeting Guide | Advanced Mechanix",
+    "description": "Prepare a comparable scope for an industrial drawing package. Understand the inputs, review allowance, coordination and handover that affect the budget."
+  },
+  "cost-calculator.html": {
+    "title": "Industrial Drawing Cost Comparison | Advanced Mechanix",
+    "description": "Compare internal and external drawing budgets using your own hours, rates and other costs. Browser-only arithmetic with no assumed market rates or discounts."
+  },
+  "blog.html": {
+    "title": "Industrial Electrical Design Guides | Advanced Mechanix",
+    "description": "Practical guides for electrical drawing packages, control documentation and plant BIM. Find scoping checklists, planning outlines and downloadable templates."
+  },
+  "authors/junaid-qazi.html": {
+    "title": "Junaid Qazi, Founder | Advanced Mechanix",
+    "description": "Junaid Qazi is the founder of Advanced Mechanix. Find company information, industrial drawing guides and the contact route for discussing a project scope."
+  },
+  "australia/index.html": {
+    "title": "Industrial Electrical Design for Australia | Advanced Mechanix",
+    "description": "Electrical documentation, control panels and plant models for Australian project teams. Explore mining and industrial scopes, regional guides and resources."
+  },
+  "usa/index.html": {
+    "title": "Industrial Electrical Documentation USA | Advanced Mechanix",
+    "description": "Electrical drawings, control documentation and plant BIM for US industrial project teams. Agree the project standard, review process and source-file handover."
+  },
+  "electrical-drafting-perth.html": {
+    "title": "Electrical Design Documentation for Perth & Pilbara",
+    "description": "Electrical drawing support for Perth and Pilbara mining teams: power distribution, MCCs and shutdown packages, scoped around your site standards and inputs."
+  },
+  "electrical-drafting-brisbane.html": {
+    "title": "Electrical Documentation for Brisbane & Queensland",
+    "description": "Electrical drawing packages for Queensland industrial and project teams. Scope the inputs, applicable standards, control documentation and review sequence."
+  },
+  "electrical-drafting-houston.html": {
+    "title": "Electrical Documentation for Houston Industrial Projects",
+    "description": "Electrical drawing and control documentation for Houston oil, gas and industrial project teams. Work from your design basis, standards and issue requirements."
+  },
+  "electrical-drafting-phoenix.html": {
+    "title": "Electrical Documentation for Phoenix Industrial Projects",
+    "description": "Electrical documentation for Phoenix industrial and data-centre project teams. Explore power distribution, control interfaces and coordinated drawing packages."
+  },
+  "substation-design-outsourcing.html": {
+    "title": "Substation Design Documentation | Advanced Mechanix",
+    "description": "Substation single-lines, layouts, protection documentation and cable schedules. Define the engineering inputs, utility interfaces and review responsibilities."
+  },
+  "arc-flash-study-services.html": {
+    "title": "Arc-Flash Study Documentation | Advanced Mechanix",
+    "description": "Scope arc-flash study inputs, electrical models, reports and label documentation. Agree the calculation method, field data and specialist review requirements."
+  },
+  "mep-drafting-outsourcing.html": {
+    "title": "MEP Drawing & BIM Production | Advanced Mechanix",
+    "description": "MEP drawing production and BIM coordination from your design inputs. Define the discipline interfaces, model requirements and review process before issue."
+  },
+  "civil-design.html": {
+    "title": "Civil & Structural Documentation | Advanced Mechanix",
+    "description": "Civil and structural drawing production for project interfaces. Agree the design inputs, engineering responsibility and document handover with your team."
+  },
+  "data-analytics.html": {
+    "title": "Industrial Data & Maintenance Analysis | Advanced Mechanix",
+    "description": "Explore industrial data and maintenance-analysis support alongside engineering documentation. Define the available data, intended decisions and validation scope."
+  },
+  "solar-services.html": {
+    "title": "Industrial PV Electrical Documentation | Advanced Mechanix",
+    "description": "Electrical drawings for industrial PV projects and their plant interfaces. Scope the equipment inputs, connection details, review and submission responsibilities."
+  },
+  "industries/index.html": {
+    "title": "Industrial Sectors & Drawing Packages | Advanced Mechanix",
+    "description": "Find electrical design documentation and plant modelling for mining, oil and gas, process industries and utilities. Explore the drawing types and project inputs."
+  },
+  "industries/mining.html": {
+    "title": "Mining Electrical Design Documentation | Advanced Mechanix",
+    "description": "Mine power distribution, MCC, substation and shutdown documentation. Scope a drawing package around the site standard, engineering inputs and review plan."
+  },
+  "industries/oil-gas.html": {
+    "title": "Oil & Gas Electrical Documentation | Advanced Mechanix",
+    "description": "Electrical and control drawing packages for oil, gas and process projects. Define the design basis, area-classification inputs and discipline interfaces."
+  },
+  "industries/utilities.html": {
+    "title": "Utility Electrical Documentation | Advanced Mechanix",
+    "description": "Substation, feeder and protection documentation for utility project teams. Agree source information, utility standards, engineering review and issue requirements."
+  },
+  "industries/commercial.html": {
+    "title": "Building Electrical & BIM Documentation | Advanced Mechanix",
+    "description": "Electrical drawing and BIM packages for commercial and institutional projects. Coordinate risers, panel schedules, equipment and discipline interfaces."
+  },
+  "industries/solar-epc.html": {
+    "title": "Industrial PV Drawing Packages for EPCs | Advanced Mechanix",
+    "description": "PV electrical drawing packages for EPC teams, with equipment, plant and connection interfaces defined in the brief. Agree the review and submission scope."
+  },
+  "bim-execution-plan-template.html": {
+    "title": "BIM Execution Plan Outline | Free Text Template",
+    "description": "An editable BIM planning outline covering inputs, coordinates, model content, coordination, reviews and handover. Download the text file without signing up."
+  },
+  "offshore-drafting-vendor-checklist.html": {
+    "title": "Industrial Design Vendor Checklist | Free Download",
+    "description": "Nine questions for comparing industrial drawing suppliers: inputs, tools, checking, queries, price and handover. Read online or download the editable checklist."
+  },
+  "how-to-brief-an-offshore-drafting-team.html": {
+    "title": "How to Brief an Industrial Drawing Team",
+    "description": "Prepare a useful electrical drawing brief: source files, drawing register, project standard, review owner, issue dates and handover requirements."
+  },
+  "guide-electrical-drafting-outsourcing.html": {
+    "title": "How to Scope External Electrical Design Support",
+    "description": "A buyer’s guide to external electrical drawing support. Define the package, evaluate suppliers and agree inputs, review responsibilities and handover."
+  },
+  "glossary.html": {
+    "title": "Electrical Design & BIM Glossary | Advanced Mechanix",
+    "description": "Plain-English definitions of single-line diagrams, MCCs, cable schedules, BIM and related engineering terms, with links to practical drawing guides."
+  },
+  "what-is-a-single-line-diagram.html": {
+    "title": "What Is a Single-Line Diagram? | Industrial Guide",
+    "description": "Learn what a single-line diagram shows, how it connects to schedules and equipment references, and what information an industrial SLD review needs."
+  },
+  "what-is-lod-350.html": {
+    "title": "What Is LOD 350? | BIM Coordination Guide",
+    "description": "Understand LOD 350, model interfaces and coordination. Learn why the required model content and intended use belong in the BIM Execution Plan."
+  },
+  "what-is-nfpa-70e.html": {
+    "title": "What Is NFPA 70E? | Electrical Safety Overview",
+    "description": "An introductory guide to NFPA 70E and its relationship to electrical safety work practices and arc-flash studies, with links to the official standard publisher."
+  },
+  "ieee-1584-arc-flash-calculation-explained.html": {
+    "title": "IEEE 1584 Arc-Flash Calculations Explained",
+    "description": "An introduction to IEEE 1584 study inputs and calculation concepts. See how source data and study scope affect the work, with official reference links."
+  },
+  "cable-schedule-template.html": {
+    "title": "Cable Schedule Template | Excel & CSV Download",
+    "description": "Download an electrical cable schedule in Excel and CSV. Capture cable references, routes and project data, then review the inputs against your design requirements."
+  },
+  "panel-schedule-template.html": {
+    "title": "Panel Schedule Template | NEC & AS/NZS Workbook",
+    "description": "Download a panel schedule workbook with US and Australian-style sheets. Adapt the circuit, load and phase information to the project design and review process."
+  },
+  "single-line-diagram-checklist.html": {
+    "title": "Single-Line Diagram Review Checklist | PDF & Print",
+    "description": "Review an industrial SLD with a printable checklist covering source information, equipment references, interfaces and issue details. Download the PDF or read online."
+  },
+  "california-solar-permit-pass-rate-benchmark-2026.html": {
+    "title": "California PV Drawing Review Checklist",
+    "description": "Prepare a consistent electrical drawing package for a California industrial PV review. A practical checklist, without an unsupported permit pass-rate benchmark."
+  },
+  "case-study-industrial-mcc-sld-package.html": {
+    "title": "Industrial MCC & Single-Line Drawing Package | Project Notes",
+    "description": "Read the scope and constraints of an industrial MCC and single-line drawing package, including power distribution references, schedules and document coordination."
+  },
+  "case-study-pilbara-mine-power-distribution.html": {
+    "title": "Pilbara Mine Power Distribution | Project Notes",
+    "description": "Project notes on mine power-distribution documentation: substation, switchgear and MCC interfaces, source information and the drawing handover."
+  },
+  "case-study-commercial-riser-panel-schedules.html": {
+    "title": "Electrical Riser & Panel Schedule Package | Project Notes",
+    "description": "Explore a commercial electrical riser and panel schedule package, with discipline interfaces, drawing references and coordination considerations."
+  },
+  "case-study-bim-transition-partnership.html": {
+    "title": "BIM Transition & Production Support | Project Notes",
+    "description": "Read project notes on introducing BIM standards while continuing drawing production, including model coordination, information requirements and handover."
+  },
+  "case-study-grain-network-arc-flash.html": {
+    "title": "Multi-Site Arc-Flash Programme | Illustrative Example",
+    "description": "An explicitly illustrative, anonymised composite showing how a grain-network arc-flash programme can be staged. Not an independently verified client result."
+  },
+  "case-study-mining-predictive-maintenance.html": {
+    "title": "Mining Maintenance Data Pilot | Project Notes",
+    "description": "Explore a maintenance-analysis pilot’s data inputs, failure-mode questions and rollout considerations alongside industrial engineering work."
+  },
+  "case-study-commercial-solar-permit-program.html": {
+    "title": "Industrial PV Drawing Programme | Project Notes",
+    "description": "Project notes on organising repeat PV electrical drawing packages, equipment inputs and review comments across an EPC programme."
+  },
+  "case-study-inside-our-timesheet-desk.html": {
+    "title": "Drawing-Led Project Tracking | Product Background",
+    "description": "Read the background to Advanced Mechanix Timesheets and how drawings, issue stages and engineering time can be connected in a project workflow."
+  },
+  "careers.html": {
+    "title": "Engineering & Drawing Careers | Advanced Mechanix",
+    "description": "Explore work with Advanced Mechanix in electrical documentation, control panels and plant modelling. Contact the team about current opportunities."
+  },
+  "privacy.html": {
+    "title": "Website Privacy Policy | Advanced Mechanix",
+    "description": "How Advanced Mechanix handles website enquiries and personal information. Read about FormSubmit, contact routes and the site’s current analytics configuration."
+  },
+  "terms.html": {
+    "title": "Website Terms | Advanced Mechanix",
+    "description": "Terms for using the Advanced Mechanix website and its public planning tools and resources. Project services are governed by a separate agreement."
+  },
+  "timesheet.html": {
+    "title": "Drawing-Team Timesheets | Advanced Mechanix Product",
+    "description": "An additional software product for connecting drawing stages, project hours and review workflows. Industrial design services remain the company’s core offer."
+  },
+  "the-true-cost-of-chasing-timesheets.html": {
+    "title": "Connecting Engineering Hours to Drawing Progress",
+    "description": "Why hours alone do not describe a drawing package’s progress. Explore linking engineering time to deliverables, review status and issue stages."
+  }
+}

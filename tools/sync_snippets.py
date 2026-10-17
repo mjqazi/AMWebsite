@@ -20,7 +20,7 @@ PAGES = {
         'index.html',
         # service pages
         'electrical-design.html', '3d-modeling.html', 'bim-modeling-outsourcing.html',
-        'solar-services.html', 'civil-design.html', 'data-analytics.html',
+
         'arc-flash-study-services.html', 'substation-design-outsourcing.html',
         'control-panel-design-outsourcing.html', 'mep-drafting-outsourcing.html',
         # city pages
@@ -29,7 +29,7 @@ PAGES = {
     ],
 }
 LABELS = {
-    'index.html': '<div class="section-number">&sect;05 &mdash; Offshore Worries</div>',
+    'index.html': '<div class="section-number">05 / Working together</div>',
 }
 DEFAULT_LABEL = '<span class="eyebrow">Before you send a drawing</span>'
 
@@ -70,7 +70,7 @@ def main():
     with open(os.path.join(ROOT, 'tools', 'snippets', 'navigation.html'), encoding='utf-8') as fh:
         navigation = fh.read().strip()
     for directory, folders, files in os.walk(ROOT):
-        folders[:] = [name for name in folders if not name.startswith('.') and name != 'tools']
+        folders[:] = [name for name in folders if not name.startswith('.') and name not in ('tools', 'node_modules')]
         for filename in files:
             if not filename.endswith('.html'):
                 continue

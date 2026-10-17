@@ -1,11 +1,11 @@
 // Advanced Mechanix — service worker
 // HTML, CSS and JS are network-first (cache only as an offline fallback), so
 // a deploy is picked up on the next page view even though GitHub Pages
-// serves un-hashed /css/styles.css and /js/main.js. Fonts and images are
+// serves un-hashed /css/styles.min.css and /js/main.min.js. Fonts and images are
 // cache-first with background refresh. Bump CACHE_VERSION on each deploy
 // that changes precached files.
 
-const CACHE_VERSION = 'am-v11-industrial-2026-10-17';
+const CACHE_VERSION = 'am-v12-industrial-seo-2026-10-17';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;
@@ -13,18 +13,12 @@ const HTML_CACHE = `${CACHE_VERSION}-html`;
 const PRECACHE_URLS = [
   '/',
   '/index.html',
-  '/timesheet.html',
-  '/case-studies.html',
-  '/blog.html',
-  '/css/styles.css',
-  '/js/main.js',
+  '/css/styles.min.css',
+  '/js/main.min.js',
   '/fonts/archivo-var-latin.woff2',
   '/fonts/ibm-plex-sans-var-latin.woff2',
   '/images/am-logo-black-h88.png',
-  '/images/drawings/single-line-diagram.svg',
-  '/images/drawings/riser-diagram.svg',
-  '/images/drawings/mining-power-distribution.svg',
-  '/images/drawings/solar-pv-layout.svg',
+  '/images/drawings/design-review.svg',
   '/404.html'
 ];
 

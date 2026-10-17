@@ -27,7 +27,7 @@ class Page(HTMLParser):
   if t=='script' and self.ins:self.jsons.append(self.buf);self.ins=False
 pages={}
 for f in ROOT.rglob('*.html'):
- if '.git' in f.parts or 'tools' in f.parts:continue
+ if '.git' in f.parts or 'tools' in f.parts or 'node_modules' in f.parts:continue
  p=Page();p.feed(f.read_text(encoding='utf-8'));pages[f]=p
  for s in p.jsons:
   blocks+=1

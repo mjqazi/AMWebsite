@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Electrical Drafting Cost Calculator</title>
-<meta name="description" content="Compare in-house electrical drafting cost to outsourced delivery. Benchmark your spend on SLDs, panel schedules, MCC packages, and BIM modeling.">
+<title>Industrial Drawing Cost Comparison | Advanced Mechanix</title>
+<meta name="description" content="Compare internal and external drawing budgets using your own hours, rates and other costs. Browser-only arithmetic with no assumed market rates or discounts.">
 <link rel="canonical" href="https://advancedmechanix.com/cost-calculator.html">
 <link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-var-latin.woff2" crossorigin>
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.min.css">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://advancedmechanix.com/cost-calculator.html">
-<meta property="og:title" content="Electrical Drafting Cost Calculator">
-<meta property="og:description" content="Compare in-house electrical drafting cost to outsourced delivery. Benchmark your spend on SLDs, panel schedules, MCC packages, and BIM modeling.">
+<meta property="og:title" content="Industrial Drawing Cost Comparison | Advanced Mechanix">
+<meta property="og:description" content="Compare internal and external drawing budgets using your own hours, rates and other costs. Browser-only arithmetic with no assumed market rates or discounts.">
 <meta property="og:image" content="https://advancedmechanix.com/images/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,16 +22,56 @@
 <meta name="twitter:image" content="https://advancedmechanix.com/images/og-card.png">
 <meta name="twitter:image:alt" content="Advanced Mechanix — industrial electrical design, controls &amp; plant BIM">
 
+<meta name="twitter:title" content="Industrial Drawing Cost Comparison | Advanced Mechanix">
+<meta name="twitter:description" content="Compare internal and external drawing budgets using your own hours, rates and other costs. Browser-only arithmetic with no assumed market rates or discounts.">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-    {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
-    {"@type":"WebApplication","name":"Drafting Cost Calculator","applicationCategory":"BusinessApplication","url":"https://advancedmechanix.com/cost-calculator.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},
-    {"@type":"BreadcrumbList","itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
-      {"@type":"ListItem","position":2,"name":"Cost Calculator","item":"https://advancedmechanix.com/cost-calculator.html"}
-    ]}
+    {
+      "@type": "Organization",
+      "@id": "https://advancedmechanix.com/#organization",
+      "name": "Advanced Mechanix",
+      "url": "https://advancedmechanix.com/",
+      "logo": "https://advancedmechanix.com/images/am-logo-black-h88.png",
+      "description": "Industrial electrical design documentation, control panel drawings and coordinated plant models.",
+      "email": "company@advancedmechanix.com",
+      "telephone": "+1-408-412-0717",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12478 San Bruno Cove",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "postalCode": "92130",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Industrial Drawing Cost Comparison | Advanced Mechanix",
+      "applicationCategory": "BusinessApplication",
+      "url": "https://advancedmechanix.com/cost-calculator.html",
+      "description": "Compare internal and external drawing budgets using your own hours, rates and other costs. Browser-only arithmetic with no assumed market rates or discounts.",
+      "operatingSystem": "Web browser"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://advancedmechanix.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Industrial Drawing Cost Comparison",
+          "item": "https://advancedmechanix.com/cost-calculator.html"
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -46,7 +86,7 @@
   <div class="container">
     <nav class="nav" aria-label="Main navigation">
   <a href="/" class="logo" aria-label="Advanced Mechanix home"><img src="/images/am-logo-black-h88.png" alt="Advanced Mechanix" width="228" height="88"></a>
-  <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
   <ul class="nav-links" id="primary-navigation">
     <li><a href="/electrical-design.html">Electrical</a></li>
     <li><a href="/control-panel-design-outsourcing.html">Control panels</a></li>
@@ -60,116 +100,164 @@
 </header>
 
 <main id="main">
-
-<section class="page-hero">
+ <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Cost Calculator</div>
-    <h1>How much is your drafting actually costing you?</h1>
-    <p>Benchmark your in-house electrical drafting spend against onshore vendor rates and outsourced delivery. Adjust the inputs to match your operation.</p>
+   <div class="breadcrumb">
+    <a href="/">
+     Home
+    </a>
+    › Cost comparison
+   </div>
+   <h1>
+    Compare two budgets for the same package.
+   </h1>
+   <p>
+    Use your own hours and rates to compare an internal option with an external proposal. This tool does not supply market benchmarks or an Advanced Mechanix price.
+   </p>
   </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="calculator-layout">
-      <div class="calc-panel">
-        <h3 style="margin-bottom:20px;">Your Operation</h3>
-
-        <div class="calc-row">
-          <label for="c-sld">Single-line diagrams per year</label>
-          <input type="number" id="c-sld" value="24" min="0">
-        </div>
-        <div class="calc-row">
-          <label for="c-panel">Panel schedules / MCC docs per year</label>
-          <input type="number" id="c-panel" value="36" min="0">
-        </div>
-        <div class="calc-row">
-          <label for="c-cable">Cable schedules per year</label>
-          <input type="number" id="c-cable" value="18" min="0">
-        </div>
-        <div class="calc-row">
-          <label for="c-bim">BIM / 3D model packages per year</label>
-          <input type="number" id="c-bim" value="6" min="0">
-        </div>
-        <div class="calc-row">
-          <label for="c-region">Your region (sets onshore rate)</label>
-          <select id="c-region">
-            <option value="us">United States</option>
-            <option value="au">Australia</option>
-            <option value="ca">Canada</option>
-            <option value="uk">United Kingdom</option>
-            <option value="eu">Europe</option>
-          </select>
-        </div>
-
-        <div class="calc-result">
-          <div class="calc-label">Estimated annual savings</div>
-          <div class="calc-value" id="c-savings">$0</div>
-          <div class="calc-vs">vs. equivalent onshore-hired delivery</div>
-        </div>
-
-        <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="contact.html?service=electrical" class="btn" data-cta="primary" data-track-event="calc_cta_click">Send us one drawing &mdash; free</a>
-          <a href="case-studies.html" class="btn btn-ghost" data-cta="secondary">Explore project work</a>
-        </div>
+ </section>
+ <section class="section">
+  <div class="container editorial-copy">
+   <h2>
+    Enter the figures you want to compare.
+   </h2>
+   <div class="calculator-layout">
+    <div class="calc-panel">
+     <form id="cost-comparison" novalidate="">
+      <div class="calc-row">
+       <label for="comparison-currency">
+        Currency for both options
+       </label>
+       <select id="comparison-currency">
+        <option value="USD">
+         USD
+        </option>
+        <option value="AUD">
+         AUD
+        </option>
+        <option value="GBP">
+         GBP
+        </option>
+        <option value="CAD">
+         CAD
+        </option>
+        <option value="EUR">
+         EUR
+        </option>
+       </select>
       </div>
-
-      <div>
-        <span class="eyebrow">Methodology</span>
-        <h2>How this calculator works</h2>
-        <p>We benchmark your drawing counts against published rate data from major onshore engineering consultancies across the US, Australia, Canada, UK, and Europe. Our per-drawing rates are the averages we quote to new clients.</p>
-        <p><strong>What it includes:</strong></p>
-        <ul class="feature-list">
-          <li>Average fully-loaded onshore drafter cost per drawing type</li>
-          <li>Advanced Mechanix standard per-drawing rate</li>
-          <li>Typical time-per-drawing benchmarks</li>
-        </ul>
-        <p><strong>What it excludes:</strong></p>
-        <ul style="padding-left:20px; color:var(--muted); font-size:0.92rem;">
-          <li>Revision cycles beyond the included standard (2 per drawing)</li>
-          <li>Specialist studies (arc flash, load flow, protection coordination)</li>
-          <li>Stamp fees where applicable</li>
-          <li>Onboarding and standards-library setup (one-off)</li>
-        </ul>
-        <p style="font-size:0.85rem; color:var(--muted); margin-top:20px;">Calculator output is an estimate based on industry benchmarks, not a quote. Actual pricing depends on scope, complexity, and engagement model. Request a detailed scoping call for a firm proposal.</p>
+      <div class="calc-row">
+       <label for="internal-hours">
+        Internal effort (hours)
+       </label>
+       <input aria-describedby="internal-hours-help" id="internal-hours" inputmode="decimal" min="0" required="" step="any" type="number"/>
+       <small id="internal-hours-help">
+        Hours your internal option would take
+       </small>
       </div>
+      <div class="calc-row">
+       <label for="internal-rate">
+        Internal cost per hour
+       </label>
+       <input aria-describedby="internal-rate-help" id="internal-rate" inputmode="decimal" min="0" required="" step="any" type="number"/>
+       <small id="internal-rate-help">
+        Your fully loaded internal hourly cost
+       </small>
+      </div>
+      <div class="calc-row">
+       <label for="external-hours">
+        External effort (hours)
+       </label>
+       <input aria-describedby="external-hours-help" id="external-hours" inputmode="decimal" min="0" required="" step="any" type="number"/>
+       <small id="external-hours-help">
+        Hours quoted or estimated for the external option
+       </small>
+      </div>
+      <div class="calc-row">
+       <label for="external-rate">
+        External cost per hour
+       </label>
+       <input aria-describedby="external-rate-help" id="external-rate" inputmode="decimal" min="0" required="" step="any" type="number"/>
+       <small id="external-rate-help">
+        The supplier rate you want to compare
+       </small>
+      </div>
+      <div class="calc-row">
+       <label for="external-extra">
+        Other external costs
+       </label>
+       <input aria-describedby="external-extra-help" id="external-extra" inputmode="decimal" min="0" step="any" type="number" value="0"/>
+       <small id="external-extra-help">
+        Onboarding, additional review or handover costs
+       </small>
+      </div>
+      <button class="btn" type="submit">
+       Compare the budgets
+      </button>
+      <p hidden="" id="comparison-error" role="alert">
+      </p>
+      <div aria-live="polite" class="calc-result" hidden="" id="comparison-results">
+       <div class="calc-label">
+        Internal option
+       </div>
+       <p id="internal-total">
+       </p>
+       <div class="calc-label">
+        External option
+       </div>
+       <p id="external-total">
+       </p>
+       <div class="calc-label" id="comparison-label">
+        Difference
+       </div>
+       <div class="calc-value" id="comparison-difference">
+       </div>
+      </div>
+     </form>
     </div>
+    <div>
+     <h3>
+      Make the scopes comparable first.
+     </h3>
+     <p>
+      Include the same drawings, inputs and review requirements on both sides. Add the cost of preparing source information, onboarding, reviewing queries and accepting the handover where it applies.
+     </p>
+     <p>
+      The internal budget is hours × internal hourly cost. The external budget is hours × supplier hourly cost + other external costs. The difference is an arithmetic comparison, not a prediction of project savings.
+     </p>
+     <p>
+      Both options use the selected currency. No exchange-rate conversion is applied. The calculation runs in your browser; these figures are not sent to us.
+     </p>
+     <p>
+      <a href="/offshore-engineering-rates-report-2026.html">
+       Read the budgeting guide →
+      </a>
+     </p>
+    </div>
+   </div>
   </div>
-</section>
-
-<section class="section section-gray">
+ </section>
+ <section class="section section-gray">
   <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Benchmark Rates</span>
-      <h2>Industry rate context</h2>
-      <p>Published and observed rates for electrical drafting across major regions, 2025 data.</p>
-    </div>
-    <div class="grid grid-4">
-      <div class="feature-item"><h4>Single-Line Diagram</h4><p style="color:var(--muted); font-size:0.88rem;">US onshore: $1,200&ndash;$2,400 each<br>AM rate: $480&ndash;$960 each</p></div>
-      <div class="feature-item"><h4>Panel Schedule / MCC</h4><p style="color:var(--muted); font-size:0.88rem;">US onshore: $800&ndash;$1,800 each<br>AM rate: $320&ndash;$720 each</p></div>
-      <div class="feature-item"><h4>Cable Schedule</h4><p style="color:var(--muted); font-size:0.88rem;">US onshore: $1,500&ndash;$3,200 each<br>AM rate: $600&ndash;$1,280 each</p></div>
-      <div class="feature-item"><h4>BIM / 3D Package</h4><p style="color:var(--muted); font-size:0.88rem;">US onshore: $12,000&ndash;$28,000<br>AM rate: $4,800&ndash;$11,200</p></div>
-    </div>
-    <p style="text-align:center; font-size:0.85rem; color:var(--muted); margin-top:30px;">Rates vary by complexity, platform, jurisdiction, and engagement model. All quoted in USD.</p>
+   <div class="cta-block">
+    <h2>
+     Work through the package with us.
+    </h2>
+    <p>
+     Tell us what needs to be issued, which information is available and who will review the result.
+    </p>
+    <a class="btn" href="/contact.html?service=electrical">
+     Scope your project
+    </a>
+   </div>
   </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="cta-block">
-      <h2>Numbers look worth a conversation?</h2>
-      <p>Book a 30-minute scoping call. We'll build a detailed quote tailored to your project pipeline.</p>
-      <div class="cta-actions"><a href="contact.html?service=electrical" class="btn" data-cta="primary">Scope your project</a><a href="case-studies.html" class="btn btn-outline" data-cta="secondary">Explore project work</a></div>
-    </div>
-  </div>
-</section>
-
+ </section>
 </main>
 
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div><a href="/" class="logo" style="margin-bottom:18px;"><img src="images/am-logo-white-h88.png" alt="Advanced Mechanix" width="249" height="88" loading="lazy" decoding="async"></a><p>Industrial electrical design, control documentation and coordinated plant models. Drawn to your standards. Checked before issue.</p></div>
+      <div><a href="/" class="logo" style="margin-bottom:18px;"><img src="images/am-logo-white-h88.png" alt="Advanced Mechanix" width="249" height="88" loading="lazy" decoding="async"></a><p>Industrial electrical design, control documentation and coordinated plant models. Drawn to your standards.</p></div>
       <div><h3 class="footer-heading">Services</h3><ul class="footer-list"><li><a href="/electrical-design.html">Industrial electrical design</a></li><li><a href="/control-panel-design-outsourcing.html">Control panel documentation</a></li><li><a href="/3d-modeling.html">Plant BIM &amp; modelling</a></li><li class="footer-secondary">Additional services</li><li><a href="solar-services.html">Solar engineering</a></li><li><a href="civil-design.html">Civil &amp; Structural</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div>
       <div><h3 class="footer-heading">Company</h3><ul class="footer-list"><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="blog.html">Insights</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div><h3 class="footer-heading">Get in Touch</h3><ul class="footer-list"><li><a href="tel:+14084120717">+1 408 412 0717</a></li><li><a href="mailto:company@advancedmechanix.com">company@advancedmechanix.com</a></li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
@@ -178,43 +266,7 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
-<script>
-// Cost calculator — standalone
-(function(){
-  // Per-drawing rate assumptions (USD midpoints)
-  const ONSHORE = {
-    us:  { sld: 1800, panel: 1300, cable: 2350, bim: 20000 },
-    au:  { sld: 1950, panel: 1450, cable: 2500, bim: 22000 },
-    ca:  { sld: 1650, panel: 1200, cable: 2200, bim: 18000 },
-    uk:  { sld: 1700, panel: 1250, cable: 2250, bim: 19000 },
-    eu:  { sld: 1600, panel: 1200, cable: 2150, bim: 17000 }
-  };
-  const AM = { sld: 720, panel: 520, cable: 940, bim: 8000 };
-
-  function fmt(n) {
-    return '$' + Math.round(n).toLocaleString('en-US');
-  }
-
-  function calc() {
-    const sld  = Math.max(0, parseInt(document.getElementById('c-sld').value  || '0', 10));
-    const pn   = Math.max(0, parseInt(document.getElementById('c-panel').value|| '0', 10));
-    const cab  = Math.max(0, parseInt(document.getElementById('c-cable').value|| '0', 10));
-    const bim  = Math.max(0, parseInt(document.getElementById('c-bim').value  || '0', 10));
-    const reg  = document.getElementById('c-region').value;
-    const rates = ONSHORE[reg] || ONSHORE.us;
-    const onshore = sld*rates.sld + pn*rates.panel + cab*rates.cable + bim*rates.bim;
-    const amTotal = sld*AM.sld   + pn*AM.panel    + cab*AM.cable    + bim*AM.bim;
-    const savings = Math.max(0, onshore - amTotal);
-    document.getElementById('c-savings').textContent = fmt(savings);
-  }
-
-  ['c-sld','c-panel','c-cable','c-bim','c-region'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener('input', calc);
-  });
-  calc();
-})();
-</script>
+<script src="js/main.min.js" defer></script>
+<script src="js/cost-calculator.min.js" defer></script>
 </body>
 </html>

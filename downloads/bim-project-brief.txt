@@ -1,0 +1,82 @@
+BIM EXECUTION PLAN — STARTING OUTLINE
+Advanced Mechanix | Updated 17-Oct-2026
+
+Project:
+Client:
+Information requirements/reference:
+Review owner:
+Issue date:
+
+1. Purpose and use
+What decisions must this model support? Identify coordination, drawing production, equipment layouts and any handover use. Do not assume a model is suitable for fabrication or operations unless that use is defined.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+2. People and responsibilities
+Name the information manager, discipline coordinators, model authors and approvers. State who makes decisions when disciplines conflict.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+3. Source information
+List surveys, existing models, 2D drawings and vendor information. Record the issue date and any known reliability limits.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+4. Coordinates and units
+Record the coordinate system, model origin, shared coordinates, units and responsibility for setting them. Agree how incoming models are checked.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+5. Required model content
+Define the elements each discipline will produce at each stage. Agree the level of development and information needed for each intended use.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+6. Naming and file exchange
+Set file naming, revision codes, native software versions and exchange formats. Include required title blocks and libraries.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+7. Model structure
+Agree discipline splits, worksets, links and the approach to federation. Make clear which model is the source for each element.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+8. Coordination reviews
+Set the review cadence, clash rules, priorities and ownership of actions. A clash report only helps if someone is responsible for resolving it.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+9. Technical queries
+Specify how missing inputs and conflicting information are raised, assigned and closed. Tie queries to the model or drawing reference.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+10. Checking and acceptance
+Define internal checking, client review, acceptance criteria and the review allowance. Agree how changes to the brief are handled.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+11. Information environment
+Record the common data environment, access permissions and issue process. Confirm confidentiality and file-sharing arrangements.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+12. Issue and handover
+List the native models, drawings, exchange files, revision information and any agreed asset data. Name the recipient and acceptance owner.
+Project decision:
+Responsible person:
+Reference/acceptance criteria:
+
+A starting outline only. Develop the plan against the appointment, client information requirements and applicable standards.

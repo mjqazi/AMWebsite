@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Timesheet Software for Engineering Drawing Teams</title>
-<meta name="description" content="Advanced Mechanix Timesheets helps engineering and drafting teams track hours by project, drawing, stage, approval, leave, and exportable delivery record.">
+<title>Drawing-Team Timesheets | Advanced Mechanix Product</title>
+<meta name="description" content="An additional software product for connecting drawing stages, project hours and review workflows. Industrial design services remain the company’s core offer.">
 <link rel="canonical" href="https://advancedmechanix.com/timesheet.html">
 <link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-var-latin.woff2" crossorigin>
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.min.css">
+<link rel="stylesheet" href="css/timesheet.min.css">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://advancedmechanix.com/timesheet.html">
-<meta property="og:title" content="Timesheet Software for Engineering Drawing Teams">
-<meta property="og:description" content="Track who worked on which drawing, how long it took, what stage it reached, and what managers can approve or export.">
+<meta property="og:title" content="Drawing-Team Timesheets | Advanced Mechanix Product">
+<meta property="og:description" content="An additional software product for connecting drawing stages, project hours and review workflows. Industrial design services remain the company’s core offer.">
 <meta property="og:image" content="https://advancedmechanix.com/images/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,6 +23,9 @@
 <meta name="twitter:image" content="https://advancedmechanix.com/images/og-card.png">
 <meta name="twitter:image:alt" content="Advanced Mechanix — industrial electrical design, controls &amp; plant BIM">
 
+<meta name="twitter:title" content="Drawing-Team Timesheets | Advanced Mechanix Product">
+<meta name="twitter:description" content="An additional software product for connecting drawing stages, project hours and review workflows. Industrial design services remain the company’s core offer.">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,17 +35,30 @@
       "@id": "https://advancedmechanix.com/#organization",
       "name": "Advanced Mechanix",
       "url": "https://advancedmechanix.com/",
-      "logo": "https://advancedmechanix.com/images/AM-Black-Logo.png"
+      "logo": "https://advancedmechanix.com/images/am-logo-black-h88.png",
+      "description": "Industrial electrical design documentation, control panel drawings and coordinated plant models.",
+      "email": "company@advancedmechanix.com",
+      "telephone": "+1-408-412-0717",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12478 San Bruno Cove",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "postalCode": "92130",
+        "addressCountry": "US"
+      }
     },
     {
       "@type": "SoftwareApplication",
-      "@id": "https://advancedmechanix.com/timesheet#software",
+      "@id": "https://advancedmechanix.com/timesheet.html#software",
       "name": "Advanced Mechanix Timesheets",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "url": "https://advancedmechanix.com/timesheet.html",
-      "publisher": {"@id": "https://advancedmechanix.com/#organization"},
-	      "description": "Timesheet software for engineering and drafting teams that tracks hours by project, drawing, stage, approval, leave, and exportable delivery record.",
+      "publisher": {
+        "@id": "https://advancedmechanix.com/#organization"
+      },
+      "description": "Timesheet software for engineering and drafting teams that tracks hours by project, drawing, stage, approval, leave, and exportable delivery record.",
       "featureList": [
         "Drawing-level hours",
         "Configurable drawing and document stages",
@@ -56,18 +73,88 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
-        {"@type":"ListItem","position":2,"name":"Advanced Mechanix Timesheets","item":"https://advancedmechanix.com/timesheet.html"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://advancedmechanix.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Drawing-Team Timesheets",
+          "item": "https://advancedmechanix.com/timesheet.html"
+        }
       ]
     },
     {
       "@type": "FAQPage",
+      "@id": "https://advancedmechanix.com/timesheet.html#faq",
       "mainEntity": [
-        {"@type":"Question","name":"Who is Advanced Mechanix Timesheets built for?","acceptedAnswer":{"@type":"Answer","text":"It is built for drafting, engineering, and AEC teams whose work is managed through drawings, document packages, project stages, approvals, and delivery evidence rather than generic task lists."}},
-        {"@type":"Question","name":"How is it different from generic time tracking?","acceptedAnswer":{"@type":"Answer","text":"Time can be attached to projects, drawings, document assets, activity types, descriptions, dates, stages, status history, and approvals so managers can see how hours connect to deliverables."}},
-        {"@type":"Question","name":"Does the product include manager approvals?","acceptedAnswer":{"@type":"Answer","text":"Yes. Manager workflows include approvals, edits, late reasons, history, exports, project views, reports, and role-aware access for admins, managers, program managers, and employees."}},
-        {"@type":"Question","name":"Is this surveillance software?","acceptedAnswer":{"@type":"Answer","text":"No. Optional consent-based screenshot and activity features can support verified-hour cases, but the core product is planning, timesheets, deliverables, approvals, leave, analytics, and exports."}},
-        {"@type":"Question","name":"Can a company start a trial?","acceptedAnswer":{"@type":"Answer","text":"Yes. The current product flow supports creating a company account and beginning from a trial setup. If a domain already belongs to an existing tenant, registration can direct the user toward the existing company."}}
+        {
+          "@type": "Question",
+          "name": "Who is Advanced Mechanix Timesheets built for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Drafting, engineering, and AEC teams whose work is managed through drawings, document packages, project stages, approvals, and delivery evidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is drawing-level time tracking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Instead of logging time only to a generic project, staff can attach hours to the actual deliverable: drawing, document, activity, date, description, stage, and approval state."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it handle leave and availability?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Leave requests, balances, working-day calculations, public holidays, approvals, cancellations, and absence history sit inside the same planning context."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is it different from generic time tracking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Time can be attached to projects, drawings, document assets, activity types, descriptions, dates, stages, status history, and approvals so managers can see how hours connect to deliverables."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the product include manager approvals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Manager workflows include approvals, edits, late reasons, history, exports, project views, reports, and role-aware access for admins, managers, program managers, and employees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a company start a trial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The current product flow supports creating a company account and beginning from a trial setup. If a domain already belongs to an existing tenant, registration can direct the user toward the existing company."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this surveillance software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Optional consent-based screenshot and activity features can support verified-hour cases, but the core product is planning, time, deliverables, approvals, analytics, and exports."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do I start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Request a demo through our contact page, or tell us if you want help mapping your existing projects and drawing registers before setup."
+          }
+        }
       ]
     }
   ]
@@ -78,13 +165,13 @@
 
 <a href="#main" class="skip-link">Skip to content</a>
 
-<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; <a href="mailto:company@advancedmechanix.com">company@advancedmechanix.com</a></span><span>&#9742; <a href="tel:+14084120717">+1 408 412 0717</a></span></div><div><span>Advanced Mechanix Timesheets &middot; Drawing-led time tracking software</span></div></div></div>
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; <a href="mailto:company@advancedmechanix.com">company@advancedmechanix.com</a></span><span>&#9742; <a href="tel:+14084120717">+1 408 412 0717</a></span></div><div><span>Industrial electrical design &middot; Control documentation &middot; Plant BIM</span></div></div></div>
 
 <header class="site-header">
   <div class="container">
     <nav class="nav" aria-label="Main navigation">
   <a href="/" class="logo" aria-label="Advanced Mechanix home"><img src="/images/am-logo-black-h88.png" alt="Advanced Mechanix" width="228" height="88"></a>
-  <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
   <ul class="nav-links" id="primary-navigation">
     <li><a href="/electrical-design.html">Electrical</a></li>
     <li><a href="/control-panel-design-outsourcing.html">Control panels</a></li>
@@ -142,7 +229,7 @@
         <div class="task-list">
           <article class="task-card">
             <div class="task-card-head">
-              <div><span class="task-code">DWG-104</span><h3>Close QA comments on substation SLD</h3></div>
+              <div><span class="task-code">DWG-104</span><h2>Close QA comments on substation SLD</h2></div>
               <span class="status-pill status-review">Review</span>
             </div>
             <div class="task-meta"><span>Owner: Maya</span><span>Due: 2:00 PM</span><span>Hours: 3.5 / 4.0</span></div>
@@ -286,10 +373,10 @@
       <h2>From morning plan to billing evidence without rebuilding the story by hand.</h2>
     </div>
     <div class="process">
-      <div class="process-step"><div class="process-num">01</div><h4>Set up projects and registers</h4><p>Create projects, assign leads, define drawing or document types, activity types, stages, budgets, and delivery context.</p></div>
-      <div class="process-step"><div class="process-num">02</div><h4>Run the morning meeting</h4><p>Set day-by-day work, resource allocations, expected outcomes, and delivered follow-up across the weekly planner.</p></div>
-      <div class="process-step"><div class="process-num">03</div><h4>Track work against drawings</h4><p>Employees record time while managers compare planned resources, actual hours, stage progress, and project activity.</p></div>
-      <div class="process-step"><div class="process-num">04</div><h4>Export the evidence</h4><p>Use analytics and timesheet exports to support billing, audits, project reviews, and client conversations.</p></div>
+      <div class="process-step"><div class="process-num">01</div><h3>Set up projects and registers</h3><p>Create projects, assign leads, define drawing or document types, activity types, stages, budgets, and delivery context.</p></div>
+      <div class="process-step"><div class="process-num">02</div><h3>Run the morning meeting</h3><p>Set day-by-day work, resource allocations, expected outcomes, and delivered follow-up across the weekly planner.</p></div>
+      <div class="process-step"><div class="process-num">03</div><h3>Track work against drawings</h3><p>Employees record time while managers compare planned resources, actual hours, stage progress, and project activity.</p></div>
+      <div class="process-step"><div class="process-num">04</div><h3>Export the evidence</h3><p>Use analytics and timesheet exports to support billing, audits, project reviews, and client conversations.</p></div>
     </div>
   </div>
 </section>
@@ -319,7 +406,7 @@
       <h2>Self-serve onboarding with guardrails for existing company domains.</h2>
       <p>New firms can create a company account and begin from a trial setup. If someone signs up with a domain that already belongs to a tenant, the registration flow can direct them toward joining the existing company instead of creating duplicate workspaces.</p>
       <div class="trust-grid">
-        <div class="trust-item"><h4>Role-aware access</h4><p>Separate workflows for admin, manager, program manager, employee, and super admin responsibilities.</p></div>
+        <div class="trust-item"><h3>Role-aware access</h3><p>Separate workflows for admin, manager, program manager, employee, and super admin responsibilities.</p></div>
         <div class="trust-item"><h4>Tenant-aware company setup</h4><p>Company registration supports SaaS operations and reduces duplicate workspace creation by domain.</p></div>
         <div class="trust-item"><h4>Verification stays secondary</h4><p>Optional screenshot and activity evidence can be enabled for selected use cases, but planning and deliverables remain the core product.</p></div>
         <div class="trust-item"><h4>Analytics and exports</h4><p>Project views, dashboards, submission reports, and Excel exports support billing and project review.</p></div>
@@ -377,7 +464,7 @@
         <a href="/" class="logo" style="margin-bottom: 24px;">
           <img src="images/am-logo-white-h88.png" alt="Advanced Mechanix" width="249" height="88" loading="lazy" decoding="async">
         </a>
-        <p>Industrial electrical design, control documentation and coordinated plant models. Drawn to your standards. Checked before issue.</p>
+        <p>Industrial electrical design, control documentation and coordinated plant models. Drawn to your standards.</p>
       </div>
       <div>
         <h3 class="footer-heading">Services</h3>
@@ -412,6 +499,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.min.js" defer></script>
 </body>
 </html>

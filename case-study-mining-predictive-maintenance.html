@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Case Study: Mining Predictive Maintenance Pilot</title>
-<meta name="description" content="How a four-week historian analytics pilot became a production predictive maintenance workflow for conveyor motor failure modes.">
+<title>Mining Maintenance Data Pilot | Project Notes</title>
+<meta name="description" content="Explore a maintenance-analysis pilot’s data inputs, failure-mode questions and rollout considerations alongside industrial engineering work.">
 <link rel="canonical" href="https://advancedmechanix.com/case-study-mining-predictive-maintenance.html">
 <link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-var-latin.woff2" crossorigin>
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.min.css">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://advancedmechanix.com/case-study-mining-predictive-maintenance.html">
-<meta property="og:title" content="Case Study: Mining Predictive Maintenance Pilot">
-<meta property="og:description" content="Historian analytics for conveyor motor failure modes, moved from four-week pilot to production maintenance workflow.">
+<meta property="og:title" content="Mining Maintenance Data Pilot | Project Notes">
+<meta property="og:description" content="Explore a maintenance-analysis pilot’s data inputs, failure-mode questions and rollout considerations alongside industrial engineering work.">
 <meta property="og:image" content="https://advancedmechanix.com/images/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,24 +20,84 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://advancedmechanix.com/images/og-card.png">
 <meta name="twitter:image:alt" content="Advanced Mechanix — industrial electrical design, controls &amp; plant BIM">
+<style>.concept-wrap{max-width:820px;margin:0 auto}.concept-wrap h2{font-size:clamp(1.7rem,3vw,2.35rem);margin-top:2.6em;margin-bottom:.65em}.concept-wrap p,.concept-wrap ul,.concept-wrap ol{font-size:1.04rem;line-height:1.75;color:var(--ink-2);margin-bottom:1.1em}.concept-wrap ul,.concept-wrap ol{padding-left:24px}.concept-wrap li{margin-bottom:.35em}.concept-wrap .tldr{background:var(--paper-2);padding:24px 28px;border-left:3px solid var(--hazard);margin:28px 0 40px}.concept-wrap .tldr h4,.related-reads h4{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--margin);font-weight:500;margin-bottom:18px}.concept-wrap .tldr p{margin:0;font-family:var(--font-display);font-size:1.12rem;color:var(--ink)}.related-reads{margin-top:48px;padding-top:36px;border-top:1px solid var(--rule)}.related-reads ul{list-style:none;padding:0}.related-reads li{margin-bottom:10px;font-family:var(--font-display);font-size:1.08rem}.related-reads a{color:var(--ink);background:none}</style>
+<meta name="twitter:title" content="Mining Maintenance Data Pilot | Project Notes">
+<meta name="twitter:description" content="Explore a maintenance-analysis pilot’s data inputs, failure-mode questions and rollout considerations alongside industrial engineering work.">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-    {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
-    {"@type":"Article","@id":"https://advancedmechanix.com/case-study-mining-predictive-maintenance.html#article","headline":"Case Study: Mining Predictive Maintenance Pilot","author":{"@type":"Person","@id":"https://advancedmechanix.com/authors/junaid-qazi.html#person","name":"Junaid Qazi","url":"https://advancedmechanix.com/authors/junaid-qazi.html"},"publisher":{"@id":"https://advancedmechanix.com/#organization"},"datePublished":"2026-07-07","dateModified":"2026-10-17","image":"https://advancedmechanix.com/images/ABX.png","mainEntityOfPage":"https://advancedmechanix.com/case-study-mining-predictive-maintenance.html","about":{"@type":"Thing","name":"Industrial data analytics"}},
-    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},{"@type":"ListItem","position":2,"name":"Case Studies","item":"https://advancedmechanix.com/case-studies.html"},{"@type":"ListItem","position":3,"name":"Mining Predictive Maintenance","item":"https://advancedmechanix.com/case-study-mining-predictive-maintenance.html"}]}
+    {
+      "@type": "Organization",
+      "@id": "https://advancedmechanix.com/#organization",
+      "name": "Advanced Mechanix",
+      "url": "https://advancedmechanix.com/",
+      "logo": "https://advancedmechanix.com/images/am-logo-black-h88.png",
+      "description": "Industrial electrical design documentation, control panel drawings and coordinated plant models.",
+      "email": "company@advancedmechanix.com",
+      "telephone": "+1-408-412-0717",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12478 San Bruno Cove",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "postalCode": "92130",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://advancedmechanix.com/case-study-mining-predictive-maintenance.html#article",
+      "headline": "Mining Maintenance Data Pilot | Project Notes",
+      "author": {
+        "@id": "https://advancedmechanix.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://advancedmechanix.com/#organization"
+      },
+      "dateModified": "2026-10-17",
+      "image": "https://advancedmechanix.com/images/ABX.png",
+      "mainEntityOfPage": "https://advancedmechanix.com/case-study-mining-predictive-maintenance.html",
+      "about": {
+        "@type": "Thing",
+        "name": "Industrial data analytics"
+      },
+      "description": "Explore a maintenance-analysis pilot’s data inputs, failure-mode questions and rollout considerations alongside industrial engineering work."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://advancedmechanix.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Case Studies",
+          "item": "https://advancedmechanix.com/case-studies.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mining Maintenance Data Pilot",
+          "item": "https://advancedmechanix.com/case-study-mining-predictive-maintenance.html"
+        }
+      ]
+    }
   ]
 }
 </script>
-<style>.concept-wrap{max-width:820px;margin:0 auto}.concept-wrap h2{font-size:clamp(1.7rem,3vw,2.35rem);margin-top:2.6em;margin-bottom:.65em}.concept-wrap p,.concept-wrap ul,.concept-wrap ol{font-size:1.04rem;line-height:1.75;color:var(--ink-2);margin-bottom:1.1em}.concept-wrap ul,.concept-wrap ol{padding-left:24px}.concept-wrap li{margin-bottom:.35em}.concept-wrap .tldr{background:var(--paper-2);padding:24px 28px;border-left:3px solid var(--hazard);margin:28px 0 40px}.concept-wrap .tldr h4,.related-reads h4{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--margin);font-weight:500;margin-bottom:18px}.concept-wrap .tldr p{margin:0;font-family:var(--font-display);font-size:1.12rem;color:var(--ink)}.related-reads{margin-top:48px;padding-top:36px;border-top:1px solid var(--rule)}.related-reads ul{list-style:none;padding:0}.related-reads li{margin-bottom:10px;font-family:var(--font-display);font-size:1.08rem}.related-reads a{color:var(--ink);background:none}</style>
 </head>
 <body data-service="analytics">
 <a href="#main" class="skip-link">Skip to content</a>
-<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; <a href="mailto:company@advancedmechanix.com">company@advancedmechanix.com</a></span><span>&#9742; <a href="tel:+14084120717">+1 408 412 0717</a></span></div><div><span>REV 2026.07 &middot; INDUSTRIAL ANALYTICS</span></div></div></div>
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; <a href="mailto:company@advancedmechanix.com">company@advancedmechanix.com</a></span><span>&#9742; <a href="tel:+14084120717">+1 408 412 0717</a></span></div><div><span>Industrial electrical design &middot; Control documentation &middot; Plant BIM</span></div></div></div>
 <header class="site-header"><div class="container"><nav class="nav" aria-label="Main navigation">
   <a href="/" class="logo" aria-label="Advanced Mechanix home"><img src="/images/am-logo-black-h88.png" alt="Advanced Mechanix" width="228" height="88"></a>
-  <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
   <ul class="nav-links" id="primary-navigation">
     <li><a href="/electrical-design.html">Electrical</a></li>
     <li><a href="/control-panel-design-outsourcing.html">Control panels</a></li>
@@ -50,20 +110,20 @@
 <main id="main">
 <section class="page-hero center"><div class="container"><div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="case-studies.html">Case Studies</a> &rsaquo; Predictive Maintenance</div><h1>Four-week analytics pilot, <em>production maintenance result.</em></h1><p>A mining operation used historian data to identify conveyor motor failure patterns and move from reactive maintenance to targeted intervention.</p></div></section>
 <section class="section"><div class="container"><article class="concept-wrap">
-<div class="tldr"><h4>Project Snapshot</h4><p>Client: mining operation, anonymized. Scope: historian data review, conveyor motor failure-mode analysis, feature engineering, dashboard prototype, maintenance-priority register, and production rollout support. Result: a four-week pilot that led to production rollout.</p></div>
+<div class="tldr"><h2>Project Snapshot</h2><p>Client: mining operation, anonymized. Scope: historian data review, conveyor motor failure-mode analysis, feature engineering, dashboard prototype, maintenance-priority register, and production rollout support. Result: a four-week pilot that led to production rollout.</p></div>
 <h2>Client type</h2><p>A mining operation running conveyor systems, with a maintenance team responsible for keeping them available and years of process historian data that it was not yet using to plan maintenance. The operation is not named because the work was delivered under NDA.</p>
 <h2>Scope</h2><ul><li>Review of the existing historian data.</li><li>Failure-mode analysis for conveyor motors.</li><li>Feature engineering on the signals that mattered.</li><li>A dashboard prototype and a maintenance-priority register.</li><li>Support for the production rollout after the pilot.</li></ul>
 <h2>Constraints</h2><p>The maintenance team had years of historian data but little usable warning before repeat motor failures. The obvious answer was not a large AI project. The first need was a practical pilot: prove whether the existing signals could identify failure modes early enough for maintenance to act, and keep the scope narrow enough to finish in four weeks.</p>
 <h2>Standards</h2><p>There is no drawing code for a pilot like this; the standard the work had to meet was the maintenance team&rsquo;s own planning process. That meant explainable features rather than a black-box prediction score, a dashboard and priority register that planners could act on, and defined escalation rules for maintenance planners and reliability engineers.</p>
 <h2>Deliverables</h2><ul><li>Cleaned historian tags, with motor load, current, vibration, temperature and stoppage signals aligned.</li><li>A comparison of failure windows against normal operating periods and seasonal load changes.</li><li>A small set of features the maintenance team could understand and trust.</li><li>A dashboard and priority register instead of a black-box score.</li><li>Escalation rules for maintenance planners and reliability engineers.</li></ul>
 <h2>Timeline</h2><p>The pilot took four weeks. Its findings justified a production rollout, and the result was measured six months later, once the targeted interventions had been running long enough to show in the downtime and maintenance figures.</p>
-<h2>Outcome</h2><div class="case-metrics" style="margin:28px 0 24px;"><div class="case-metric"><strong>32%</strong><span>Downtime reduction</span></div><div class="case-metric"><strong>19%</strong><span>Maintenance saving</span></div><div class="case-metric"><strong>4 wk</strong><span>Pilot duration</span></div></div><p>The pilot justified a production rollout because it gave maintenance planners a specific intervention list, not just an analytics presentation. Six months later, downtime tied to the studied conveyor motor failure modes had dropped by roughly one-third, and maintenance spend was 19% lower through targeted failure-mode intervention.</p>
+<h2>Outcome</h2><p>The project notes focus on the asset-data inputs and the failure-mode questions. Any decision to extend the analysis needs an agreed operational baseline and validation criteria.</p>
 <h3>Why the pilot worked</h3><p>The project stayed narrow. We did not try to model every asset in the plant. We selected one failure pattern, proved the signal quality, and made sure the output fit the maintenance team&rsquo;s planning rhythm. That kept the result operational instead of academic.</p>
-<div class="guarantee" style="margin-top:60px;"><div class="guarantee-seal">Pilot<br>First</div><div><h3>Have historian data but no decision layer?</h3><p>Send a sample export and one recurring failure mode. We will scope a pilot around the smallest signal set that can change a maintenance decision.</p></div><div><a href="data-analytics.html" class="btn">Explore Analytics</a></div></div>
+<div class="guarantee"><div><h3>Start with a defined scope.</h3><p>Agree the source information, deliverables and review requirements before the first issue.</p></div><a href="/contact.html?service=electrical" class="btn">Scope your project</a></div>
 <div class="related-reads"><h4>Related Reads</h4><ul><li><a href="data-analytics.html">Industrial data analytics services</a></li><li><a href="industries/mining.html">Mining industry services</a></li><li><a href="case-study-pilbara-mine-power-distribution.html">Case study: mine power distribution package</a></li><li><a href="case-studies.html">All case studies</a></li></ul></div>
 </article></div></section>
 </main>
-<footer class="footer"><div class="container"><div class="footer-grid"><div><a href="/" class="logo" style="margin-bottom:24px;"><img src="images/am-logo-white-h88.png" alt="Advanced Mechanix" width="249" height="88" loading="lazy" decoding="async"></a><p>Industrial electrical design, control documentation and coordinated plant models. Drawn to your standards. Checked before issue.</p></div><div><h3 class="footer-heading">Services</h3><ul class="footer-list"><li><a href="/electrical-design.html">Industrial electrical design</a></li><li><a href="/control-panel-design-outsourcing.html">Control panel documentation</a></li><li><a href="/3d-modeling.html">Plant BIM &amp; modelling</a></li><li class="footer-secondary">Additional services</li><li><a href="solar-services.html">Solar engineering</a></li><li><a href="timesheet.html">Timesheet Software</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div><div><h3 class="footer-heading">Company</h3><ul class="footer-list"><li><a href="about.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="blog.html">Insights</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h3 class="footer-heading">Office</h3><ul class="footer-list"><li><a href="tel:+14084120717">+1 408 412 0717</a></li><li><a href="mailto:company@advancedmechanix.com">company@advancedmechanix.com</a></li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div></div><div class="footer-bottom"><span>&copy; <span class="current-year"></span> Advanced Mechanix &middot; Engineering Documentation</span><span>NEC &middot; IEC &middot; AS/NZS</span></div></div></footer>
-<script src="js/main.js"></script>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><a href="/" class="logo" style="margin-bottom:24px;"><img src="images/am-logo-white-h88.png" alt="Advanced Mechanix" width="249" height="88" loading="lazy" decoding="async"></a><p>Industrial electrical design, control documentation and coordinated plant models. Drawn to your standards.</p></div><div><h3 class="footer-heading">Services</h3><ul class="footer-list"><li><a href="/electrical-design.html">Industrial electrical design</a></li><li><a href="/control-panel-design-outsourcing.html">Control panel documentation</a></li><li><a href="/3d-modeling.html">Plant BIM &amp; modelling</a></li><li class="footer-secondary">Additional services</li><li><a href="solar-services.html">Solar engineering</a></li><li><a href="timesheet.html">Timesheet Software</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div><div><h3 class="footer-heading">Company</h3><ul class="footer-list"><li><a href="about.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="blog.html">Insights</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h3 class="footer-heading">Office</h3><ul class="footer-list"><li><a href="tel:+14084120717">+1 408 412 0717</a></li><li><a href="mailto:company@advancedmechanix.com">company@advancedmechanix.com</a></li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div></div><div class="footer-bottom"><span>&copy; <span class="current-year"></span> Advanced Mechanix &middot; Engineering Documentation</span><span>NEC &middot; IEC &middot; AS/NZS</span></div></div></footer>
+<script src="js/main.min.js" defer></script>
 </body>
 </html>

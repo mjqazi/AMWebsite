@@ -1,0 +1,63 @@
+INDUSTRIAL DESIGN VENDOR CHECKLIST
+Advanced Mechanix | Updated 17-Oct-2026
+
+Project:
+Review owner:
+Standard/edition:
+Target issue:
+
+1. Define the package
+Give each bidder the same drawing register, source information and example mark-ups. Separate new engineering development from drafting existing decisions.
+Supplier response:
+Evidence/reference:
+Action owner:
+
+2. Name the review owner
+Ask who is responsible for technical queries, checking and accepting the issue. A named contact is more useful than an unspecified team size.
+Supplier response:
+Evidence/reference:
+Action owner:
+
+3. Confirm the toolset
+Record the software version, native file format, title blocks, symbol libraries and naming convention. Check how source files will be handed back.
+Supplier response:
+Evidence/reference:
+Action owner:
+
+4. Discuss the design basis
+Identify the project standard and edition, design inputs and who owns calculations and design decisions. Agree any certification or statutory review separately.
+Supplier response:
+Evidence/reference:
+Action owner:
+
+5. Agree a query process
+Missing inputs should be visible. Ask how questions are referenced, assigned and closed before a drawing moves to the next issue.
+Supplier response:
+Evidence/reference:
+Action owner:
+
+6. Set the review allowance
+Define review rounds, response windows and how a change to the design basis is priced. Do not assume an unlimited revision promise covers a changing scope.
+Supplier response:
+Evidence/reference:
+Action owner:
+
+7. Set file access and confidentiality
+Agree the NDA, permitted workspace, access approval and handover requirements before sharing confidential source information.
+Supplier response:
+Evidence/reference:
+Action owner:
+
+8. Compare the complete estimate
+Include input preparation, onboarding, checking, coordination, revisions and handover. Compare quotes against the same inclusions rather than an hourly rate alone.
+Supplier response:
+Evidence/reference:
+Action owner:
+
+9. Agree the issue and handover
+Confirm the drawing register, revision record, native files, PDFs and model exchange requirements. Make clear what counts as accepted delivery.
+Supplier response:
+Evidence/reference:
+Action owner:
+
+This checklist is a planning aid, not a supplier certification or a substitute for project-specific procurement requirements.

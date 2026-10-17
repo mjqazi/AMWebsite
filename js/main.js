@@ -1,7 +1,6 @@
 // Advanced Mechanix — site JS
 
-// Lead-form endpoint. All forms (#consultation-form on index, contact,
-// BEP template and vendor checklist pages) POST JSON here via fetch().
+// Lead-form endpoint. The homepage and contact forms POST JSON via fetch().
 // FormSubmit (https://formsubmit.co) relays the submission by email; the
 // first submission triggers a one-time activation email to the address.
 // To switch providers, change this one constant — e.g. a Formspree form
@@ -76,14 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.addEventListener('click', () => {
       const open = links.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
     // Close menu when a link is clicked
     links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         links.classList.remove('open');
         toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open navigation');
+        toggle.setAttribute('aria-label', 'Open menu');
       });
     });
     // Close menu on Escape and return focus to the toggle
@@ -91,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape' && links.classList.contains('open')) {
         links.classList.remove('open');
         toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open navigation');
+        toggle.setAttribute('aria-label', 'Open menu');
         toggle.focus();
       }
     });
