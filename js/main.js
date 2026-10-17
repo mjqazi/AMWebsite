@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const serviceSelect = form.querySelector('select[name="service"]');
     const wanted = new URLSearchParams(location.search).get('service');
     if (serviceSelect && wanted) {
-      const needle = wanted.toLowerCase().replace(/[-_+]/g, ' ').trim();
-      const match = Array.from(serviceSelect.options).find(o =>
+      const needle = wanted.toLowerCase().replace(/[-_+]/g, ' ').trim().replace(/s$/, '');
+      const match = needle && Array.from(serviceSelect.options).find(o =>
         o.value && (o.value.toLowerCase().includes(needle) || o.text.toLowerCase().includes(needle)));
       if (match) serviceSelect.value = match.value;
     }
