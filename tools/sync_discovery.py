@@ -71,6 +71,8 @@ def main():
         ET.SubElement(entry, f'{{{NS}}}lastmod').text = MODIFIED
     write_xml('sitemap.xml', index)
     write_xml('sitemap-index.xml', index)
+    # Preserve the WordPress-era URL already registered in Search Console.
+    write_xml('sitemap_index.xml', index)
 
     rss = ET.Element('rss', version='2.0')
     channel = ET.SubElement(rss, 'channel')
