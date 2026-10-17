@@ -64,6 +64,8 @@ def main():
         if re.search(r'(?:src|href)="http://', source):
             errors.append(f'{filename}: insecure linked asset or destination')
         schemas = re.findall(r'<script\b[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', source, re.S)
+        if re.search(r'first drawing free|free pilot|Phoenix solar|Solar Permits & Studies', '\n'.join(schemas), re.I):
+            errors.append(f'{filename}: retired messaging in structured data')
         graph = [node for block in schemas for node in json.loads(block).get('@graph', [])]
         visible = VisibleContent(source).faqs
         structured = [node for node in graph if node.get('@type') == 'FAQPage']

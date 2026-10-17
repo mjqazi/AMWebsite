@@ -94,8 +94,16 @@ def sync_schema(source, canonical, metadata, faqs):
         if not isinstance(value, dict):
             return value
         kind = value.get('@type')
-        if kind in ('LocalBusiness', 'FAQPage'):
+        if kind in ('LocalBusiness', 'FAQPage', 'HowTo'):
             return None
+        if kind in ('WebPage', 'AboutPage', 'CollectionPage', 'ContactPage', 'ProfilePage', 'Blog', 'CreativeWork', 'SoftwareApplication'):
+            return {'@type': kind, '@id': value.get('@id', canonical + '#page'),
+                    'url': canonical, 'name': metadata['title'],
+                    'description': metadata['description'], 'about': {'@id': ORG_ID}}
+        if kind == 'WebSite':
+            return {'@type': 'WebSite', '@id': BASE + '/#website', 'url': BASE + '/',
+                    'name': 'Advanced Mechanix', 'description': ORGANIZATION['description'],
+                    'publisher': {'@id': ORG_ID}}
         if kind == 'Organization' and value.get('name', 'Advanced Mechanix') == 'Advanced Mechanix':
             return ORGANIZATION.copy()
         if kind == 'Organization' and value.get('name') == 'OptiScheduleAI':
