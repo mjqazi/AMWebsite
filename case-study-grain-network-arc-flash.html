@@ -27,7 +27,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
-    {"@type":"Article","@id":"https://advancedmechanix.com/case-study-grain-network-arc-flash.html#article","headline":"Case Study: A 38-Site Arc Flash Study Program for an Australian Grain-Handling Network","author":{"@type":"Person","@id":"https://advancedmechanix.com/authors/junaid-qazi.html#person","name":"Junaid Qazi","url":"https://advancedmechanix.com/authors/junaid-qazi.html"},"publisher":{"@id":"https://advancedmechanix.com/#organization"},"datePublished":"2026-07-07","dateModified":"2026-07-07","image":"https://advancedmechanix.com/images/drawings/mining-power-distribution.svg","mainEntityOfPage":"https://advancedmechanix.com/case-study-grain-network-arc-flash.html","about":{"@type":"Thing","name":"Arc Flash Study"}},
+    {"@type":"Article","@id":"https://advancedmechanix.com/case-study-grain-network-arc-flash.html#article","headline":"Case Study: A 38-Site Arc Flash Study Program for an Australian Grain-Handling Network","author":{"@type":"Person","@id":"https://advancedmechanix.com/authors/junaid-qazi.html#person","name":"Junaid Qazi","url":"https://advancedmechanix.com/authors/junaid-qazi.html"},"publisher":{"@id":"https://advancedmechanix.com/#organization"},"datePublished":"2026-07-07","dateModified":"2026-10-17","image":"https://advancedmechanix.com/images/drawings/mining-power-distribution.svg","mainEntityOfPage":"https://advancedmechanix.com/case-study-grain-network-arc-flash.html","about":{"@type":"Thing","name":"Arc Flash Study"}},
     {"@type":"BreadcrumbList","itemListElement":[
       {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
       {"@type":"ListItem","position":2,"name":"Case Studies","item":"https://advancedmechanix.com/case-studies.html"},
@@ -103,24 +103,22 @@
         <p>Client: Australian grain-handling network (anonymized composite &mdash; identifying details altered; representative of the engagement). Scope: IEEE 1584-2018 arc flash studies across 38 receival and port sites, ~520 buses. Platform: ETAP. Duration: 9 months, staged around harvest. Field data collected by the client's electricians using our structured collection packs.</p>
       </div>
 
-      <h2>The situation</h2>
-      <p>The client operates a network of grain receival sites and port terminals spread across a very large area &mdash; each with its own transformers, MCCs, and distribution boards driving conveyors, elevators, aeration fans, and ship loaders. Their last network-wide arc flash assessment predated both the IEEE 1584-2018 method and several rounds of site upgrades. An insurer review flagged the gap; internally, the electrical team already knew the labels on the gear no longer matched the systems behind them.</p>
-      <p>Three constraints shaped the engagement:</p>
+      <h2>Client type</h2>
+      <p>The client operates a network of grain receival sites and port terminals spread across a very large area &mdash; each with its own transformers, MCCs, and distribution boards driving conveyors, elevators, aeration fans, and ship loaders. It has its own electrical team and site electricians, an insurer that reviews its electrical safety program, and a board HSE committee that receives the results.</p>
+
+      <h2>Scope</h2>
+      <p>A network-wide refresh of the arc flash studies at all 38 receival and port sites, about 520 buses in total. The engagement ran as a staged program rather than 38 separate studies, and covered data collection support, single-line verification and redraw, ETAP modeling, short-circuit and protection coordination review, incident-energy calculations, labels, and a ranked remediation register.</p>
+
+      <h2>Constraints</h2>
+      <p>The last network-wide arc flash assessment predated both the IEEE 1584-2018 method and several rounds of site upgrades. An insurer review flagged the gap; internally, the electrical team already knew the labels on the gear no longer matched the systems behind them. Three constraints shaped the engagement:</p>
       <ul>
         <li><strong>The harvest window is untouchable.</strong> During intake season the sites run hard, and nobody is walking a consultant through a switchroom.</li>
         <li><strong>Documentation quality varied wildly by site.</strong> Some sites had current single-lines; others had drawings two upgrade cycles old, or none that could be located.</li>
         <li><strong>Onshore study quotes didn't scale.</strong> Priced site-by-site by local consultancies, the program's cost was roughly double the approved budget &mdash; a familiar shape of problem (see our <a href="guide-electrical-drafting-outsourcing.html">outsourcing pricing benchmarks</a>).</li>
       </ul>
 
-      <h2>What we did</h2>
-      <p>The engagement ran as a staged program rather than 38 separate studies:</p>
-      <ol>
-        <li><strong>Site triage.</strong> All 38 sites ranked by documentation quality, electrical complexity, and operational criticality. Port terminals and the largest receival sites first.</li>
-        <li><strong>Structured data collection packs.</strong> Rather than flying engineers between remote sites, we built per-site collection packs &mdash; photo checklists, nameplate forms, settings capture sheets &mdash; that the client's own electricians completed during routine site visits. Our team validated each pack overnight and returned queries within 24 hours.</li>
-        <li><strong>SLD verification and redraw.</strong> Every site got a verified single-line as a study prerequisite; 14 sites needed substantial redraws from field data. These became client-standard drawings, not just study inputs.</li>
-        <li><strong>ETAP modeling and studies.</strong> Short-circuit, protection coordination review, and IEEE 1584-2018 incident-energy calculations at every relevant bus, including reduced-arcing-current cases and per-bus electrode configurations.</li>
-        <li><strong>Labels and remediation register.</strong> Print-ready labels per site, plus a network-wide remediation register: recommended protection-setting changes ranked by risk reduction per dollar &mdash; most requiring only settings work by site electricians, no hardware.</li>
-      </ol>
+      <h2>Standards</h2>
+      <p>Incident energy was calculated with the IEEE 1584-2018 method at every relevant bus, including reduced-arcing-current cases and per-bus electrode configurations, in ETAP. Each site's study rested on a verified single-line diagram, and the redrawn single-lines were produced as client-standard drawings rather than throwaway study inputs. Labels were issued print-ready for every labeled equipment item.</p>
 
       <h2>Deliverables</h2>
       <ul>
@@ -133,7 +131,17 @@
         <li>Program summary for the insurer and the board HSE committee</li>
       </ul>
 
-      <h2>Results</h2>
+      <h2>Timeline</h2>
+      <p>The program ran for nine months, staged around the harvest window:</p>
+      <ol>
+        <li><strong>Site triage.</strong> All 38 sites ranked by documentation quality, electrical complexity, and operational criticality. Port terminals and the largest receival sites first.</li>
+        <li><strong>Structured data collection packs.</strong> Rather than flying engineers between remote sites, we built per-site collection packs &mdash; photo checklists, nameplate forms, settings capture sheets &mdash; that the client's own electricians completed during routine site visits. Our team validated each pack overnight and returned queries within 24 hours.</li>
+        <li><strong>SLD verification and redraw.</strong> Every site got a verified single-line as a study prerequisite; 14 sites needed substantial redraws from field data.</li>
+        <li><strong>ETAP modeling and studies.</strong> Short-circuit, protection coordination review, and IEEE 1584-2018 incident-energy calculations at every relevant bus.</li>
+        <li><strong>Labels and remediation register.</strong> Print-ready labels per site, plus a network-wide remediation register: recommended protection-setting changes ranked by risk reduction per dollar &mdash; most requiring only settings work by site electricians, no hardware.</li>
+      </ol>
+
+      <h2>Outcome</h2>
       <div class="case-metrics" style="margin: 28px 0 8px;">
         <div class="case-metric"><strong>38</strong><span>Sites completed</span></div>
         <div class="case-metric"><strong>9 mo</strong><span>Program duration</span></div>
@@ -153,7 +161,8 @@
         <div class="testimonial-result">&#10004; 38 sites in 9 months / high-incident-energy buses cut by roughly three-quarters</div>
       </div>
 
-      <div class="guarantee" style="margin-top: 60px;">
+      
+<div class="guarantee" style="margin-top: 60px;">
         <div class="guarantee-seal">First<br>Bus<br>Free</div>
         <div>
           <h3>Running a multi-site network on stale labels?</h3>

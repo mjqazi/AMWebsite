@@ -27,7 +27,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
-    {"@type":"Article","@id":"https://advancedmechanix.com/case-study-industrial-mcc-sld-package.html#article","headline":"Case Study: Industrial MCC and Single-Line Diagram Package","author":{"@type":"Person","@id":"https://advancedmechanix.com/authors/junaid-qazi.html#person","name":"Junaid Qazi","url":"https://advancedmechanix.com/authors/junaid-qazi.html"},"publisher":{"@id":"https://advancedmechanix.com/#organization"},"datePublished":"2026-07-07","dateModified":"2026-07-07","image":"https://advancedmechanix.com/images/drawings/single-line-diagram.svg","mainEntityOfPage":"https://advancedmechanix.com/case-study-industrial-mcc-sld-package.html","about":{"@type":"Thing","name":"Electrical drafting"}},
+    {"@type":"Article","@id":"https://advancedmechanix.com/case-study-industrial-mcc-sld-package.html#article","headline":"Case Study: Industrial MCC and Single-Line Diagram Package","author":{"@type":"Person","@id":"https://advancedmechanix.com/authors/junaid-qazi.html#person","name":"Junaid Qazi","url":"https://advancedmechanix.com/authors/junaid-qazi.html"},"publisher":{"@id":"https://advancedmechanix.com/#organization"},"datePublished":"2026-07-07","dateModified":"2026-10-17","image":"https://advancedmechanix.com/images/drawings/single-line-diagram.svg","mainEntityOfPage":"https://advancedmechanix.com/case-study-industrial-mcc-sld-package.html","about":{"@type":"Thing","name":"Electrical drafting"}},
     {"@type":"BreadcrumbList","itemListElement":[
       {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
       {"@type":"ListItem","position":2,"name":"Case Studies","item":"https://advancedmechanix.com/case-studies.html"},
@@ -93,35 +93,53 @@
     <article class="concept-wrap">
       <div class="tldr">
         <h4>Project Snapshot</h4>
-        <p>Client: industrial processing facility in Western Australia, anonymized. Scope: 11 kV / 415 V single-line diagram, 2500 kVA transformer, main switchboard, MCC feeders, panel schedules, cable schedule coordination, and issue-for-construction drawing set.</p>
+        <p>Client: industrial processing facility in Western Australia, anonymized. Scope: 11 kV / 415 V single-line diagram, 2500 kVA transformer, main switchboard, MCC feeders, panel schedules, cable schedule coordination, and issue-for-construction drawing set. Result: five conflicts caught before construction, delivered two weeks early.</p>
       </div>
 
-      <h2>The problem</h2>
-      <p>The client was preparing to mobilize electrical contractors against a fast-moving plant upgrade. Their internal engineering team had enough source material to brief construction, but not enough clean documentation to issue. The latest single-line was split across markups, vendor drawings, and field notes. Several motor-control feeders were known to have changed, but the changes had not made it back into the drawing register.</p>
-      <p>The construction window was fixed. The risk was not that drawings would be late in isolation; the risk was that field crews would discover conflicts after cable tray, MCC buckets, and isolation points were already committed.</p>
+      <h2>Client type</h2>
+      <p>An industrial processing facility in Western Australia, part-way through a fast-moving plant upgrade. The client had its own internal engineering team, which owned the design and the drawing register, and was preparing to mobilise electrical contractors. The facility is not named because the work was delivered under NDA.</p>
 
-      <h2>What we delivered</h2>
+      <h2>Scope</h2>
+      <p>The job was to turn scattered source material into one construction-ready electrical package:</p>
       <ul>
-        <li>Verified 11 kV / 415 V single-line diagram with utility source, transformer, main switchboard, MCC, and downstream feeders</li>
-        <li>MCC schedule with motor loads, starter references, protection notes, and spare ways</li>
+        <li>The 11&thinsp;kV / 415&thinsp;V single-line diagram, from the utility source through the 2500&thinsp;kVA transformer and main switchboard to the MCC and downstream feeders.</li>
+        <li>The MCC schedule, panel schedules and feeder schedule.</li>
+        <li>Coordination with the cable schedule.</li>
+        <li>An issue-for-construction (IFC) drawing set for the client&rsquo;s drawing register.</li>
+      </ul>
+
+      <h2>Constraints</h2>
+      <p>The client&rsquo;s internal engineering team had enough source material to brief construction, but not enough clean documentation to issue. The latest single-line was split across mark-ups, vendor drawings and field notes. Several motor-control feeders were known to have changed, but the changes had not made it back into the drawing register.</p>
+      <p>The construction window was fixed. The risk was not that drawings would be late in isolation; the risk was that field crews would discover conflicts after cable tray, MCC buckets and isolation points were already committed.</p>
+
+      <h2>Standards</h2>
+      <p>The governing discipline on this job was drawing control. Every change had to reconcile across the SLD, the MCC schedule, the feeder schedule and the title-block revision history before the package moved forward, and client decisions were logged separately from drafting corrections so the engineering team could see exactly what had changed and why. The finished set was delivered in the client&rsquo;s drawing-register format with editable source files.</p>
+      <!-- OWNER: state which electrical standard the package was checked against. The case-studies hub labels this job "Industrial · WA", but the homepage sample card for the same SLD says "NEC 2023 + IEC" for an 11 kV / 415 V system; confirm and align both. -->
+
+      <h2>Deliverables</h2>
+      <ul>
+        <li>Verified 11&thinsp;kV / 415&thinsp;V single-line diagram with utility source, transformer, main switchboard, MCC and downstream feeders</li>
+        <li>MCC schedule with motor loads, starter references, protection notes and spare ways</li>
         <li>Panel schedules and feeder schedule cross-referenced against the SLD</li>
         <li>Redline register separating client decisions from drafting corrections</li>
         <li>Issue-for-construction PDFs plus editable source files for the client drawing register</li>
       </ul>
 
-      <h2>The QA pass that changed the outcome</h2>
-      <p>Our review found five construction-phase conflicts before IFC issue: one transformer data mismatch, two motor-load feeder conflicts, one spare-way assumption that had already been consumed by a vendor skid, and one panel schedule that carried a superseded breaker frame size.</p>
-      <p>None of those items were dramatic on paper. In the field, each would have triggered an RFI, procurement delay, or rework instruction. The fix was disciplined drawing control: every change had to reconcile across the SLD, MCC schedule, feeder schedule, and title-block revision history before the package moved forward.</p>
+      <h2>Timeline</h2>
+      <p>The QA review ran before IFC issue rather than after it, which is what made the schedule work. Coordination of all five conflicts was cleared before construction mobilisation, and the complete package was delivered two weeks earlier than the client needed it.</p>
+      <!-- OWNER: add the total engagement duration if you can share it. -->
 
-      <h2>Result</h2>
+      <h2>Outcome</h2>
       <div class="case-metrics" style="margin: 28px 0 24px;">
         <div class="case-metric"><strong>5</strong><span>Conflicts caught</span></div>
         <div class="case-metric"><strong>2 wk</strong><span>Early delivery</span></div>
         <div class="case-metric"><strong>0</strong><span>Rework invoices</span></div>
       </div>
-      <p>The finished package was accepted into the client's drawing register and issued to the electrical contractor without a rework claim from the documentation scope. The facility also received a cleaner baseline for future arc flash and protection-coordination updates.</p>
+      <p>Our review found five construction-phase conflicts before IFC issue: one transformer data mismatch, two motor-load feeder conflicts, one spare-way assumption that had already been consumed by a vendor skid, and one panel schedule that carried a superseded breaker frame size.</p>
+      <p>None of those items was dramatic on paper. In the field, each would have triggered an RFI, a procurement delay or a rework instruction. The finished package was accepted into the client&rsquo;s drawing register and issued to the electrical contractor without a rework claim from the documentation scope. The facility also received a cleaner baseline for future arc flash and protection-coordination updates.</p>
 
-      <div class="guarantee" style="margin-top: 60px;">
+      
+<div class="guarantee" style="margin-top: 60px;">
         <div class="guarantee-seal">First<br>Drawing<br>Free</div>
         <div>
           <h3>Need an SLD or MCC package cleaned up?</h3>
