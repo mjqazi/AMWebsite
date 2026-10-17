@@ -3648,3 +3648,155 @@ h3 em,
 .trust-panel h2 em { color: #93b9ff; }
 .concept-wrap .guarantee p,
 article .guarantee p { color: rgba(247,245,238,0.78); }
+
+/* -------------------------------------------------------------------------- */
+/* Mobile homepage + sticky CTA bar (Part B, task 1)                          */
+/* -------------------------------------------------------------------------- */
+
+/* Sticky bottom CTA bar — injected by js/main.js on every page except
+   contact.html. Hidden above 768px; hides itself while a lead form is on
+   screen so it never covers the submit button. */
+.mobile-cta-bar { display: none; }
+
+@media (max-width: 768px) {
+  .mobile-cta-bar {
+    display: flex;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 900;
+    gap: 8px;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: var(--navy);
+    border-top: 1px solid rgba(250,248,242,0.16);
+    box-shadow: 0 -12px 28px -18px rgba(10,22,38,0.8);
+    transition: transform 0.25s var(--ease-out);
+  }
+  .mobile-cta-bar.is-hidden { transform: translateY(110%); }
+  .mobile-cta-bar .btn {
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: center;
+    padding: 13px 14px;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .mobile-cta-bar .btn::after { display: none; }
+  .mobile-cta-call {
+    flex: 0 0 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    border: 1px solid rgba(250,248,242,0.4);
+    color: var(--paper-2);
+    background: transparent;
+  }
+  .mobile-cta-call svg { width: 20px; height: 20px; }
+  /* Room for the bar so it never hides the footer, consent or submit button */
+  body.has-mobile-cta { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* Platform tabs: horizontal scroller with a right-edge fade cue */
+@media (max-width: 1100px) {
+  .platform-tab-list {
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 56px), transparent);
+            mask-image: linear-gradient(to right, #000 calc(100% - 56px), transparent);
+  }
+  .platform-tab-list::-webkit-scrollbar { display: none; }
+  .platform-tab-list.at-end { -webkit-mask-image: none; mask-image: none; }
+  .platform-tab { flex: 0 0 auto; width: auto; scroll-snap-align: start; }
+}
+
+/* Hero chips on one line (scrolls sideways if it ever runs out of room) */
+.hero .chips {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.hero .chips::-webkit-scrollbar { display: none; }
+.hero .chip { flex: 0 0 auto; white-space: nowrap; }
+
+@media (max-width: 640px) {
+  /* Hero: drop the sheet strip so the first CTA lands above the fold */
+  .hero .title-block { display: none; }
+  .hero { padding: 36px 0 48px; }
+  .hero .chips { margin-top: 22px; gap: 6px; }
+  .hero .chip { font-size: 0.64rem; padding: 5px 9px; letter-spacing: 0.08em; }
+  .hero-socialproof { margin-top: 18px; font-size: 0.76rem; }
+  .hero-below { gap: 32px; }
+  .hero .spec-stats > div { padding: 14px 16px; }
+  .hero .spec-num { font-size: 1.7rem; }
+
+  /* Homepage sections: tighter rhythm */
+  .home .section { padding: 52px 0; }
+  .home .section-header { margin-bottom: 28px; }
+  .home .section-header p { font-size: 0.98rem; }
+  .home .clients { padding: 32px 0; }
+  .home .clients-title { margin-bottom: 18px; }
+  .home .clients-logos { gap: 18px 28px; }
+  .home .clients-logos img { width: 112px; height: auto; }
+
+  /* Services: compact cards, bullet lists stay on the service pages */
+  .home #services .grid-3 { gap: 0; }
+  .home #services .service-card { padding: 22px 20px 20px; }
+  .home #services .service-icon { display: none; }
+  .home #services .service-card h3 { font-size: 1.12rem; margin-bottom: 6px; }
+  .home #services .service-card p { font-size: 0.92rem; margin: 0; }
+  .home #services .service-card ul { display: none; }
+
+  /* How it works: number beside the text */
+  .home .process-step { padding: 20px 20px 18px 72px; position: relative; }
+  .home .process-step .process-num { position: absolute; left: 20px; top: 20px; margin: 0; font-size: 1.3rem; }
+  .home .process-step h4 { margin-bottom: 4px; }
+  .home .process-step p { font-size: 0.92rem; margin: 0; }
+
+  /* Testimonials and samples: swipe rows instead of tall stacks */
+  .home .swipe-row {
+    display: flex;
+    grid-template-columns: none;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -24px;
+    padding: 4px 24px 12px;
+    scrollbar-width: thin;
+  }
+  .home .swipe-row > * { flex: 0 0 86%; scroll-snap-align: center; }
+  .home .swipe-row .testimonial-card { padding: 28px 22px 24px; }
+  .home .swipe-row .testimonial-quote { font-size: 0.95rem; }
+  .home .swipe-row .project-body { padding: 18px 18px; }
+  .home .swipe-hint {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--margin);
+    margin-top: 6px;
+  }
+  .home .center-cta { margin-top: 20px; }
+
+  .home .faq-item summary { padding-top: 16px; padding-bottom: 16px; font-size: 0.98rem; }
+  .home .faq-item summary::before { top: 19px; }
+  .home .faq-item summary::after { top: 9px; }
+  .home .contact-detail { margin-bottom: 14px; }
+  .home .form-card { padding: 26px 20px; }
+}
+.swipe-hint { display: none; }
+
+@media (max-width: 640px) {
+  /* Footer: link lists side by side instead of one long column */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
+  .footer-grid > div:first-child,
+  .footer-grid > div:last-child:nth-child(odd),
+  .footer-grid > div:only-child { grid-column: 1 / -1; }
+  .footer-list li { overflow-wrap: anywhere; }
+  .home .contact-info > p { margin-bottom: 18px; }
+  .home .contact-detail { padding: 10px 0; gap: 14px; }
+  .home .contact-icon { width: 36px; height: 36px; }
+}

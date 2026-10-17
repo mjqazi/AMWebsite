@@ -107,6 +107,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Platform tab list: drop the right-edge fade once scrolled to the end
+  document.querySelectorAll('.platform-tab-list').forEach(list => {
+    const edge = () => list.classList.toggle('at-end',
+      list.scrollLeft + list.clientWidth >= list.scrollWidth - 4);
+    list.addEventListener('scroll', edge, { passive: true });
+    window.addEventListener('resize', edge);
+    edge();
+  });
+
+  // Sticky mobile CTA bar (CSS shows it at <= 768px). Not on the contact
+  // page itself. <body data-cta-href> overrides the target (homepage uses
+  // its own #contact form); <body data-service> preselects the service.
+  if (!document.body.hasAttribute('data-no-mobile-cta') && !/\/contact(\.html)?$/.test(location.pathname)) {
+    const svc = document.body.dataset.service;
+    const href = document.body.dataset.ctaHref || ('/contact.html' + (svc ? '?service=' + encodeURIComponent(svc) : ''));
+    const bar = document.createElement('div');
+    bar.className = 'mobile-cta-bar';
+    bar.setAttribute('role', 'region');
+    bar.setAttribute('aria-label', 'Quick contact');
+    const cta = document.createElement('a');
+    cta.className = 'btn';
+    cta.href = href;
+    cta.textContent = 'Free drawing';
+    const call = document.createElement('a');
+    call.className = 'mobile-cta-call';
+    call.href = 'tel:' + CONTACT_PHONE_E164;
+    call.setAttribute('aria-label', 'Call ' + CONTACT_PHONE_DISPLAY);
+    call.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>';
+    bar.append(cta, call);
+    document.body.appendChild(bar);
+    document.body.classList.add('has-mobile-cta');
+    // Get out of the way while any lead form is on screen
+    if ('IntersectionObserver' in window) {
+      const visible = new Set();
+      const fio = new IntersectionObserver(entries => {
+        entries.forEach(en => en.isIntersecting ? visible.add(en.target) : visible.delete(en.target));
+        bar.classList.toggle('is-hidden', visible.size > 0);
+      }, { threshold: 0 });
+      document.querySelectorAll('form').forEach(f => fio.observe(f));
+    }
+  }
+
   // Lead forms (#consultation-form) — submitted with fetch() as JSON to
   // FORM_ENDPOINT (top of file). Each form can set data-form-subject and
   // data-form-name; a hidden _honey input traps bots.
