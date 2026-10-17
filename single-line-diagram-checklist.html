@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Single-Line Diagram Review Checklist | PDF &amp; Print</title>
+<meta name="description" content="Review an industrial SLD with a printable checklist covering source information, equipment references, interfaces and issue details. Download the PDF or read online.">
+<link rel="canonical" href="https://advancedmechanix.com/single-line-diagram-checklist.html">
+<link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-var-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.min.css">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://advancedmechanix.com/single-line-diagram-checklist.html">
+<meta property="og:title" content="Single-Line Diagram Review Checklist | PDF &amp; Print">
+<meta property="og:description" content="Review an industrial SLD with a printable checklist covering source information, equipment references, interfaces and issue details. Download the PDF or read online.">
+<meta property="og:image" content="https://advancedmechanix.com/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Advanced Mechanix — industrial electrical design, controls &amp; plant BIM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://advancedmechanix.com/images/og-card.png">
+<meta name="twitter:image:alt" content="Advanced Mechanix — industrial electrical design, controls &amp; plant BIM">
+
+<style>
+.concept-wrap { max-width: 820px; margin: 0 auto; }
+.concept-wrap h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-top: 2.8em; margin-bottom: 0.6em; }
+.concept-wrap h3 { font-size: 1.25rem; margin-top: 1.8em; margin-bottom: 0.5em; }
+.concept-wrap p, .concept-wrap ul, .concept-wrap ol { font-size: 1.04rem; line-height: 1.75; color: var(--ink-2); margin-bottom: 1.1em; }
+.concept-wrap ul, .concept-wrap ol { padding-left: 24px; }
+.concept-wrap li { margin-bottom: 0.35em; }
+.concept-wrap figure { margin: 36px 0; }
+.concept-wrap figure img { width: 100%; border: 1px solid var(--rule); }
+.concept-wrap figcaption { font-family: var(--font-mono); font-size: 0.78rem; color: var(--margin); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 10px; }
+.concept-wrap table { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.95rem; }
+.concept-wrap th, .concept-wrap td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--rule); }
+.concept-wrap th { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--margin); }
+.concept-wrap .tldr { background: var(--paper-2); padding: 24px 28px; border-left: 3px solid var(--hazard); margin: 28px 0 40px; }
+.concept-wrap .tldr h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 10px; }
+.concept-wrap .tldr p { margin: 0; font-family: var(--font-display); font-style: italic; font-size: 1.12rem; color: var(--ink); }
+.related-reads { margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--rule); }
+.related-reads h4 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 18px; }
+.related-reads ul { list-style: none; padding: 0; }
+.related-reads li { margin-bottom: 10px; font-family: var(--font-display); font-size: 1.08rem; }
+.related-reads a { color: var(--ink); background: none; }
+.related-reads a:hover { color: var(--hazard); }
+.concept-wrap .tldr .tldr-label { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 10px; font-style: normal; }
+.download-row { display: flex; flex-wrap: wrap; gap: 14px; margin: 26px 0 8px; }
+.download-row .btn { text-decoration: none; }
+.download-note { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; color: var(--margin); }
+.concept-wrap .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.concept-wrap td:first-child { white-space: nowrap; font-weight: 600; color: var(--ink); }
+.related-reads .related-heading { margin-top: 0; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--margin); font-weight: 500; margin-bottom: 18px; }
+/* Checklist */
+.checklist { list-style: none; padding-left: 0 !important; margin: 0 0 1.4em; }
+.checklist li { position: relative; padding: 9px 0 9px 36px; border-bottom: 1px solid var(--rule-soft); margin: 0 !important; break-inside: avoid; }
+.checklist input { position: absolute; left: 4px; top: 14px; width: 18px; height: 18px; accent-color: var(--blueprint); }
+.checklist label { cursor: pointer; display: block; }
+.checklist .tag { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; color: var(--margin); text-transform: uppercase; margin-left: 6px; }
+.check-meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule); margin: 20px 0 8px; }
+.check-meta div { padding: 10px 14px; border-bottom: 1px solid var(--rule); font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--margin); min-height: 44px; }
+.check-meta div:nth-child(odd) { border-right: 1px solid var(--rule); }
+.print-only { display: none; }
+@media (max-width: 640px) { .check-meta { grid-template-columns: 1fr; } .check-meta div:nth-child(odd) { border-right: none; } }
+@media print {
+  @page { size: A4; margin: 14mm 14mm 16mm; }
+  .site-header, .topbar, .footer, .skip-link, .mobile-cta-bar, .download-row, .download-note, .tldr, .guarantee, .related-reads, .no-print, .page-hero .breadcrumb { display: none !important; }
+  body { background: #fff !important; padding: 0 !important; font-size: 10.5pt; }
+  .page-hero { background: #fff !important; padding: 0 0 8px !important; border-bottom: 2px solid #000; }
+  .page-hero h1, .page-hero h1 em, .page-hero p { color: #000 !important; text-align: left; }
+  .page-hero h1 { font-size: 20pt !important; }
+  .page-hero p { font-size: 9.5pt !important; max-width: none !important; margin: 4px 0 0; }
+  .page-hero::before, .page-hero::after { display: none !important; }
+  .section { padding: 6px 0 !important; }
+  .container { padding: 0 !important; max-width: none !important; }
+  .concept-wrap { max-width: none; }
+  .concept-wrap h2 { font-size: 12.5pt; margin: 14px 0 4px; break-after: avoid; color: #000; }
+  .concept-wrap p { font-size: 9.5pt; line-height: 1.45; margin-bottom: 6px; color: #000; }
+  .checklist li { padding: 4px 0 4px 24px; font-size: 9.5pt; line-height: 1.35; border-color: #ccc; color: #000; }
+  .checklist input { -webkit-appearance: none; appearance: none; width: 11px; height: 11px; border: 1px solid #000; top: 6px; left: 2px; }
+  .check-meta div { color: #000; min-height: 28px; padding: 5px 8px; font-size: 7.5pt; }
+  .print-only { display: block; font-size: 8pt; color: #333; margin-top: 12px; border-top: 1px solid #000; padding-top: 6px; }
+  a { color: #000 !important; text-decoration: none; }
+}
+</style>
+<meta name="twitter:title" content="Single-Line Diagram Review Checklist | PDF &amp; Print">
+<meta name="twitter:description" content="Review an industrial SLD with a printable checklist covering source information, equipment references, interfaces and issue details. Download the PDF or read online.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://advancedmechanix.com/#organization",
+      "name": "Advanced Mechanix",
+      "url": "https://advancedmechanix.com/",
+      "logo": "https://advancedmechanix.com/images/am-logo-black-h88.png",
+      "description": "Industrial electrical design documentation, control panel drawings and coordinated plant models.",
+      "email": "company@advancedmechanix.com",
+      "telephone": "+1-408-412-0717",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12478 San Bruno Cove",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "postalCode": "92130",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://advancedmechanix.com/single-line-diagram-checklist.html#article",
+      "headline": "Single-Line Diagram Review Checklist | PDF & Print",
+      "description": "Review an industrial SLD with a printable checklist covering source information, equipment references, interfaces and issue details. Download the PDF or read online.",
+      "author": {
+        "@id": "https://advancedmechanix.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://advancedmechanix.com/#organization"
+      },
+      "dateModified": "2026-10-17",
+      "image": "https://advancedmechanix.com/images/og-card.png",
+      "mainEntityOfPage": "https://advancedmechanix.com/single-line-diagram-checklist.html",
+      "associatedMedia": [
+        {
+          "@type": "MediaObject",
+          "name": "Single-line diagram checklist (PDF)",
+          "contentUrl": "https://advancedmechanix.com/downloads/single-line-diagram-checklist.pdf",
+          "encodingFormat": "application/pdf"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://advancedmechanix.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://advancedmechanix.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Single-Line Diagram Review Checklist",
+          "item": "https://advancedmechanix.com/single-line-diagram-checklist.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-service="electrical">
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; <a href="mailto:company@advancedmechanix.com">company@advancedmechanix.com</a></span><span>&#9742; <a href="tel:+14084120717">+1 408 412 0717</a></span></div><div><span>Industrial electrical design &middot; Control documentation &middot; Plant BIM</span></div></div></div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+  <a href="/" class="logo" aria-label="Advanced Mechanix home"><img src="/images/am-logo-black-h88.png" alt="Advanced Mechanix" width="228" height="88"></a>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+  <ul class="nav-links" id="primary-navigation">
+    <li><a href="/electrical-design.html">Electrical</a></li>
+    <li><a href="/control-panel-design-outsourcing.html">Control panels</a></li>
+    <li><a href="/3d-modeling.html">Plant BIM</a></li>
+    <li><a href="/case-studies.html">Project work</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="nav-cta"><a href="/contact.html?service=electrical">Scope your project <span aria-hidden="true">↗</span></a></li>
+  </ul>
+</nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-hero center">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="blog.html">Insights</a> &rsaquo; Single-Line Diagram Checklist</div>
+    <h1>Single-line diagram <em>checklist.</em></h1>
+    <p>49 checks to run on a single-line diagram before it is issued: document control, supply, transformers, switchboards, protection, cables, loads, alternate supplies, earthing and cross-checks.</p>
+    <div class="breadcrumb">By Advanced Mechanix &middot; October 2026</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="concept-wrap">
+
+      <div class="tldr">
+        <p class="tldr-label">Print or download</p>
+        <p>Tick the boxes on screen, print this page (the print layout drops the site navigation), or download the same checklist as a PDF. No sign-up and no email required.</p>
+      </div>
+
+      <div class="download-row">
+        <a class="btn" href="downloads/single-line-diagram-checklist.pdf" download data-track-event="download_sld_checklist_pdf">Download PDF</a>
+        <button type="button" class="btn btn-outline" onclick="window.print()" data-track-event="print_sld_checklist">Print checklist</button>
+      </div>
+      <p class="download-note">PDF &middot; A4 &middot; 49 checks in 10 sections &middot; free to use and adapt</p>
+
+      <p class="no-print">New to SLDs? Start with <a href="what-is-a-single-line-diagram.html">what a single-line diagram is and what it shows</a>. The checklist is written for both Australian / New Zealand projects (AS/NZS 3000) and US projects (NEC); items that only apply in one market say so.</p>
+
+      <div class="check-meta" aria-label="Review record">
+        <div>Project</div><div>Drawing no. / rev</div>
+        <div>Checked by</div><div>Date</div>
+      </div>
+
+      <h2>1. Title block and document control</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> Title block matches the client or project template: project, drawing title, drawing number, sheet number and total sheets</label></li>
+        <li><label><input type="checkbox"> Revision letter or number, date, description and the prepared / checked / approved initials are complete</label></li>
+        <li><label><input type="checkbox"> Revision clouds and triangles mark every change since the last issue</label></li>
+        <li><label><input type="checkbox"> Issue status is stated (for example preliminary, for review, for construction, as-built)</label></li>
+        <li><label><input type="checkbox"> Drawing references list the related drawings: layouts, schematics, panel and cable schedules, protection study</label></li>
+        <li><label><input type="checkbox"> Legend or symbol key is included, or the drawing references the project symbol standard (for example IEC 60617 or IEEE 315 symbols)</label></li>
+        <li><label><input type="checkbox"> Text is legible at the issued sheet size and nothing overlaps the title block</label></li>
+      </ul>
+
+      <h2>2. Supply and point of connection</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> Each incoming supply is shown with its source: utility, network operator or DNSP connection, or on-site generation</label></li>
+        <li><label><input type="checkbox"> Nominal voltage, number of phases and frequency are stated for every voltage level</label></li>
+        <li><label><input type="checkbox"> Prospective fault level (or available fault current) at the point of connection is stated, with its source and date</label></li>
+        <li><label><input type="checkbox"> Metering point and metering CTs/VTs are shown where they form part of the scope</label></li>
+        <li><label><input type="checkbox"> Point of supply and ownership boundary between the network and the installation are clear</label></li>
+        <li><label><input type="checkbox"> Earthing system is identified (for example TN-C-S / MEN, TN-S, TT or IT) and the main earthing or grounding connection is shown</label></li>
+      </ul>
+
+      <h2>3. Transformers</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> Rating (kVA or MVA), primary and secondary voltages and vector group are shown</label></li>
+        <li><label><input type="checkbox"> Impedance (%Z) is shown, because it drives the fault levels downstream</label></li>
+        <li><label><input type="checkbox"> Tap range and tap position, cooling class and neutral earthing arrangement are shown where relevant</label></li>
+        <li><label><input type="checkbox"> Transformer protection (fuses, relays, Buchholz or temperature devices) is shown or referenced</label></li>
+      </ul>
+
+      <h2>4. Switchboards, switchgear and MCCs</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> Each board has a unique tag that matches the layout drawings and the panel schedule</label></li>
+        <li><label><input type="checkbox"> Busbar current rating and short-circuit withstand rating are stated and are at least the calculated fault level at that board</label></li>
+        <li><label><input type="checkbox"> Main switch or incoming breaker type and rating are shown</label></li>
+        <li><label><input type="checkbox"> Bus sections, bus couplers and interlocks are shown, including the normal open/closed state</label></li>
+        <li><label><input type="checkbox"> Assembly details required by the project are noted (for example form of separation and IP rating for AS/NZS 61439 assemblies, or the short-circuit current rating for NEC panelboards and switchboards)</label></li>
+        <li><label><input type="checkbox"> Spare and space positions are shown where the client wants them recorded</label></li>
+      </ul>
+
+      <h2>5. Protective devices</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> Every circuit shows its device type (circuit breaker, fuse, MCCB, ACB, relay-operated breaker) and rating</label></li>
+        <li><label><input type="checkbox"> Breaking capacity of every device is at least the prospective fault current at its point of installation</label></li>
+        <li><label><input type="checkbox"> Relay functions and CT ratios are shown for relay-protected circuits, with a reference to the protection settings or study</label></li>
+        <li><label><input type="checkbox"> Earth-fault and residual-current protection (RCD/GFCI) is shown where required</label></li>
+        <li><label><input type="checkbox"> Discrimination / selectivity is referenced to the protection coordination study rather than assumed</label></li>
+      </ul>
+
+      <h2>6. Cables and conductors</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> Every cable has an ID that matches the cable schedule</label></li>
+        <li><label><input type="checkbox"> Size, number of cores, conductor material and insulation are shown for each feeder, plus the earth or equipment grounding conductor</label></li>
+        <li><label><input type="checkbox"> Feeder sizes are consistent with the cable schedule after derating (current-carrying capacity and voltage drop checked to the applicable standard, such as AS/NZS 3008.1.1 or the NEC)</label></li>
+        <li><label><input type="checkbox"> Parallel conductors are shown as such, with the number of runs</label></li>
+      </ul>
+
+      <h2>7. Loads, motors and drives</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> Each load is tagged and rated (kW, kVA or A) and matches the load list or equipment schedule</label></li>
+        <li><label><input type="checkbox"> Motor starters are identified (DOL, star-delta, soft starter, VSD/VFD) with their ratings</label></li>
+        <li><label><input type="checkbox"> Power factor correction and harmonic filtering equipment is shown where installed</label></li>
+        <li><label><input type="checkbox"> Essential, emergency or life-safety loads are identified and fed as the design intends</label></li>
+      </ul>
+
+      <h2>8. Alternate supplies: generators, UPS, PV and batteries</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> Generators, UPS, solar PV inverters and battery systems are shown with their ratings</label></li>
+        <li><label><input type="checkbox"> Transfer switches or changeover arrangements are shown with their interlocking</label></li>
+        <li><label><input type="checkbox"> Paralleling, anti-islanding or export-limiting arrangements are shown or referenced where applicable (for example to AS/NZS 4777 for inverter connections in Australia, or the utility interconnection requirements in the US)</label></li>
+        <li><label><input type="checkbox"> Neutral switching and earthing of alternate supplies is consistent with the earthing system</label></li>
+      </ul>
+
+      <h2>9. Earthing, bonding and arc flash</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> Main earthing conductor / grounding electrode conductor and main earth bar are shown</label></li>
+        <li><label><input type="checkbox"> Equipotential bonding and earthing of transformers, generators and switchboards are shown or referenced</label></li>
+        <li><label><input type="checkbox"> Arc flash study and labelling are referenced where the project requires them (for example IEEE 1584 calculations and NFPA 70E labelling in the US)</label></li>
+      </ul>
+
+      <h2>10. Final cross-checks before issue</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> SLD agrees with the panel schedules: circuit numbers, device ratings and descriptions</label></li>
+        <li><label><input type="checkbox"> SLD agrees with the cable schedule: cable IDs, sizes and from/to</label></li>
+        <li><label><input type="checkbox"> SLD agrees with the protection study and the fault level calculations</label></li>
+        <li><label><input type="checkbox"> SLD agrees with the general arrangement and layout drawings: equipment tags and locations</label></li>
+        <li><label><input type="checkbox"> All open queries are closed or listed as holds on the drawing</label></li>
+        <li><label><input type="checkbox"> A second person has checked the drawing and initialled the check box in the title block</label></li>
+      </ul>
+
+      <p>This checklist is a review aid, not engineering advice. It does not replace the applicable standards, the network operator&rsquo;s or utility&rsquo;s requirements, or review by a competent engineer.</p>
+      <p class="print-only">Single-line diagram checklist &middot; Advanced Mechanix &middot; advancedmechanix.com/single-line-diagram-checklist.html &middot; free to use and adapt</p>
+
+      <div class="guarantee"><div><h3>Start with a defined scope.</h3><p>Agree the source information, deliverables and review requirements before the first issue.</p></div><a href="/contact.html?service=electrical" class="btn">Scope your project</a></div>
+
+      <div class="related-reads">
+        <h2 class="related-heading">Related Reads</h2>
+        <ul>
+          <li><a href="what-is-a-single-line-diagram.html">What is a single-line diagram?</a></li>
+          <li><a href="panel-schedule-template.html">Panel schedule template (NEC &amp; AS/NZS)</a></li>
+          <li><a href="cable-schedule-template.html">Cable schedule template (Excel &amp; CSV)</a></li>
+          <li><a href="electrical-design.html">Electrical drafting services: SLDs, schematics and panel schedules</a></li>
+        </ul>
+      </div>
+
+    </article>
+  </div>
+</section>
+
+<section class="section-sm"><div class="container editorial-copy source-links"><h2>Reference sources</h2><p>Use the project’s nominated standard and edition for the work. These publisher pages provide context; this guide does not replace the applicable standard or engineering review.</p><ul><li><a href="https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70">NFPA: National Electrical Code development</a></li></ul></div></section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="/" class="logo" style="margin-bottom: 24px;"><img src="images/am-logo-white-h88.png" alt="Advanced Mechanix" width="249" height="88" loading="lazy" decoding="async"></a><p>Industrial electrical design, control documentation and coordinated plant models. Drawn to your standards.</p></div>
+      <div><h3 class="footer-heading">Services</h3><ul class="footer-list"><li><a href="/electrical-design.html">Industrial electrical design</a></li><li><a href="/control-panel-design-outsourcing.html">Control panel documentation</a></li><li><a href="/3d-modeling.html">Plant BIM &amp; modelling</a></li><li class="footer-secondary">Additional services</li><li><a href="solar-services.html">Solar engineering</a></li><li><a href="civil-design.html">Civil &amp; Structural</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div>
+      <div><h3 class="footer-heading">Company</h3><ul class="footer-list"><li><a href="about.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="guide-electrical-drafting-outsourcing.html">Outsourcing Guide</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h3 class="footer-heading">Office</h3><ul class="footer-list"><li><a href="tel:+14084120717">+1 408 412 0717</a></li><li><a href="mailto:company@advancedmechanix.com">company@advancedmechanix.com</a></li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="current-year"></span> Advanced Mechanix &middot; Engineering Documentation</span>
+      <span>NEC &middot; IEC &middot; AS/NZS &middot; CSA &middot; BS 7671</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.min.js" defer></script>
+</body>
+</html>

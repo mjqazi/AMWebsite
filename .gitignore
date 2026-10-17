@@ -3,3 +3,9 @@ ONSITE-SEO-REPORT.md
 
 # MJP multi-agent scratch
 .mjp/
+
+# Local build dependencies; generated public assets are committed.
+node_modules/
+__pycache__/
+test-results/
+playwright-report/

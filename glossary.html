@@ -3,46 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Engineering Glossary — SLD, BIM, NEC, NFPA 70E</title>
-<meta name="description" content="Plain-English definitions for electrical engineering, BIM, and solar permit terminology. SLD, MCC, arc flash, LOD, NEC, NFPA 70E, IEEE 1584, and more.">
+<title>Electrical Design &amp; BIM Glossary | Advanced Mechanix</title>
+<meta name="description" content="Plain-English definitions of single-line diagrams, MCCs, cable schedules, BIM and related engineering terms, with links to practical drawing guides.">
 <link rel="canonical" href="https://advancedmechanix.com/glossary.html">
 <link rel="icon" href="images/cropped-favicon-32x32-1-180x180.png">
-<link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-700-normal-latin.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-400-normal-latin.woff2" crossorigin>
-<link rel="stylesheet" href="css/styles.css">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-var-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.min.css">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://advancedmechanix.com/glossary.html">
-<meta property="og:image" content="https://advancedmechanix.com/images/drawings/single-line-diagram.svg">
+<meta property="og:image" content="https://advancedmechanix.com/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Advanced Mechanix — industrial electrical design, controls &amp; plant BIM">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:title" content="Engineering Glossary — SLD, BIM, NEC, NFPA 70E">
-<meta property="og:description" content="Plain-English definitions for electrical engineering, BIM, and solar permit terminology.">
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {"@type":"Organization","@id":"https://advancedmechanix.com/#organization","name":"Advanced Mechanix","url":"https://advancedmechanix.com/","logo":"https://advancedmechanix.com/images/AM-Black-Logo.png"},
-    {"@type":"CollectionPage","@id":"https://advancedmechanix.com/glossary.html#collection","name":"Engineering Glossary","url":"https://advancedmechanix.com/glossary.html"},
-    {"@type":"BreadcrumbList","itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://advancedmechanix.com/"},
-      {"@type":"ListItem","position":2,"name":"Glossary","item":"https://advancedmechanix.com/glossary.html"}
-    ]},
-    {"@type":"DefinedTermSet","@id":"https://advancedmechanix.com/glossary.html#termset","name":"Advanced Mechanix Engineering Glossary","hasDefinedTerm":[
-      {"@type":"DefinedTerm","name":"Single-Line Diagram (SLD)","description":"A simplified electrical schematic representing a three-phase system as a single line, showing sources, transformers, protective devices, buses, and loads with their ratings.","url":"https://advancedmechanix.com/what-is-a-single-line-diagram.html"},
-      {"@type":"DefinedTerm","name":"NFPA 70E","description":"US consensus standard for electrical safety in the workplace. Covers shock, arc flash, and arc blast hazard protection through risk assessment, safe work practices, PPE, and training.","url":"https://advancedmechanix.com/what-is-nfpa-70e.html"},
-      {"@type":"DefinedTerm","name":"NEC","description":"National Electrical Code (NFPA 70). US foundational code governing the installation of electrical systems. Revised every three years."},
-      {"@type":"DefinedTerm","name":"Arc Flash","description":"Intense heat, light, and pressure wave generated when a fault creates an arcing short-circuit. Quantified via IEEE 1584 incident energy calculations."},
-      {"@type":"DefinedTerm","name":"IEEE 1584","description":"Industry-standard method for calculating arc flash incident energy. Input to NFPA 70E-compliant PPE selection and equipment labeling."},
-      {"@type":"DefinedTerm","name":"LOD (Level of Development)","description":"BIM concept defining how developed a model element is at a given project phase. Common levels: LOD 100 (conceptual), 200 (approximate), 300 (accurate), 350 (coordinated), 400 (fabrication)."},
-      {"@type":"DefinedTerm","name":"MCC (Motor Control Center)","description":"Grouped assembly of motor starters, protective devices, and associated wiring in a single enclosure for controlling multiple motors from a common bus."},
-      {"@type":"DefinedTerm","name":"Hazardous Area Classification","description":"Division of areas per NEC Art. 500/505 or IEC 60079 based on the likelihood of explosive gas/dust presence. Drives equipment and installation requirements."},
-      {"@type":"DefinedTerm","name":"AHJ (Authority Having Jurisdiction)","description":"The local regulator responsible for approving electrical installations. In the US typically a city or county building department; in solar permitting context, defines local requirements and plan-check process."},
-      {"@type":"DefinedTerm","name":"BEP (BIM Execution Plan)","description":"Document defining how a project's BIM will be executed: LOD requirements, coordinate system, file naming, model federation, clash detection process, deliverable schedule."}
-    ]}
-  ]
-}
-</script>
+<meta name="twitter:image" content="https://advancedmechanix.com/images/og-card.png">
+<meta name="twitter:image:alt" content="Advanced Mechanix — industrial electrical design, controls &amp; plant BIM">
+<meta property="og:title" content="Electrical Design &amp; BIM Glossary | Advanced Mechanix">
+<meta property="og:description" content="Plain-English definitions of single-line diagrams, MCCs, cable schedules, BIM and related engineering terms, with links to practical drawing guides.">
 
 <style>
 .glossary-grid { display: grid; grid-template-columns: 200px 1fr; gap: 60px; align-items: start; }
@@ -65,30 +43,141 @@
   .glossary-toc li { margin: 0; }
 }
 </style>
+<meta name="twitter:title" content="Electrical Design &amp; BIM Glossary | Advanced Mechanix">
+<meta name="twitter:description" content="Plain-English definitions of single-line diagrams, MCCs, cable schedules, BIM and related engineering terms, with links to practical drawing guides.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://advancedmechanix.com/#organization",
+      "name": "Advanced Mechanix",
+      "url": "https://advancedmechanix.com/",
+      "logo": "https://advancedmechanix.com/images/am-logo-black-h88.png",
+      "description": "Industrial electrical design documentation, control panel drawings and coordinated plant models.",
+      "email": "company@advancedmechanix.com",
+      "telephone": "+1-408-412-0717",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12478 San Bruno Cove",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "postalCode": "92130",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://advancedmechanix.com/glossary.html#collection",
+      "url": "https://advancedmechanix.com/glossary.html",
+      "name": "Electrical Design & BIM Glossary | Advanced Mechanix",
+      "description": "Plain-English definitions of single-line diagrams, MCCs, cable schedules, BIM and related engineering terms, with links to practical drawing guides.",
+      "about": {
+        "@id": "https://advancedmechanix.com/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://advancedmechanix.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Electrical Design & BIM Glossary",
+          "item": "https://advancedmechanix.com/glossary.html"
+        }
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://advancedmechanix.com/glossary.html#termset",
+      "name": "Advanced Mechanix Engineering Glossary",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Single-Line Diagram (SLD)",
+          "description": "A simplified electrical schematic representing a three-phase system as a single line, showing sources, transformers, protective devices, buses, and loads with their ratings.",
+          "url": "https://advancedmechanix.com/what-is-a-single-line-diagram.html"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "NFPA 70E",
+          "description": "US consensus standard for electrical safety in the workplace. Covers shock, arc flash, and arc blast hazard protection through risk assessment, safe work practices, PPE, and training.",
+          "url": "https://advancedmechanix.com/what-is-nfpa-70e.html"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "NEC",
+          "description": "National Electrical Code (NFPA 70). US foundational code governing the installation of electrical systems. Revised every three years."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Arc Flash",
+          "description": "Intense heat, light, and pressure wave generated when a fault creates an arcing short-circuit. Quantified via IEEE 1584 incident energy calculations."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "IEEE 1584",
+          "description": "Industry-standard method for calculating arc flash incident energy. Input to NFPA 70E-compliant PPE selection and equipment labeling."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "LOD (Level of Development)",
+          "description": "BIM concept defining how developed a model element is at a given project phase. Common levels: LOD 100 (conceptual), 200 (approximate), 300 (accurate), 350 (coordinated), 400 (fabrication)."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "MCC (Motor Control Center)",
+          "description": "Grouped assembly of motor starters, protective devices, and associated wiring in a single enclosure for controlling multiple motors from a common bus."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Hazardous Area Classification",
+          "description": "Division of areas per NEC Art. 500/505 or IEC 60079 based on the likelihood of explosive gas/dust presence. Drives equipment and installation requirements."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "AHJ (Authority Having Jurisdiction)",
+          "description": "The organization or person responsible for enforcing the applicable code or approving an installation. Identify the project authority and its review requirements during scoping."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "BEP (BIM Execution Plan)",
+          "description": "Document defining how a project's BIM will be executed: LOD requirements, coordinate system, file naming, model federation, clash detection process, deliverable schedule."
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
 <a href="#main" class="skip-link">Skip to content</a>
 
-<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; company@advancedmechanix.com</span><span>&#9742; +1 408 412 0717</span></div><div><span>Electrical drafting &middot; BIM/Revit &middot; Solar permits &middot; Managed production support</span></div></div></div>
+<div class="topbar"><div class="container topbar-inner"><div class="topbar-meta"><span>&#9993; <a href="mailto:company@advancedmechanix.com">company@advancedmechanix.com</a></span><span>&#9742; <a href="tel:+14084120717">+1 408 412 0717</a></span></div><div><span>Industrial electrical design &middot; Control documentation &middot; Plant BIM</span></div></div></div>
 
 <header class="site-header">
   <div class="container">
-    <nav class="nav">
-      <a href="index.html" class="logo"><img src="images/AM-Black-Logo.png" alt="Advanced Mechanix"></a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="electrical-design.html">Electrical</a></li>
-        <li><a href="3d-modeling.html">BIM</a></li>
-        <li><a href="solar-services.html">Solar</a></li>
-        <li><a href="data-analytics.html">Analytics</a></li>
-        <li><a href="timesheet.html">Timesheets</a></li>
-        <li><a href="case-studies.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="nav-cta"><a href="contact.html">Free Drawing</a></li>
-      </ul>
-    </nav>
+    <nav class="nav" aria-label="Main navigation">
+  <a href="/" class="logo" aria-label="Advanced Mechanix home"><img src="/images/am-logo-black-h88.png" alt="Advanced Mechanix" width="228" height="88"></a>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+  <ul class="nav-links" id="primary-navigation">
+    <li><a href="/electrical-design.html">Electrical</a></li>
+    <li><a href="/control-panel-design-outsourcing.html">Control panels</a></li>
+    <li><a href="/3d-modeling.html">Plant BIM</a></li>
+    <li><a href="/case-studies.html">Project work</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="nav-cta"><a href="/contact.html?service=electrical">Scope your project <span aria-hidden="true">↗</span></a></li>
+  </ul>
+</nav>
   </div>
 </header>
 
@@ -96,7 +185,7 @@
 
 <section class="page-hero center">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Glossary</div>
+    <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Glossary</div>
     <h1>Engineering glossary, <em>plain English.</em></h1>
     <p>Reference definitions for the terminology we use every day. Linked to deeper explainers where available.</p>
   </div>
@@ -120,8 +209,8 @@
       <div>
         <div class="glossary-entry" id="a">
           <div class="glossary-letter">A</div>
-          <h3>AHJ &mdash; Authority Having Jurisdiction</h3>
-          <p>The local regulator responsible for approving electrical installations. In the US, typically a city or county building department. In solar permitting, the AHJ defines local plan-check requirements, submission format, and inspection process. Each AHJ has quirks; a good permit vendor maintains checklists per jurisdiction.</p>
+          <h2>AHJ &mdash; Authority Having Jurisdiction</h2>
+          <p>The organization or person responsible for enforcing the applicable code or approving an installation. Identify the project’s authority and its review requirements during scoping.</p>
         </div>
         <div class="glossary-entry">
           <div class="glossary-letter">A</div>
@@ -209,15 +298,15 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div><a href="index.html" class="logo" style="margin-bottom: 24px;"><img src="images/AM-White-Logo.png" alt="Advanced Mechanix"></a><p>Specialized electrical drafting, BIM modeling, solar permit packages, and data analytics. Onshore project management. Offshore production scale. First drawing free.</p></div>
-      <div><h4>Services</h4><ul class="footer-list"><li><a href="electrical-design.html">Electrical Drafting</a></li><li><a href="3d-modeling.html">3D BIM Modeling</a></li><li><a href="solar-services.html">Solar Permits</a></li><li><a href="civil-design.html">Civil &amp; Structural</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div>
-      <div><h4>Resources</h4><ul class="footer-list"><li><a href="faq.html">FAQ</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="guide-electrical-drafting-outsourcing.html">Outsourcing Guide</a></li></ul></div>
-      <div><h4>Office</h4><ul class="footer-list"><li>+1 408 412 0717</li><li>company@advancedmechanix.com</li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
+      <div><a href="/" class="logo" style="margin-bottom: 24px;"><img src="images/am-logo-white-h88.png" alt="Advanced Mechanix" width="249" height="88" loading="lazy" decoding="async"></a><p>Industrial electrical design, control documentation and coordinated plant models. Drawn to your standards.</p></div>
+      <div><h3 class="footer-heading">Services</h3><ul class="footer-list"><li><a href="/electrical-design.html">Industrial electrical design</a></li><li><a href="/control-panel-design-outsourcing.html">Control panel documentation</a></li><li><a href="/3d-modeling.html">Plant BIM &amp; modelling</a></li><li class="footer-secondary">Additional services</li><li><a href="solar-services.html">Solar engineering</a></li><li><a href="civil-design.html">Civil &amp; Structural</a></li><li><a href="data-analytics.html">Data Analytics</a></li></ul></div>
+      <div><h3 class="footer-heading">Resources</h3><ul class="footer-list"><li><a href="faq.html">FAQ</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="guide-electrical-drafting-outsourcing.html">Outsourcing Guide</a></li></ul></div>
+      <div><h3 class="footer-heading">Office</h3><ul class="footer-list"><li><a href="tel:+14084120717">+1 408 412 0717</a></li><li><a href="mailto:company@advancedmechanix.com">company@advancedmechanix.com</a></li><li>12478 San Bruno Cove,<br>San Diego, CA 92130, USA</li></ul></div>
     </div>
     <div class="footer-bottom"><span>&copy; <span class="current-year"></span> Advanced Mechanix &middot; Engineering Documentation</span><span>NEC &middot; IEC &middot; AS/NZS &middot; CSA &middot; BS 7671</span></div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.min.js" defer></script>
 </body>
 </html>

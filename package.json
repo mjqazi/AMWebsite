@@ -1,0 +1,16 @@
+{
+  "name": "advanced-mechanix-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build-assets.mjs",
+    "build:check": "node tools/build-assets.mjs --check",
+    "test:e2e": "playwright test",
+    "check": "python tools/check_site.py"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "esbuild": "0.28.2",
+    "sharp": "0.35.5"
+  }
+}

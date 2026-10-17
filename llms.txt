@@ -1,0 +1,46 @@
+# Advanced Mechanix
+
+> Industrial electrical design documentation, control panel drawings and coordinated plant models for mining, process and industrial project teams. Work is scoped around the client’s engineering inputs, templates, project standard and review requirements.
+
+This is a short directory of public pages. The linked pages are the authoritative content. It is not an additional service offer, a claim of certification or a guarantee of search visibility.
+
+## Company and project enquiries
+
+- [Home](https://advancedmechanix.com/): Industrial electrical design, control documentation and plant BIM; project work and the scoping conversation.
+- [About](https://advancedmechanix.com/about.html): The work, production arrangements, file access and review responsibilities.
+- [Contact](https://advancedmechanix.com/contact.html): Share the package scope, standard, software and target issue date. Confidential files can wait until access arrangements are agreed.
+- [Project FAQ](https://advancedmechanix.com/faq.html): Inputs, design scope, technical queries, pricing, reviews and source-file handover.
+- [Junaid Qazi](https://advancedmechanix.com/authors/junaid-qazi.html): Founder profile and project contact route.
+
+## Industrial capabilities
+
+- [Industrial electrical design](https://advancedmechanix.com/electrical-design.html): SLDs, MCC and panel schedules, cable registers and distribution documentation.
+- [Control panel documentation](https://advancedmechanix.com/control-panel-design-outsourcing.html): Schematics, arrangements, terminal references and PLC I/O documentation.
+- [Plant BIM and models](https://advancedmechanix.com/3d-modeling.html): Equipment, containment and coordination from existing drawings and supplied inputs.
+- [Revit production](https://advancedmechanix.com/bim-modeling-outsourcing.html): Model and drawing production against an established BIM Execution Plan.
+- [Substation documentation](https://advancedmechanix.com/substation-design-outsourcing.html): Single-lines, layouts, protection documentation and cable schedules; engineering inputs and review defined in scope.
+- [Arc-flash study documentation](https://advancedmechanix.com/arc-flash-study-services.html): Study inputs, reports and label documentation, with calculation and review responsibilities agreed separately.
+
+## Sectors and regions
+
+- [Mining](https://advancedmechanix.com/industries/mining.html): Mine power, MCC, substation and shutdown drawing packages.
+- [Oil and gas](https://advancedmechanix.com/industries/oil-gas.html): Electrical and control documents for process projects and their interfaces.
+- [Utilities](https://advancedmechanix.com/industries/utilities.html): Substation, feeder and protection documentation.
+- [Australia](https://advancedmechanix.com/australia/): Industrial services, regional context and resources for Australian project teams.
+- [United States](https://advancedmechanix.com/usa/): Industrial drawing services, regional context and resources for US project teams.
+
+## Project notes and practical resources
+
+- [Project notes](https://advancedmechanix.com/case-studies.html): Scope and constraints of electrical and BIM work; composite examples are identified as illustrative.
+- [Industrial MCC package](https://advancedmechanix.com/case-study-industrial-mcc-sld-package.html): Drawing-package scope and coordination notes.
+- [Mine power distribution](https://advancedmechanix.com/case-study-pilbara-mine-power-distribution.html): Substation, switchgear and MCC documentation notes.
+- [Prepare a drawing brief](https://advancedmechanix.com/how-to-brief-an-offshore-drafting-team.html): Collect source files, drawing register, standards and review requirements.
+- [Vendor checklist](https://advancedmechanix.com/offshore-drafting-vendor-checklist.html): Nine supplier-review questions; a real editable text download is available without sign-up.
+- [BIM execution plan outline](https://advancedmechanix.com/bim-execution-plan-template.html): An editable planning outline, not a completed or certified project BEP.
+- [Budgeting guide](https://advancedmechanix.com/offshore-engineering-rates-report-2026.html): Scope drivers and pricing models; not a surveyed market-rate report.
+- [Cost comparison](https://advancedmechanix.com/cost-calculator.html): Compare budgets with your own hours and rates; no assumed company discount.
+- [Cable schedule](https://advancedmechanix.com/cable-schedule-template.html): Excel and CSV planning templates.
+- [Panel schedule](https://advancedmechanix.com/panel-schedule-template.html): Workbook with US and Australian-style sheets.
+- [SLD checklist](https://advancedmechanix.com/single-line-diagram-checklist.html): Review checklist, printable online and available as a PDF.
+
+Project scope, programme, price and certification responsibilities are agreed before work starts. Contact: company@advancedmechanix.com, +1 408 412 0717.
