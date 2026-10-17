@@ -28,7 +28,9 @@ class Page(HTMLParser):
 pages={}
 for f in ROOT.rglob('*.html'):
  if '.git' in f.parts or 'tools' in f.parts or 'node_modules' in f.parts:continue
- p=Page();p.feed(f.read_text(encoding='utf-8'));pages[f]=p
+ source=f.read_text(encoding='utf-8')
+ if re.fullmatch(r'google[a-f0-9]+\.html',f.name) and source.strip()=='google-site-verification: '+f.name:continue
+ p=Page();p.feed(source);pages[f]=p
  for s in p.jsons:
   blocks+=1
   try:json.loads(s)
