@@ -3811,3 +3811,84 @@ article .guarantee p { color: rgba(247,245,238,0.78); }
   .cta-actions { width: 100%; }
   .cta-actions .btn { width: 100%; justify-content: center; }
 }
+
+/* "Offshore worries, answered" block (Part B, task 3) — source:
+   tools/snippets/objections.html. Collapsed on phones, opened by main.js
+   on wider screens. */
+.objections { border-top: 1px solid var(--rule); }
+.objections-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.objection {
+  background: var(--paper-2);
+  border: 1px solid rgba(27,58,107,0.22);
+  min-width: 0;
+}
+.objection-wide { grid-column: 1 / -1; }
+.objection summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 48px 18px 22px;
+  position: relative;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.objection summary::-webkit-details-marker { display: none; }
+.objection summary::after {
+  content: '+';
+  position: absolute;
+  right: 20px; top: 14px;
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  color: var(--hazard);
+  transition: transform 0.2s var(--ease-out);
+}
+.objection[open] summary::after { transform: rotate(45deg); }
+.objection-body { padding: 0 22px 20px; }
+.objection-body p { color: var(--ink-2); font-size: 0.96rem; margin: 0 0 12px; }
+.objection-body p:last-child { margin-bottom: 0; }
+.tz-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 4px 0 14px; }
+.tz-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.tz-table caption {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--margin);
+  padding-bottom: 8px;
+}
+.tz-table th, .tz-table td {
+  text-align: left;
+  padding: 9px 12px 9px 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+.tz-table thead th {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 500;
+}
+.tz-table tbody th { font-weight: 600; color: var(--ink); }
+.tz-table td { font-family: var(--font-mono); font-size: 0.84rem; color: var(--ink-2); }
+.objection-body .tz-note { font-size: 0.86rem; color: var(--ink-3); }
+@media (max-width: 768px) {
+  .objections-list { grid-template-columns: 1fr; gap: 8px; }
+  .objection summary { font-size: 0.98rem; padding: 15px 44px 15px 18px; }
+  .objection-body { padding: 0 18px 18px; }
+  .tz-table, .tz-table tbody, .tz-table tr, .tz-table th, .tz-table td { display: block; }
+  .tz-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .tz-table caption { display: block; }
+  .tz-table tr { border-bottom: 1px solid var(--rule); padding: 8px 0; }
+  .tz-table th, .tz-table td { border: none; padding: 1px 0; }
+  .tz-table td:nth-of-type(1)::before { content: 'Our day: '; color: var(--margin); }
+  .tz-table td:nth-of-type(2)::before { content: 'Overlap: '; color: var(--margin); }
+}

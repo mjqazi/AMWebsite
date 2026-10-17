@@ -107,6 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // "Offshore worries" block: open every answer on wider screens
+  if (window.matchMedia('(min-width: 769px)').matches) {
+    document.querySelectorAll('.objections details').forEach(d => { d.open = true; });
+  }
+
   // Platform tab list: drop the right-edge fade once scrolled to the end
   document.querySelectorAll('.platform-tab-list').forEach(list => {
     const edge = () => list.classList.toggle('at-end',
