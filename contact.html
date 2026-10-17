@@ -165,7 +165,7 @@
       </div>
 
       <div class="form-card">
-        <h3>Request Free Consultation</h3>
+        <h3>Send us one drawing</h3>
         <div class="form-success" id="form-success">Your consultation request has been received. One of our engineering specialists will contact you within 1 business day.</div>
         <div class="form-error" id="form-error" style="display:none; padding:14px 18px; margin-bottom:18px; background:#fdecea; border-left:3px solid var(--hazard); color:var(--ink); font-size:0.92rem; line-height:1.55;"></div>
         <form id="consultation-form" method="POST" data-form-name="contact" data-form-subject="New consultation request — advancedmechanix.com" novalidate>
@@ -174,53 +174,45 @@
             <label for="website">Leave this field empty</label>
             <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone">
-            </div>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
           </div>
           <div class="form-group">
-            <label for="service">Service or Product Needed</label>
+            <label for="email">Work email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Service</label>
             <select id="service" name="service">
-              <option value="">Select a service or product</option>
-              <option>Electrical Design &amp; Engineering</option>
-              <option>Civil &amp; Structural Design</option>
-              <option>2D &rarr; 3D Modeling</option>
-              <option>Solar Backend Services</option>
-              <option>Advanced Data Analytics</option>
-              <option value="Timesheet Software">Timesheet Software</option>
-              <option>Other / Multiple</option>
+              <option value="">Select a service</option>
+              <option value="electrical">Electrical drafting &amp; design</option>
+              <option value="bim">BIM / Revit modeling &amp; 2D to 3D conversion</option>
+              <option value="solar">Solar permit plan sets</option>
+              <option value="arc-flash">Arc flash &amp; power system studies</option>
+              <option value="substation">Substation design</option>
+              <option value="control-panel">Control panel &amp; PLC documentation</option>
+              <option value="mep">MEP drafting</option>
+              <option value="civil">Civil &amp; structural design</option>
+              <option value="analytics">Industrial data analytics</option>
+              <option value="timesheet">Timesheet software (demo)</option>
+              <option value="other">Other / multiple</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="time">Preferred Contact Time</label>
-            <input type="text" id="time" name="time" placeholder="e.g. Weekdays 9am–12pm PT">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Which drawing should we do first? Standard, software and deadline help us scope it." required></textarea>
           </div>
           <div class="form-group">
-            <label for="message">Project Details</label>
-            <textarea id="message" name="message" placeholder="Tell us about your project scope, timeline, and any specific requirements."></textarea>
+            <label for="file_link">Link to files <span class="label-optional">(optional)</span></label>
+            <input type="url" id="file_link" name="file_link" inputmode="url" placeholder="Dropbox, OneDrive or Google Drive link to mark-ups">
           </div>
           <div style="padding: 18px 20px; background: var(--paper-2); border-left: 3px solid var(--hazard); margin: 20px 0 22px; font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.85; color: var(--ink-2); letter-spacing: 0.02em;">
             <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--hazard); font-weight:700;">&#10003;</span> First drawing free &mdash; no credit card, no retainer</div>
             <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--hazard); font-weight:700;">&#10003;</span> Mutual NDA signed before any source material shared</div>
             <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--hazard); font-weight:700;">&#10003;</span> Response within 1 business day, always</div>
           </div>
-          <button type="submit" class="btn" style="width:100%;">Request Consultation</button>
+          <button type="submit" class="btn" style="width:100%;">Send us one drawing &mdash; free</button>
           <p class="form-note">We respect your privacy. Your information is never shared with third parties.</p>
         </form>
       </div>
@@ -238,7 +230,7 @@
         <p>If our first delivery doesn't meet your internal quality standards, there's no invoice and no obligation. No credit card, no retainer &mdash; just a scoping call and your source material.</p>
         <p class="guarantee-note">We can afford this because our multi-stage QA catches most errors before issue, so first-drawing approvals are routine. One free drawing costs us less than a single sales call &mdash; and saves you an entire vendor evaluation cycle.</p>
       </div>
-      <div><a href="#consultation-form" class="btn">Claim Free Drawing</a></div>
+      <div><a href="#consultation-form" class="btn" data-cta="primary">Send us one drawing &mdash; free</a></div>
     </div>
   </div>
 </section>
@@ -287,19 +279,5 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script>
-(function () {
-  var svc = new URLSearchParams(location.search).get('service');
-  if (!svc) return;
-  var sel = document.getElementById('service');
-  if (!sel) return;
-  var map = { timesheets: 'Timesheet Software' };
-  var want = (map[svc.toLowerCase()] || svc).toLowerCase();
-  for (var i = 0; i < sel.options.length; i++) {
-    var o = sel.options[i];
-    if ((o.value || o.text).toLowerCase() === want) { sel.selectedIndex = i; break; }
-  }
-})();
-</script>
 </body>
 </html>

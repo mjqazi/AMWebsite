@@ -3800,3 +3800,14 @@ article .guarantee p { color: rgba(247,245,238,0.78); }
   .home .contact-detail { padding: 10px 0; gap: 14px; }
   .home .contact-icon { width: 36px; height: 36px; }
 }
+
+/* One CTA system (Part B, task 2): primary + secondary pair */
+.cta-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.cta-block .cta-actions .btn-outline { color: var(--paper-2); border-color: rgba(250,248,242,0.6); }
+.cta-block .cta-actions .btn-outline:hover { background: var(--paper-2); color: var(--ink); }
+.cta-block p a { color: #93b9ff; }
+.label-optional { text-transform: none; letter-spacing: 0; color: var(--margin); font-weight: 400; }
+@media (max-width: 640px) {
+  .cta-actions { width: 100%; }
+  .cta-actions .btn { width: 100%; justify-content: center; }
+}

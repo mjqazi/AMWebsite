@@ -36,7 +36,7 @@
 }
 </script>
 </head>
-<body>
+<body data-service="electrical">
 
 <a href="#main" class="skip-link">Skip to content</a>
 
@@ -56,7 +56,7 @@
         <li><a href="timesheet.html">Timesheets</a></li>
         <li><a href="case-studies.html">Work</a></li>
         <li><a href="about.html">About</a></li>
-        <li class="nav-cta"><a href="contact.html">Free Drawing</a></li>
+        <li class="nav-cta"><a href="contact.html?service=electrical">Free Drawing</a></li>
       </ul>
     </nav>
   </div>
@@ -112,8 +112,8 @@
         </div>
 
         <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="contact.html" class="btn" data-track-event="calc_cta_click">Get My Detailed Quote</a>
-          <a href="case-studies.html" class="btn btn-ghost">See Case Studies</a>
+          <a href="contact.html?service=electrical" class="btn" data-cta="primary" data-track-event="calc_cta_click">Send us one drawing &mdash; free</a>
+          <a href="case-studies.html" class="btn btn-ghost" data-cta="secondary">See sample drawings</a>
         </div>
       </div>
 
@@ -162,7 +162,7 @@
     <div class="cta-block">
       <h2>Numbers look worth a conversation?</h2>
       <p>Book a 30-minute scoping call. We'll build a detailed quote tailored to your project pipeline.</p>
-      <a href="contact.html" class="btn btn-outline">Book Scoping Call</a>
+      <div class="cta-actions"><a href="contact.html?service=electrical" class="btn" data-cta="primary">Send us one drawing &mdash; free</a><a href="case-studies.html" class="btn btn-outline" data-cta="secondary">See sample drawings</a></div>
     </div>
   </div>
 </section>

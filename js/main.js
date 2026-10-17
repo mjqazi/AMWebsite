@@ -129,7 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const cta = document.createElement('a');
     cta.className = 'btn';
     cta.href = href;
-    cta.textContent = 'Free drawing';
+    cta.textContent = 'Send us one drawing \u2014 free';
+    cta.dataset.cta = 'primary';
     const call = document.createElement('a');
     call.className = 'mobile-cta-call';
     call.href = 'tel:' + CONTACT_PHONE_E164;
@@ -167,13 +168,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalLabel = submitBtn ? submitBtn.textContent : '';
 
-    // Pre-select the service dropdown from ?service=… (e.g. contact.html?service=timesheet)
+    // Pre-select the service dropdown from ?service=<slug> (every CTA on the
+    // site links to contact.html?service=<slug>; option values are the slugs).
     const serviceSelect = form.querySelector('select[name="service"]');
-    const wanted = new URLSearchParams(location.search).get('service');
+    const wanted = (new URLSearchParams(location.search).get('service') || '').toLowerCase().trim();
     if (serviceSelect && wanted) {
-      const needle = wanted.toLowerCase().replace(/[-_+]/g, ' ').trim().replace(/s$/, '');
-      const match = needle && Array.from(serviceSelect.options).find(o =>
-        o.value && (o.value.toLowerCase().includes(needle) || o.text.toLowerCase().includes(needle)));
+      const aliases = { timesheets: 'timesheet', 'arc-flash-study': 'arc-flash', arcflash: 'arc-flash',
+        modeling: 'bim', '3d': 'bim', revit: 'bim', 'solar-permit': 'solar', permits: 'solar',
+        drafting: 'electrical', 'control-panels': 'control-panel', plc: 'control-panel' };
+      const slug = aliases[wanted] || wanted;
+      const opts = Array.from(serviceSelect.options);
+      let match = opts.find(o => o.value && o.value.toLowerCase() === slug);
+      if (!match) {
+        const needle = slug.replace(/[-_+]/g, ' ').replace(/s$/, '');
+        match = needle && opts.find(o => o.value && o.text.toLowerCase().includes(needle));
+      }
       if (match) serviceSelect.value = match.value;
     }
 
@@ -226,6 +235,9 @@ document.addEventListener('DOMContentLoaded', () => {
       payload._template = 'table';
       payload._captcha = 'false';
       payload._honey = '';
+      if (serviceSelect && serviceSelect.value) {
+        payload.service = serviceSelect.options[serviceSelect.selectedIndex].text + ' [' + serviceSelect.value + ']';
+      }
       payload.form = form.dataset.formName || 'consultation';
       payload.page = location.href;
 
