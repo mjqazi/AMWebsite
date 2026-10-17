@@ -32,7 +32,8 @@ for (const name of files) {
 const logos = ['Synergy', 'Rio-Tinto', 'Fortescue', 'Evolution-Mining', 'Endeavour-Mining', 'CBH-Group'];
 const digest = data => createHash('sha256').update(data).digest('hex');
 const manifestPath = path.join(root, 'tools/logo-assets.json');
-const manifest = { recipe: digest(await readFile(fileURLToPath(import.meta.url))), logos: {} };
+const recipe = (await readFile(fileURLToPath(import.meta.url), 'utf8')).replace(/\r\n/g, '\n');
+const manifest = { recipe: digest(recipe), logos: {} };
 // AVIF encoders can produce different bytes across operating systems. Verify
 // committed outputs against the build manifest instead of re-encoding in CI.
 const recorded = check ? JSON.parse(await readFile(manifestPath, 'utf8')) : null;
