@@ -3892,3 +3892,17 @@ article .guarantee p { color: rgba(247,245,238,0.78); }
   .tz-table td:nth-of-type(1)::before { content: 'Our day: '; color: var(--margin); }
   .tz-table td:nth-of-type(2)::before { content: 'Overlap: '; color: var(--margin); }
 }
+
+/* Answer block under the service-page H1 (Part B, task 8) */
+.answer-section { padding: 28px 0 0; }
+.answer-block {
+  max-width: 880px;
+  margin: 0;
+  padding: 18px 22px;
+  background: var(--paper-2);
+  border-left: 3px solid var(--hazard);
+  color: var(--ink);
+  font-size: 1.04rem;
+  line-height: 1.65;
+}
+@media (max-width: 640px) { .answer-block { font-size: 0.98rem; padding: 16px 18px; } }

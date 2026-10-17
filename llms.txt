@@ -1,0 +1,42 @@
+# Advanced Mechanix
+
+> Advanced Mechanix is an engineering documentation firm: outsourced electrical drafting, BIM/Revit modeling, solar permit plan sets, arc flash studies and related engineering documentation for consultancies, EPCs, mining and industrial operators in the United States and Australia. Production drafting and modeling run from the company's Pakistan office; project management is US-based. New clients get their first drawing free.
+
+Standards the team works to: NEC 2023 (US), IEC 60364 and IEC 61439, AS/NZS 3000 (Australia/New Zealand), CSA C22.1 (Canada) and BS 7671 (UK). Contact: company@advancedmechanix.com, +1 408 412 0717, https://advancedmechanix.com/contact.html
+
+## Services
+
+- [Home](https://advancedmechanix.com/): Overview of services, how an engagement works, sample drawings, offshore questions answered and the free-drawing form.
+- [Electrical drafting](https://advancedmechanix.com/electrical-design.html): SLDs, panel and MCC schedules, cable schedules and control documentation in AutoCAD Electrical, Microstation, SkyCAD and EPLAN; standard SLDs in 3-5 business days.
+- [BIM & Revit MEP modeling outsourcing](https://advancedmechanix.com/bim-modeling-outsourcing.html): Multi-discipline Revit production, clash detection and Revit families built to an ISO 19650 BIM Execution Plan.
+- [2D to 3D conversion & digital twins](https://advancedmechanix.com/3d-modeling.html): Legacy 2D drawings converted into coordinated Revit models at LOD 200-400, with Navisworks clash reports.
+- [Solar permit plan sets](https://advancedmechanix.com/solar-services.html): Commercial, industrial and utility-scale PV permit packages to NEC 2023 Article 690, IEEE 1547, UL 1741 SA and ASCE 7-22.
+- [Arc flash studies](https://advancedmechanix.com/arc-flash-study-services.html): IEEE 1584 incident-energy studies, protection coordination and NFPA 70E labels in ETAP or SKM Power Tools.
+- [Substation design](https://advancedmechanix.com/substation-design-outsourcing.html): HV/MV substation SLDs, layouts, protection schemes and IEC 61850 documentation up to 500 kV.
+- [Control panel & PLC documentation](https://advancedmechanix.com/control-panel-design-outsourcing.html): Panel layouts, schematics, PLC I/O schedules and HMI documentation in EPLAN and AutoCAD Electrical, including UL 508A.
+- [MEP drafting outsourcing](https://advancedmechanix.com/mep-drafting-outsourcing.html): Mechanical, electrical and plumbing drafting and Revit MEP production for commercial building consultancies.
+- [Civil & structural design](https://advancedmechanix.com/civil-design.html): Site development, earthworks, foundations and permit packages to US, Australian and European codes.
+
+## Markets
+
+- [Electrical drafting for Perth & Pilbara mining](https://advancedmechanix.com/electrical-drafting-perth.html): WA mining and EPC drafting to AS/NZS 3000, AS/NZS 3008.1.1, AS/NZS 61439 and AS/NZS 60079, with AWST working-hour overlap.
+- [Electrical drafting for Brisbane & Queensland](https://advancedmechanix.com/electrical-drafting-brisbane.html): Queensland coal, CSG and consultancy drafting to AS/NZS standards, with AEST working-hour overlap.
+- [Electrical drafting for Houston oil & gas](https://advancedmechanix.com/electrical-drafting-houston.html): Oil, gas and petrochemical electrical documentation with overnight turnaround from the CST time difference.
+- [Electrical drafting for Phoenix solar & data centers](https://advancedmechanix.com/electrical-drafting-phoenix.html): Solar and data-center electrical documentation for Arizona projects.
+- [Mining electrical drafting & BIM](https://advancedmechanix.com/industries/mining.html): Mine power distribution, substations, hazardous-area (Ex) classification and shutdown packages for operators and EPCs.
+
+## Proof and free resources
+
+- [Case studies](https://advancedmechanix.com/case-studies.html): Project write-ups covering SLD/MCC packages, mine power distribution, solar permit programs, arc flash and BIM work.
+- [Guide to outsourcing electrical drafting](https://advancedmechanix.com/guide-electrical-drafting-outsourcing.html): A buyer's guide to scoping, vetting and managing an outsourced drafting team.
+- [Cable schedule template](https://advancedmechanix.com/cable-schedule-template.html): Free Excel and CSV cable schedule with an Ib/Iz check and voltage-drop formula, for AS/NZS 3008.1.1 and NEC projects.
+- [Panel schedule template](https://advancedmechanix.com/panel-schedule-template.html): Free Excel workbook with an NEC panelboard sheet and an AS/NZS distribution board sheet, phase totals and an imbalance check.
+- [Single-line diagram checklist](https://advancedmechanix.com/single-line-diagram-checklist.html): 49 checks to run on an SLD before issue, printable or as a PDF.
+
+## Optional
+
+- [About](https://advancedmechanix.com/about.html): Company background, how engagements run, security and compliance, leadership.
+- [FAQ](https://advancedmechanix.com/faq.html): Answers on IP protection, standards, turnaround, pricing models and team location.
+- [Contact](https://advancedmechanix.com/contact.html): Send one drawing for a free sample, or ask a question.
+- [Cost calculator](https://advancedmechanix.com/cost-calculator.html): Estimate drafting cost by drawing type.
+- [Glossary](https://advancedmechanix.com/glossary.html): Plain-English definitions of SLD, BIM, NEC and related terms.
