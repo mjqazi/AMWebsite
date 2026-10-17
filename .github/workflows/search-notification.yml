@@ -2,7 +2,7 @@ name: Notify search engines after deployment
 
 on:
   workflow_run:
-    workflows: [pages build and deployment]
+    workflows: [pages-build-deployment]
     branches: [master]
     types: [completed]
   workflow_dispatch:
