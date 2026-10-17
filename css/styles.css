@@ -3915,3 +3915,7 @@ article .guarantee p { color: rgba(247,245,238,0.78); }
 .hub-card p { font-size: 0.94rem; margin: 0; }
 .hub-more { display: inline-block; margin-top: 14px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
 .page-hero .hero-actions { margin-top: 28px; }
+
+/* Case-study metric rows wrap instead of pushing cards past 360px */
+.case-metrics { flex-wrap: wrap; row-gap: 14px; }
+.grid > .case-card { min-width: 0; }

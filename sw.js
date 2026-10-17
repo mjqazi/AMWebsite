@@ -5,7 +5,7 @@
 // cache-first with background refresh. Bump CACHE_VERSION on each deploy
 // that changes precached files.
 
-const CACHE_VERSION = 'am-v9-2026-10-17';
+const CACHE_VERSION = 'am-v10-2026-10-17';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;
