@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 
-Disallow: /tmp/
 Disallow: /*.json$
 
 Sitemap: https://advancedmechanix.com/sitemap.xml
