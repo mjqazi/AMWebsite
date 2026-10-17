@@ -4,6 +4,9 @@
 Each page holds a copy of a snippet between markers:
     <!-- snippet:objections -->  ...  <!-- /snippet:objections -->
 Edit tools/snippets/<name>.html, then run:  python3 tools/sync_snippets.py
+The shared primary navigation is rendered from navigation.html with active
+links and service-aware contact targets for each page.
+
 The {{LABEL}} placeholder becomes the section label: a numbered
 section-number on the homepage, an eyebrow elsewhere.
 Pages listed in PAGES but missing markers get the block inserted just
@@ -62,7 +65,37 @@ def main():
                 with open(path, 'w', encoding='utf-8') as fh:
                     fh.write(new)
                 changed += 1
-    print('updated %d page(s)' % changed)
+    # One navigation source for root pages, hubs and preserved legacy URLs.
+    # Root-relative paths work at every depth on our custom-domain host.
+    with open(os.path.join(ROOT, 'tools', 'snippets', 'navigation.html'), encoding='utf-8') as fh:
+        navigation = fh.read().strip()
+    for directory, folders, files in os.walk(ROOT):
+        folders[:] = [name for name in folders if not name.startswith('.') and name != 'tools']
+        for filename in files:
+            if not filename.endswith('.html'):
+                continue
+            path = os.path.join(directory, filename)
+            with open(path, encoding='utf-8') as fh:
+                html = fh.read()
+            if not re.search(r'<nav\b[^>]*class="nav"', html):
+                continue
+            page = os.path.relpath(path, ROOT).replace(os.sep, '/')
+            active_path = '/' + page
+            nav = navigation.replace('href="%s"' % active_path,
+                                     'href="%s" class="active" aria-current="page"' % active_path)
+            if page == 'index.html':
+                nav = nav.replace('/contact.html?service=electrical', '#contact')
+            else:
+                service = re.search(r'<body\b[^>]*data-service="([a-z-]+)"', html)
+                if service:
+                    nav = nav.replace('/contact.html?service=electrical',
+                                      '/contact.html?service=' + service.group(1))
+            new = re.sub(r'<nav\b[^>]*class="nav"[^>]*>.*?</nav>', lambda m: nav, html, count=1, flags=re.S)
+            if new != html:
+                with open(path, 'w', encoding='utf-8') as fh:
+                    fh.write(new)
+                changed += 1
+    print('updated %d snippet placement(s)' % changed)
 
 
 if __name__ == '__main__':

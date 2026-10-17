@@ -76,12 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.addEventListener('click', () => {
       const open = links.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
     });
     // Close menu when a link is clicked
     links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         links.classList.remove('open');
         toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation');
       });
     });
     // Close menu on Escape and return focus to the toggle
@@ -89,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape' && links.classList.contains('open')) {
         links.classList.remove('open');
         toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation');
         toggle.focus();
       }
     });
@@ -166,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cta = document.createElement('a');
     cta.className = 'btn';
     cta.href = href;
-    cta.textContent = 'Send us one drawing \u2014 free';
+    cta.textContent = 'Scope your project';
     cta.dataset.cta = 'primary';
     const call = document.createElement('a');
     call.className = 'mobile-cta-call';
@@ -244,22 +247,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const hideError = () => { errorBox.style.display = 'none'; };
     const showSuccess = () => {
       if (!success) return;
+      // Resource-request templates keep their confirmation inside the form.
+      // Move it out before hiding the fields, so all four forms stay visible
+      // and announce the same persistent confirmation.
+      if (form.contains(success)) form.before(success);
+      form.hidden = true;
+      form.style.display = 'none';
+      success.setAttribute('role', 'status');
+      success.setAttribute('tabindex', '-1');
       success.classList.add('show');
       success.style.display = 'block';
+      success.focus({ preventScroll: true });
       success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setTimeout(() => { success.classList.remove('show'); success.style.display = ''; }, 12000);
     };
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       hideError();
-      const required = form.querySelectorAll('[required]');
-      let valid = true;
-      required.forEach(f => {
-        if (!f.value.trim()) { f.style.borderColor = '#E11D48'; valid = false; }
-        else { f.style.borderColor = ''; }
+      let firstInvalid;
+      form.querySelectorAll('input:not([type="hidden"]), select, textarea').forEach(field => {
+        if (!field.willValidate || field.name === '_honey' || field.name === 'website') return;
+        const errorId = field.id + '-error';
+        document.getElementById(errorId)?.remove();
+        const descriptions = (field.getAttribute('aria-describedby') || '').split(/\s+/).filter(id => id && id !== errorId);
+        field.removeAttribute('aria-invalid');
+        if ((field.required && !field.value.trim()) || !field.validity.valid) {
+          firstInvalid = firstInvalid || field;
+          field.setAttribute('aria-invalid', 'true');
+          const message = document.createElement('span');
+          message.id = errorId;
+          message.className = 'field-error';
+          message.textContent = field.validity.valid ? 'Please complete this field.' : field.validationMessage;
+          field.after(message);
+          descriptions.push(errorId);
+        }
+        if (descriptions.length) field.setAttribute('aria-describedby', descriptions.join(' '));
+        else field.removeAttribute('aria-describedby');
       });
-      if (!valid) { showValidation('Please complete the required fields.'); return; }
+      if (firstInvalid) {
+        showValidation('Please check the highlighted fields. Your message has not been sent.');
+        firstInvalid.focus();
+        return;
+      }
 
       const fd = new FormData(form);
       // Honeypot filled in → silently "succeed" without sending anything.
@@ -285,13 +314,12 @@ document.addEventListener('DOMContentLoaded', () => {
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify(payload)
         });
-        let data = {};
-        try { data = await res.json(); } catch (_) {}
-        // FormSubmit replies {"success":"true"|"false", "message": "..."}
-        // (string or boolean depending on version). Accept either form;
-        // other providers (Formspree) just return 2xx with {ok:true}.
-        const okFlag = data.success !== undefined ? String(data.success) === 'true'
-                     : data.ok !== undefined ? Boolean(data.ok) : true;
+        const data = await res.json();
+        // Require an explicit acknowledgement, including on HTTP 200.
+        // Activation/error pages must never look like a delivered lead.
+        const okFlag = data && (data.success !== undefined
+          ? data.success === true || data.success === 'true'
+          : data.ok === true);
         if (!res.ok || !okFlag) {
           showError('Sorry — your message could not be sent.');
           return;
