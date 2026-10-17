@@ -1,0 +1,53 @@
+{
+  "recipe": "1dfb3ef9cae9c017e877f038ef1b504d4ca358e1c95573bebc840489705be72b",
+  "logos": {
+    "Synergy": {
+      "source": "5a2b2dfc8086dadeeb4a58d7cc7ffaf47e5db1254e8fb83615d57a30b32edf46",
+      "files": {
+        "webp": "736e781e5bf5283125aaa0aff2ee6681d85850aac02ef1b71984275181be1a72",
+        "avif": "616bb1255330e216d8b9ebc341eba6a2ca4a1056609778fcef7449e5c249b165",
+        "png": "6c4569074c62007395e250d1e593727a1a0d0b8d1a23389f18f0d6aa0ed0b513"
+      }
+    },
+    "Rio-Tinto": {
+      "source": "65de10037e33e93b771bca968f93263b91ebb4cfd782af6fa9813a101e7987ed",
+      "files": {
+        "webp": "ee4faa8547d5f32d6e6c944e850ac5eadb76f1296847faa24722347df5bf2e2c",
+        "avif": "7070d5f484fcfbd725c7bebfce66a1be578de0c4b9b8b0576695f7aab91e81ac",
+        "png": "9320122418e7e5cda100eb3d6b381b10eb55c67dfc5691dc1ec353c5162a4f11"
+      }
+    },
+    "Fortescue": {
+      "source": "04c0acc89464135e88bd3919de493dcd9b5cab964607ab5d43c4bcf100a6655e",
+      "files": {
+        "webp": "c2f3dc79faaf6994a855dc8ea00199e9a211adcf0e73ccb9a5205ecda3a6a78b",
+        "avif": "f99a37d2e084cd7c7e310f662fac22536583c254fb1e7aa03bcc98e5c57d7b16",
+        "png": "e157caa0268a44ecb94e34e26399c9755741b268e87ac8bc41e300192b536cac"
+      }
+    },
+    "Evolution-Mining": {
+      "source": "31d87b8c0c6fa93b65ea5ff26e155b64fbcc2237bf7c4055cb2647a66bd40103",
+      "files": {
+        "webp": "3d63655041cadb8f5bc5659370dfa2922986ae6b1da6c468a961a98a6bd5b5ac",
+        "avif": "5f93c4240dc56001ba8ea5bf434fe424ff02bc8cc33881c755f24b91f8cf0886",
+        "png": "c4646ad920fe6679ed13636e5279f6b229130b3de466f2e5b803f6896e1ca8bf"
+      }
+    },
+    "Endeavour-Mining": {
+      "source": "cfe3f8b01028401942d8f4e99c56fe13d18951be0b6b5037b187cc2eb9d7cfe8",
+      "files": {
+        "webp": "843439d2df0208fd4107bafcbdd17d12c6b7a05e38b6c847b4f5371f98a9d3a3",
+        "avif": "f9d53400be048e83bf7f1fdfff70c83cf85082ac547fc5c902f4cd757cac13db",
+        "png": "8f8e99398c6bd15a9a089641b82a86fb47e441b88425d25de256287dfd026278"
+      }
+    },
+    "CBH-Group": {
+      "source": "1ef39e954ecf5df2797a4d22de2aa984fff2b6e8adbe570bb7cba0d6a94329ee",
+      "files": {
+        "webp": "4cd1db6346771b79ca5f271f086b2f3bc7d14a015b9216b812101e6ed191fba8",
+        "avif": "83a9e1cc7f8294629455ba7daca91e9fbf82c1409133e09c8a842c5d6fae3733",
+        "png": "08aa25eaba4dce597b40a1b2476f3c88901e15086f61837219c4596810264c04"
+      }
+    }
+  }
+}
