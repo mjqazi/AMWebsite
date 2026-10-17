@@ -3342,3 +3342,13 @@ article .guarantee p { color: rgba(247,245,238,0.78); }
 .contact-detail h3 { font: .68rem/1.5 var(--font-mono); text-transform: uppercase; letter-spacing: .14em; margin-bottom: 6px; }
 .guide-link { display: block; background-image: none; }
 .guide-link h3 { font-size: 1.2rem; line-height: 1.4; }
+
+.analytics-preferences { position: fixed; right: 24px; bottom: 24px; width: min(480px, calc(100% - 48px)); z-index: 1500; padding: 24px; background: var(--paper); color: var(--ink); border: 1px solid var(--rule); box-shadow: 0 12px 48px rgba(0,0,0,.2); }
+.analytics-preferences[hidden] { display: none; }
+.analytics-preferences h2 { font-size: 1.25rem; margin-bottom: 10px; }
+.analytics-preferences p { font-size: .9rem; margin-bottom: 12px; }
+.analytics-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.analytics-actions .btn { flex: 1; font-size: .68rem; padding: 14px 12px; }
+.analytics-actions .btn::after { content: none; }
+.analytics-settings { display: block; margin: 20px auto 0; padding: 12px; color: var(--paper); background: transparent; border: 1px solid currentColor; font: .75rem var(--font-mono); cursor: pointer; }
+@media (max-width: 768px) { .analytics-preferences { right: 12px; bottom: 82px; width: calc(100% - 24px); padding: 20px; } }

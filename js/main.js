@@ -25,25 +25,36 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Analytics. Paste the IDs to switch tracking on; while both are empty
-// nothing is loaded and no request leaves the page.
+// Analytics is production-only and loads after the visitor grants permission.
+// An empty ID disables that provider. Local previews never send analytics.
 //   ga4:     Google Analytics 4 measurement ID, e.g. 'G-XXXXXXXXXX'
 //   clarity: Microsoft Clarity project ID, e.g. 'abcd1234ef'
 // Events sent to GA4: generate_lead (successful form submit),
 // contact_click (tel:/mailto: links), cta_click and file downloads.
 const ANALYTICS = {
-  ga4: '',
+  ga4: 'G-1VGM9W6RT0',
   clarity: ''
 };
 
-(function loadAnalytics() {
+let analyticsAllowed = false;
+let analyticsLoaded = false;
+function loadAnalytics() {
+  if (!analyticsAllowed || analyticsLoaded || !/^(www\.)?advancedmechanix\.com$/.test(location.hostname)) return;
+  analyticsLoaded = true;
   const ga4 = (ANALYTICS.ga4 || '').trim();
   const clarity = (ANALYTICS.clarity || '').trim();
   if (/^G-[A-Z0-9]+$/i.test(ga4)) {
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
+    window['ga-disable-' + ga4] = false;
+    window.gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied',
+      ad_user_data: 'denied', ad_personalization: 'denied' });
+    window.gtag('consent', 'update', { analytics_storage: 'granted' });
     window.gtag('js', new Date());
-    window.gtag('config', ga4);
+    let referrer = '';
+    try { const url = new URL(document.referrer); referrer = url.origin + url.pathname; } catch {}
+    window.gtag('config', ga4, { allow_google_signals: false, allow_ad_personalization_signals: false,
+      page_location: location.origin + location.pathname, page_referrer: referrer, cookie_expires: 7776000 });
     const s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(ga4);
@@ -56,17 +67,67 @@ const ANALYTICS = {
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, 'clarity', 'script', clarity);
   }
-})();
+}
+
+function analyticsPreferences() {
+  if ((!ANALYTICS.ga4 && !ANALYTICS.clarity) || !/^(www\.)?advancedmechanix\.com$/.test(location.hostname)) return;
+  const key = 'am-analytics-choice-v1';
+  let choice = null;
+  try {
+    const saved = JSON.parse(localStorage.getItem(key));
+    if (saved && ['granted', 'denied'].includes(saved.value) &&
+        Date.now() - saved.time < 15552000000) choice = saved.value;
+  } catch {}
+  analyticsAllowed = choice === 'granted';
+  loadAnalytics();
+  const panel = document.createElement('section');
+  panel.className = 'analytics-preferences';
+  panel.setAttribute('aria-label', 'Analytics preferences');
+  panel.hidden = choice !== null;
+  panel.innerHTML = '<h2>Optional analytics</h2><p>Allow Google Analytics to help us understand site visits and project enquiries? We keep form messages and contact details out of analytics.</p><p><a href="/privacy.html">Privacy policy</a></p><div class="analytics-actions"><button type="button" class="btn" data-choice="granted">Allow analytics</button><button type="button" class="btn btn-outline" data-choice="denied">Decline analytics</button></div>';
+  const settings = document.createElement('button');
+  settings.type = 'button';
+  settings.className = 'analytics-settings';
+  settings.textContent = 'Analytics preferences';
+  settings.addEventListener('click', () => { panel.hidden = false; panel.querySelector('button').focus(); });
+  (document.querySelector('footer') || document.body).appendChild(settings);
+  document.body.appendChild(panel);
+  panel.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && choice !== null) { panel.hidden = true; settings.focus(); }
+  });
+  panel.querySelectorAll('[data-choice]').forEach(button => button.addEventListener('click', () => {
+    choice = button.dataset.choice;
+    try { localStorage.setItem(key, JSON.stringify({ value: choice, time: Date.now() })); } catch {}
+    analyticsAllowed = choice === 'granted';
+    if (analyticsAllowed) {
+      loadAnalytics();
+    } else if (analyticsLoaded) {
+      window['ga-disable-' + ANALYTICS.ga4] = true;
+      document.cookie.split(';').forEach(entry => {
+        const name = entry.trim().split('=')[0];
+        if (!/^_ga(?:_|$)/.test(name)) return;
+        for (const domain of ['', '; domain=advancedmechanix.com', '; domain=.advancedmechanix.com']) {
+          document.cookie = name + '=; Max-Age=0; path=/' + domain;
+        }
+      });
+      location.reload();
+      return;
+    }
+    panel.hidden = true;
+    settings.focus();
+  }));
+}
 
 // One call for every event: forwards to GA4 (and tags Clarity) when loaded.
 window.amTrack = function (event, props) {
   props = props || {};
-  if (typeof window.gtag === 'function') window.gtag('event', event, props);
-  if (typeof window.clarity === 'function') window.clarity('event', event);
+  if (analyticsAllowed && typeof window.gtag === 'function') window.gtag('event', event, props);
+  if (analyticsAllowed && typeof window.clarity === 'function') window.clarity('event', event);
   if (window.console && console.debug) console.debug('[amTrack]', event, props);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  analyticsPreferences();
 
   // Mobile nav toggle with aria
   const toggle = document.querySelector('.nav-toggle');
