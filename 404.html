@@ -6,6 +6,33 @@
 <title>404 &mdash; Page Not Found | Advanced Mechanix</title>
 <meta name="robots" content="noindex, follow">
 <meta name="description" content="This page could not be found. Browse Advanced Mechanix electrical drafting, BIM modeling, solar, timesheet, and data analytics services from the links below.">
+<script>
+/* Legacy-URL rescue: GitHub Pages can't do server-side redirects, so old
+   WordPress URLs that land here are forwarded by keyword. Unknown paths
+   (and asset requests) fall through to the normal 404 page below. */
+(function () {
+  var p = location.pathname.toLowerCase();
+  if (/\.(png|jpe?g|gif|svg|webp|avif|css|js|json|xml|txt|pdf|woff2?|ico)$/.test(p)) return;
+  var rules = [
+    [/perth/, '/electrical-drafting-perth.html'],
+    [/brisbane/, '/electrical-drafting-brisbane.html'],
+    [/houston/, '/electrical-drafting-houston.html'],
+    [/phoenix/, '/electrical-drafting-phoenix.html'],
+    [/arc-?flash/, '/arc-flash-study-services.html'],
+    [/mining/, '/industries/mining.html'],
+    [/solar/, '/solar-services.html'],
+    [/plc|control-system|automation/, '/control-panel-design-outsourcing.html'],
+    [/bim|3d-model|revit/, '/bim-modeling-outsourcing.html'],
+    [/drafting|electrical|cad/, '/electrical-design.html']
+  ];
+  for (var i = 0; i < rules.length; i++) {
+    if (rules[i][0].test(p)) {
+      if (p !== rules[i][1]) location.replace(rules[i][1] + location.hash);
+      return;
+    }
+  }
+})();
+</script>
 <link rel="icon" href="/images/cropped-favicon-32x32-1-180x180.png">
 <link rel="stylesheet" href="/css/styles.css">
 
