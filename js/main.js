@@ -1,5 +1,17 @@
 // Advanced Mechanix — site JS
 
+// Lead-form endpoint. All forms (#consultation-form on index, contact,
+// BEP template and vendor checklist pages) POST JSON here via fetch().
+// FormSubmit (https://formsubmit.co) relays the submission by email; the
+// first submission triggers a one-time activation email to the address.
+// To switch providers, change this one constant — e.g. a Formspree form
+// ('https://formspree.io/f/XXXX') or a HubSpot/Cloudflare Worker endpoint
+// that accepts JSON and returns a 2xx response.
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/company@advancedmechanix.com';
+const CONTACT_EMAIL = 'company@advancedmechanix.com';
+const CONTACT_PHONE_E164 = '+14084120717';
+const CONTACT_PHONE_DISPLAY = '+1 408 412 0717';
+
 // Service worker registration — deferred until after load + idle so it
 // never blocks the critical path on first visit. Repeat visits and
 // page-to-page navigations are then served from cache.
@@ -95,21 +107,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Contact form — POSTs to /contact-handler.php (PHP mailer, same-origin)
+  // Lead forms (#consultation-form) — submitted with fetch() as JSON to
+  // FORM_ENDPOINT (top of file). Each form can set data-form-subject and
+  // data-form-name; a hidden _honey input traps bots.
   const form = document.getElementById('consultation-form');
   if (form) {
     const success = document.getElementById('form-success');
-    const errorBox = document.getElementById('form-error');
+    let errorBox = document.getElementById('form-error');
+    if (!errorBox) {
+      errorBox = document.createElement('div');
+      errorBox.id = 'form-error';
+      errorBox.className = 'form-error';
+      errorBox.setAttribute('role', 'alert');
+      errorBox.style.marginTop = '16px';
+      form.appendChild(errorBox);
+    }
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalLabel = submitBtn ? submitBtn.textContent : '';
 
-    const showError = (msg) => {
-      if (!errorBox) { alert(msg); return; }
-      errorBox.textContent = msg;
+    // Pre-select the service dropdown from ?service=… (e.g. contact.html?service=timesheet)
+    const serviceSelect = form.querySelector('select[name="service"]');
+    const wanted = new URLSearchParams(location.search).get('service');
+    if (serviceSelect && wanted) {
+      const needle = wanted.toLowerCase().replace(/[-_+]/g, ' ').trim();
+      const match = Array.from(serviceSelect.options).find(o =>
+        o.value && (o.value.toLowerCase().includes(needle) || o.text.toLowerCase().includes(needle)));
+      if (match) serviceSelect.value = match.value;
+    }
+
+    const showError = (fallbackIntro) => {
+      errorBox.innerHTML = '';
+      errorBox.append(document.createTextNode(fallbackIntro + ' Please email '));
+      const mail = document.createElement('a');
+      mail.href = 'mailto:' + CONTACT_EMAIL;
+      mail.textContent = CONTACT_EMAIL;
+      errorBox.append(mail, document.createTextNode(' or call '));
+      const tel = document.createElement('a');
+      tel.href = 'tel:' + CONTACT_PHONE_E164;
+      tel.textContent = CONTACT_PHONE_DISPLAY;
+      errorBox.append(tel, document.createTextNode('.'));
       errorBox.style.display = 'block';
       errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
     };
-    const hideError = () => { if (errorBox) errorBox.style.display = 'none'; };
+    const showValidation = (msg) => {
+      errorBox.textContent = msg;
+      errorBox.style.display = 'block';
+    };
+    const hideError = () => { errorBox.style.display = 'none'; };
+    const showSuccess = () => {
+      if (!success) return;
+      success.classList.add('show');
+      success.style.display = 'block';
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => { success.classList.remove('show'); success.style.display = ''; }, 12000);
+    };
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -120,30 +171,45 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!f.value.trim()) { f.style.borderColor = '#E11D48'; valid = false; }
         else { f.style.borderColor = ''; }
       });
-      if (!valid) { showError('Please complete the required fields.'); return; }
+      if (!valid) { showValidation('Please complete the required fields.'); return; }
 
-      const action = form.getAttribute('action') || '/contact-handler.php';
+      const fd = new FormData(form);
+      // Honeypot filled in → silently "succeed" without sending anything.
+      if ((fd.get('_honey') || '').toString().trim() || (fd.get('website') || '').toString().trim()) {
+        form.reset(); showSuccess(); return;
+      }
+      const payload = {};
+      fd.forEach((v, k) => { if (k !== 'website') payload[k] = v; });
+      payload._subject = form.dataset.formSubject || 'New consultation request — advancedmechanix.com';
+      payload._template = 'table';
+      payload._captcha = 'false';
+      payload._honey = '';
+      payload.form = form.dataset.formName || 'consultation';
+      payload.page = location.href;
+
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
-
       try {
-        const res = await fetch(action, {
+        const res = await fetch(FORM_ENDPOINT, {
           method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' },
-          credentials: 'same-origin'
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
         });
         let data = {};
         try { data = await res.json(); } catch (_) {}
-        if (!res.ok || !data.ok) {
-          showError(data.error || 'Could not send your message. Please email company@advancedmechanix.com.');
+        // FormSubmit replies {"success":"true"|"false", "message": "..."}
+        // (string or boolean depending on version). Accept either form;
+        // other providers (Formspree) just return 2xx with {ok:true}.
+        const okFlag = data.success !== undefined ? String(data.success) === 'true'
+                     : data.ok !== undefined ? Boolean(data.ok) : true;
+        if (!res.ok || !okFlag) {
+          showError('Sorry — your message could not be sent.');
           return;
         }
-        if (success) { success.classList.add('show'); success.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-        window.amTrack('form_submit', { form: form.id || 'consultation', page: location.pathname });
+        window.amTrack('form_submit', { form: payload.form, page: location.pathname });
         form.reset();
-        setTimeout(() => success && success.classList.remove('show'), 12000);
+        showSuccess();
       } catch (err) {
-        showError('Network error. Please try again or email company@advancedmechanix.com.');
+        showError('Network error — your message could not be sent.');
       } finally {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel; }
       }
